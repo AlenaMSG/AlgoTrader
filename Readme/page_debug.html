@@ -1,0 +1,376 @@
+<!DOCTYPE html><html lang="en"><head><style type="text/css">:root{--toastify-color-light: #fff;--toastify-color-dark: #121212;--toastify-color-info: #3498db;--toastify-color-success: #07bc0c;--toastify-color-warning: #f1c40f;--toastify-color-error: hsl(6, 78%, 57%);--toastify-color-transparent: rgba(255, 255, 255, .7);--toastify-icon-color-info: var(--toastify-color-info);--toastify-icon-color-success: var(--toastify-color-success);--toastify-icon-color-warning: var(--toastify-color-warning);--toastify-icon-color-error: var(--toastify-color-error);--toastify-container-width: fit-content;--toastify-toast-width: 320px;--toastify-toast-offset: 16px;--toastify-toast-top: max(var(--toastify-toast-offset), env(safe-area-inset-top));--toastify-toast-right: max(var(--toastify-toast-offset), env(safe-area-inset-right));--toastify-toast-left: max(var(--toastify-toast-offset), env(safe-area-inset-left));--toastify-toast-bottom: max(var(--toastify-toast-offset), env(safe-area-inset-bottom));--toastify-toast-background: #fff;--toastify-toast-padding: 14px;--toastify-toast-min-height: 64px;--toastify-toast-max-height: 800px;--toastify-toast-bd-radius: 6px;--toastify-toast-shadow: 0px 4px 12px rgba(0, 0, 0, .1);--toastify-font-family: sans-serif;--toastify-z-index: 9999;--toastify-text-color-light: #757575;--toastify-text-color-dark: #fff;--toastify-text-color-info: #fff;--toastify-text-color-success: #fff;--toastify-text-color-warning: #fff;--toastify-text-color-error: #fff;--toastify-spinner-color: #616161;--toastify-spinner-color-empty-area: #e0e0e0;--toastify-color-progress-light: linear-gradient(to right, #4cd964, #5ac8fa, #007aff, #34aadc, #5856d6, #ff2d55);--toastify-color-progress-dark: #bb86fc;--toastify-color-progress-info: var(--toastify-color-info);--toastify-color-progress-success: var(--toastify-color-success);--toastify-color-progress-warning: var(--toastify-color-warning);--toastify-color-progress-error: var(--toastify-color-error);--toastify-color-progress-bgo: .2}.Toastify__toast-container{z-index:var(--toastify-z-index);-webkit-transform:translate3d(0,0,var(--toastify-z-index));position:fixed;width:var(--toastify-container-width);box-sizing:border-box;color:#fff;display:flex;flex-direction:column}.Toastify__toast-container--top-left{top:var(--toastify-toast-top);left:var(--toastify-toast-left)}.Toastify__toast-container--top-center{top:var(--toastify-toast-top);left:50%;transform:translate(-50%);align-items:center}.Toastify__toast-container--top-right{top:var(--toastify-toast-top);right:var(--toastify-toast-right);align-items:end}.Toastify__toast-container--bottom-left{bottom:var(--toastify-toast-bottom);left:var(--toastify-toast-left)}.Toastify__toast-container--bottom-center{bottom:var(--toastify-toast-bottom);left:50%;transform:translate(-50%);align-items:center}.Toastify__toast-container--bottom-right{bottom:var(--toastify-toast-bottom);right:var(--toastify-toast-right);align-items:end}.Toastify__toast{--y: 0;position:relative;touch-action:none;width:var(--toastify-toast-width);min-height:var(--toastify-toast-min-height);box-sizing:border-box;margin-bottom:1rem;padding:var(--toastify-toast-padding);border-radius:var(--toastify-toast-bd-radius);box-shadow:var(--toastify-toast-shadow);max-height:var(--toastify-toast-max-height);font-family:var(--toastify-font-family);z-index:0;display:flex;flex:1 auto;align-items:center;word-break:break-word}@media only screen and (max-width: 480px){.Toastify__toast-container{width:100vw;left:env(safe-area-inset-left);margin:0}.Toastify__toast-container--top-left,.Toastify__toast-container--top-center,.Toastify__toast-container--top-right{top:env(safe-area-inset-top);transform:translate(0)}.Toastify__toast-container--bottom-left,.Toastify__toast-container--bottom-center,.Toastify__toast-container--bottom-right{bottom:env(safe-area-inset-bottom);transform:translate(0)}.Toastify__toast-container--rtl{right:env(safe-area-inset-right);left:initial}.Toastify__toast{--toastify-toast-width: 100%;margin-bottom:0;border-radius:0}}.Toastify__toast-container[data-stacked=true]{width:var(--toastify-toast-width)}.Toastify__toast--stacked{position:absolute;width:100%;transform:translate3d(0,var(--y),0) scale(var(--s));transition:transform .3s}.Toastify__toast--stacked[data-collapsed] .Toastify__toast-body,.Toastify__toast--stacked[data-collapsed] .Toastify__close-button{transition:opacity .1s}.Toastify__toast--stacked[data-collapsed=false]{overflow:visible}.Toastify__toast--stacked[data-collapsed=true]:not(:last-child)>*{opacity:0}.Toastify__toast--stacked:after{content:"";position:absolute;left:0;right:0;height:calc(var(--g) * 1px);bottom:100%}.Toastify__toast--stacked[data-pos=top]{top:0}.Toastify__toast--stacked[data-pos=bot]{bottom:0}.Toastify__toast--stacked[data-pos=bot].Toastify__toast--stacked:before{transform-origin:top}.Toastify__toast--stacked[data-pos=top].Toastify__toast--stacked:before{transform-origin:bottom}.Toastify__toast--stacked:before{content:"";position:absolute;left:0;right:0;bottom:0;height:100%;transform:scaleY(3);z-index:-1}.Toastify__toast--rtl{direction:rtl}.Toastify__toast--close-on-click{cursor:pointer}.Toastify__toast-icon{margin-inline-end:10px;width:22px;flex-shrink:0;display:flex}.Toastify--animate{animation-fill-mode:both;animation-duration:.5s}.Toastify--animate-icon{animation-fill-mode:both;animation-duration:.3s}.Toastify__toast-theme--dark{background:var(--toastify-color-dark);color:var(--toastify-text-color-dark)}.Toastify__toast-theme--light,.Toastify__toast-theme--colored.Toastify__toast--default{background:var(--toastify-color-light);color:var(--toastify-text-color-light)}.Toastify__toast-theme--colored.Toastify__toast--info{color:var(--toastify-text-color-info);background:var(--toastify-color-info)}.Toastify__toast-theme--colored.Toastify__toast--success{color:var(--toastify-text-color-success);background:var(--toastify-color-success)}.Toastify__toast-theme--colored.Toastify__toast--warning{color:var(--toastify-text-color-warning);background:var(--toastify-color-warning)}.Toastify__toast-theme--colored.Toastify__toast--error{color:var(--toastify-text-color-error);background:var(--toastify-color-error)}.Toastify__progress-bar-theme--light{background:var(--toastify-color-progress-light)}.Toastify__progress-bar-theme--dark{background:var(--toastify-color-progress-dark)}.Toastify__progress-bar--info{background:var(--toastify-color-progress-info)}.Toastify__progress-bar--success{background:var(--toastify-color-progress-success)}.Toastify__progress-bar--warning{background:var(--toastify-color-progress-warning)}.Toastify__progress-bar--error{background:var(--toastify-color-progress-error)}.Toastify__progress-bar-theme--colored.Toastify__progress-bar--info,.Toastify__progress-bar-theme--colored.Toastify__progress-bar--success,.Toastify__progress-bar-theme--colored.Toastify__progress-bar--warning,.Toastify__progress-bar-theme--colored.Toastify__progress-bar--error{background:var(--toastify-color-transparent)}.Toastify__close-button{color:#fff;position:absolute;top:6px;right:6px;background:transparent;outline:none;border:none;padding:0;cursor:pointer;opacity:.7;transition:.3s ease;z-index:1}.Toastify__toast--rtl .Toastify__close-button{left:6px;right:unset}.Toastify__close-button--light{color:#000;opacity:.3}.Toastify__close-button>svg{fill:currentColor;height:16px;width:14px}.Toastify__close-button:hover,.Toastify__close-button:focus{opacity:1}@keyframes Toastify__trackProgress{0%{transform:scaleX(1)}to{transform:scaleX(0)}}.Toastify__progress-bar{position:absolute;bottom:0;left:0;width:100%;height:100%;z-index:1;opacity:.7;transform-origin:left}.Toastify__progress-bar--animated{animation:Toastify__trackProgress linear 1 forwards}.Toastify__progress-bar--controlled{transition:transform .2s}.Toastify__progress-bar--rtl{right:0;left:initial;transform-origin:right;border-bottom-left-radius:initial}.Toastify__progress-bar--wrp{position:absolute;overflow:hidden;bottom:0;left:0;width:100%;height:5px;border-bottom-left-radius:var(--toastify-toast-bd-radius);border-bottom-right-radius:var(--toastify-toast-bd-radius)}.Toastify__progress-bar--wrp[data-hidden=true]{opacity:0}.Toastify__progress-bar--bg{opacity:var(--toastify-color-progress-bgo);width:100%;height:100%}.Toastify__spinner{width:20px;height:20px;box-sizing:border-box;border:2px solid;border-radius:100%;border-color:var(--toastify-spinner-color-empty-area);border-right-color:var(--toastify-spinner-color);animation:Toastify__spin .65s linear infinite}@keyframes Toastify__bounceInRight{0%,60%,75%,90%,to{animation-timing-function:cubic-bezier(.215,.61,.355,1)}0%{opacity:0;transform:translate3d(3000px,0,0)}60%{opacity:1;transform:translate3d(-25px,0,0)}75%{transform:translate3d(10px,0,0)}90%{transform:translate3d(-5px,0,0)}to{transform:none}}@keyframes Toastify__bounceOutRight{20%{opacity:1;transform:translate3d(-20px,var(--y),0)}to{opacity:0;transform:translate3d(2000px,var(--y),0)}}@keyframes Toastify__bounceInLeft{0%,60%,75%,90%,to{animation-timing-function:cubic-bezier(.215,.61,.355,1)}0%{opacity:0;transform:translate3d(-3000px,0,0)}60%{opacity:1;transform:translate3d(25px,0,0)}75%{transform:translate3d(-10px,0,0)}90%{transform:translate3d(5px,0,0)}to{transform:none}}@keyframes Toastify__bounceOutLeft{20%{opacity:1;transform:translate3d(20px,var(--y),0)}to{opacity:0;transform:translate3d(-2000px,var(--y),0)}}@keyframes Toastify__bounceInUp{0%,60%,75%,90%,to{animation-timing-function:cubic-bezier(.215,.61,.355,1)}0%{opacity:0;transform:translate3d(0,3000px,0)}60%{opacity:1;transform:translate3d(0,-20px,0)}75%{transform:translate3d(0,10px,0)}90%{transform:translate3d(0,-5px,0)}to{transform:translateZ(0)}}@keyframes Toastify__bounceOutUp{20%{transform:translate3d(0,calc(var(--y) - 10px),0)}40%,45%{opacity:1;transform:translate3d(0,calc(var(--y) + 20px),0)}to{opacity:0;transform:translate3d(0,-2000px,0)}}@keyframes Toastify__bounceInDown{0%,60%,75%,90%,to{animation-timing-function:cubic-bezier(.215,.61,.355,1)}0%{opacity:0;transform:translate3d(0,-3000px,0)}60%{opacity:1;transform:translate3d(0,25px,0)}75%{transform:translate3d(0,-10px,0)}90%{transform:translate3d(0,5px,0)}to{transform:none}}@keyframes Toastify__bounceOutDown{20%{transform:translate3d(0,calc(var(--y) - 10px),0)}40%,45%{opacity:1;transform:translate3d(0,calc(var(--y) + 20px),0)}to{opacity:0;transform:translate3d(0,2000px,0)}}.Toastify__bounce-enter--top-left,.Toastify__bounce-enter--bottom-left{animation-name:Toastify__bounceInLeft}.Toastify__bounce-enter--top-right,.Toastify__bounce-enter--bottom-right{animation-name:Toastify__bounceInRight}.Toastify__bounce-enter--top-center{animation-name:Toastify__bounceInDown}.Toastify__bounce-enter--bottom-center{animation-name:Toastify__bounceInUp}.Toastify__bounce-exit--top-left,.Toastify__bounce-exit--bottom-left{animation-name:Toastify__bounceOutLeft}.Toastify__bounce-exit--top-right,.Toastify__bounce-exit--bottom-right{animation-name:Toastify__bounceOutRight}.Toastify__bounce-exit--top-center{animation-name:Toastify__bounceOutUp}.Toastify__bounce-exit--bottom-center{animation-name:Toastify__bounceOutDown}@keyframes Toastify__zoomIn{0%{opacity:0;transform:scale3d(.3,.3,.3)}50%{opacity:1}}@keyframes Toastify__zoomOut{0%{opacity:1}50%{opacity:0;transform:translate3d(0,var(--y),0) scale3d(.3,.3,.3)}to{opacity:0}}.Toastify__zoom-enter{animation-name:Toastify__zoomIn}.Toastify__zoom-exit{animation-name:Toastify__zoomOut}@keyframes Toastify__flipIn{0%{transform:perspective(400px) rotateX(90deg);animation-timing-function:ease-in;opacity:0}40%{transform:perspective(400px) rotateX(-20deg);animation-timing-function:ease-in}60%{transform:perspective(400px) rotateX(10deg);opacity:1}80%{transform:perspective(400px) rotateX(-5deg)}to{transform:perspective(400px)}}@keyframes Toastify__flipOut{0%{transform:translate3d(0,var(--y),0) perspective(400px)}30%{transform:translate3d(0,var(--y),0) perspective(400px) rotateX(-20deg);opacity:1}to{transform:translate3d(0,var(--y),0) perspective(400px) rotateX(90deg);opacity:0}}.Toastify__flip-enter{animation-name:Toastify__flipIn}.Toastify__flip-exit{animation-name:Toastify__flipOut}@keyframes Toastify__slideInRight{0%{transform:translate3d(110%,0,0);visibility:visible}to{transform:translate3d(0,var(--y),0)}}@keyframes Toastify__slideInLeft{0%{transform:translate3d(-110%,0,0);visibility:visible}to{transform:translate3d(0,var(--y),0)}}@keyframes Toastify__slideInUp{0%{transform:translate3d(0,110%,0);visibility:visible}to{transform:translate3d(0,var(--y),0)}}@keyframes Toastify__slideInDown{0%{transform:translate3d(0,-110%,0);visibility:visible}to{transform:translate3d(0,var(--y),0)}}@keyframes Toastify__slideOutRight{0%{transform:translate3d(0,var(--y),0)}to{visibility:hidden;transform:translate3d(110%,var(--y),0)}}@keyframes Toastify__slideOutLeft{0%{transform:translate3d(0,var(--y),0)}to{visibility:hidden;transform:translate3d(-110%,var(--y),0)}}@keyframes Toastify__slideOutDown{0%{transform:translate3d(0,var(--y),0)}to{visibility:hidden;transform:translate3d(0,500px,0)}}@keyframes Toastify__slideOutUp{0%{transform:translate3d(0,var(--y),0)}to{visibility:hidden;transform:translate3d(0,-500px,0)}}.Toastify__slide-enter--top-left,.Toastify__slide-enter--bottom-left{animation-name:Toastify__slideInLeft}.Toastify__slide-enter--top-right,.Toastify__slide-enter--bottom-right{animation-name:Toastify__slideInRight}.Toastify__slide-enter--top-center{animation-name:Toastify__slideInDown}.Toastify__slide-enter--bottom-center{animation-name:Toastify__slideInUp}.Toastify__slide-exit--top-left,.Toastify__slide-exit--bottom-left{animation-name:Toastify__slideOutLeft;animation-timing-function:ease-in;animation-duration:.3s}.Toastify__slide-exit--top-right,.Toastify__slide-exit--bottom-right{animation-name:Toastify__slideOutRight;animation-timing-function:ease-in;animation-duration:.3s}.Toastify__slide-exit--top-center{animation-name:Toastify__slideOutUp;animation-timing-function:ease-in;animation-duration:.3s}.Toastify__slide-exit--bottom-center{animation-name:Toastify__slideOutDown;animation-timing-function:ease-in;animation-duration:.3s}@keyframes Toastify__spin{0%{transform:rotate(0)}to{transform:rotate(360deg)}}
+</style>
+    <!--  https://github.com/webpack/webpack/issues/2882#issuecomment-280906981-->
+    <base href="/">
+    <!-- title -->
+    <title>Alpaca - Login</title>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Trade with algorithms, connect with apps, and build services with our easy to use APIs for crypto and stock trading.">
+    <!-- open graph and twitter card meta tags -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Alpaca - Crypto, Stock Trading API">
+    <meta property="og:description" content="Trade with algorithms, connect with apps, and build services with our easy to use APIs for crypto and stock trading.">
+    <meta property="og:image" content="https://alpaca.markets/static/images/meta-image-homepage.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Alpaca - Crypto, Stock Trading API">
+    <meta name="twitter:description" content="Trade with algorithms, connect with apps, and build services with our easy to use APIs for crypto and stock trading.">
+    <meta name="twitter:image" content="https://alpaca.markets/static/images/meta-image-homepage.png">
+    <!-- critical assets -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="shortcut icon" href="./favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;1,400&amp;family=Roboto+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <!-- this in-line style lets the browser quickly render while the rest of the page is still loading -->
+    <style>
+      .utils__loadingPage {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        z-index: 99999;
+      }
+
+      .wireframe * {
+        outline: 1px solid red;
+      }
+    </style>
+    <!-- inter font -->
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <!-- app env -->
+    <script type="text/javascript" async="" src="https://widget.intercom.io/widget/p7a9jdob"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-F38QD4C4M3&amp;cx=c&amp;gtm=4e6562"></script><script src="https://www.redditstatic.com/ads/pixel.js" async=""></script><script type="text/javascript" src="/env.js"></script>
+    <!-- trading view datafeed -->
+    <script src="/datafeeds/udf/dist/bundle.js"></script>
+    <!-- reddit conversion pixel -->
+    <script>
+      var i = new Image();
+      i.src =
+        "https://alb.reddit.com/snoo.gif?q=CAAHAAABAAoACQAAABfdxKrRAA==&s=bsWAEN9dDKVpVjcpl6-5Qys8APPN4X7PaN6ArKnBA5M=";
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-835481437"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "AW-835481437");
+    </script>
+    <!-- intercom -->
+    <script>
+      (function () {
+        var w = window;
+        var ic = w.Intercom;
+        if (typeof ic === "function") {
+          ic("reattach_activator");
+          ic("update", w.intercomSettings);
+        } else {
+          var d = document;
+          var i = function () {
+            i.c(arguments);
+          };
+          i.q = [];
+          i.c = function (args) {
+            i.q.push(args);
+          };
+          w.Intercom = i;
+          var l = function () {
+            var s = d.createElement("script");
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://widget.intercom.io/widget/p7a9jdob";
+            var x = d.getElementsByTagName("script")[0];
+            x.parentNode.insertBefore(s, x);
+          };
+          if (document.readyState === "complete") {
+            l();
+          } else if (w.attachEvent) {
+            w.attachEvent("onload", l);
+          } else {
+            w.addEventListener("load", l, false);
+          }
+        }
+      })();
+    </script>
+    <!-- google maps -->
+    <script type="text/javascript">
+      const scriptTag = document.createElement("script");
+      scriptTag.type = "text/javascript";
+      scriptTag.src = `https://maps.googleapis.com/maps/api/js?key=${window.env.GOOGLE_MAPS_API_KEY}&libraries=places`;
+      document.head.appendChild(scriptTag);
+    </script><script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlSYRxzWO5NxgB-vuBKKcEkkHyojcQ7nw&amp;libraries=places"></script>
+
+    <!-- reddit pixel -->
+    <script type="text/javascript">
+      !(function (w, d) {
+        if (!w.rdt) {
+          var p = (w.rdt = function () {
+            p.sendEvent
+              ? p.sendEvent.apply(p, arguments)
+              : p.callQueue.push(arguments);
+          });
+          p.callQueue = [];
+          var t = d.createElement("script");
+          ((t.src = "https://www.redditstatic.com/ads/pixel.js"),
+            (t.async = !0));
+          var s = d.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(t, s);
+        }
+      })(window, document);
+    </script>
+    <script type="module" crossorigin="" src="/assets/v3.12.1882/index-ChpzBGWl.entry.js"></script>
+    <link rel="stylesheet" crossorigin="" href="/assets/v3.12.1882/css/index-5kL-Tb1f.chunk.css">
+    <link rel="prefetch" href="/assets/v3.12.1882/js/App-CvxG_3Wr.chunk.js">
+    <link rel="prefetch" href="/assets/v3.12.1882/js/index-zXvYlxzV.chunk.js">
+    <link rel="prefetch" href="/assets/v3.12.1882/css/App-YkSu47zC.chunk.css">
+  <link rel="stylesheet" crossorigin="" href="/assets/v3.12.1882/css/App-YkSu47zC.chunk.css"><link rel="stylesheet" type="text/css" href="https://fonts.cdnfonts.com/css/graphik"><link rel="stylesheet" type="text/css" href="https://files.alpaca.markets/fonts/gilroy/MyFontsWebfontsKit.css"><link rel="stylesheet" type="text/css" href="https://files.alpaca.markets/fonts/carnas/stylesheet.css"><link rel="stylesheet" type="text/css" href="https://files.alpaca.markets/fonts/Formular/stylesheet.css"><link rel="stylesheet" type="text/css" href="https://files.alpaca.markets/fonts/BROmega/stylesheet.css"><link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:400,700,900"><link rel="stylesheet" type="text/css" href="/resources/fonts/font-icomoon/style.css"><link rel="stylesheet" type="text/css" href="/resources/fonts/font-linearicons/style.css"><link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"><script src="https://js.stripe.com/clover/stripe.js"></script></head>
+
+  <body classname="tracking-[-0.02em]">
+    <noscript>Sorry, you'll need JavaScript to run this app.</noscript>
+    <!-- reddit conversion pixel if noscript -->
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://alb.reddit.com/snoo.gif?q=CAAHAAABAAoACQAAABfdxKrRAA==&amp;s=bsWAEN9dDKVpVjcpl6-5Qys8APPN4X7PaN6ArKnBA5M="
+      />
+    </noscript>
+    <!-- for react app -->
+    <div id="root"><div class="p-6 md:py-28 flex flex-col gap-6 md:gap-28 min-h-screen"><div class="transition-all ease-in-out"><div class="flex flex-col gap-4 min-w-fit w-full md:w-[400px] mx-auto transition-all ease-in-out"><div class="flex justify-start items-center gap-4 rounded-lg py-2 px-4 bg-light-blue-50 border border-blue-400"><div class="flex flex-col gap-1"><div class="flex items-center justify-start gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256" class="text-light-blue-600"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm16-40a8,8,0,0,1-8,8,16,16,0,0,1-16-16V128a8,8,0,0,1,0-16,16,16,0,0,1,16,16v40A8,8,0,0,1,144,176ZM112,84a12,12,0,1,1,12,12A12,12,0,0,1,112,84Z"></path></svg><div class="text-base m-0 p-0 font-semibold text-indigo-600"><h3 class="text-base font-semibold p-0 m-0 text-light-blue-600">System Maintenance: Saturday May 9, 9 - 10 am ET.</h3></div></div><div class="text-sm m-0 p-0 text-gray-700"><p class="text-sm text-gray-700 p-0 m-0">Some services may be unavailable. We apologize for any inconvenience this may cause.</p></div></div></div><svg viewBox="0 0 200 200" class="flex-shrink-0 h-[40px] w-[40px] rounded-md text-yellow-400"><path fill-rule="evenodd" clip-rule="evenodd" d="M200 0H0V200H70.3297L78.2679 115.944H77.5265C70.9978 115.945 65.5978 113.605 60.6286 109.345C55.6595 105.084 52.3617 99.1813 51.3269 92.6953L66.7172 82.6848V82.5605C66.7167 75.7379 69.3342 69.1785 74.0238 64.2506C78.7133 59.3227 85.1127 56.4069 91.8871 56.1114V56.0838H96.4634V39.9676C99.7079 39.9676 102.847 41.1237 105.325 43.231C107.803 45.3382 109.46 48.2603 110 51.4792H110.192V39.9676C112.631 39.9676 115.026 40.6213 117.131 41.8615C119.235 43.1016 120.973 44.8834 122.166 47.0236C123.359 49.1638 123.964 51.5852 123.919 54.0386C123.874 56.4921 123.179 58.8891 121.908 60.9832C126.042 63.7014 129.437 67.4136 131.786 71.784C134.135 76.1545 135.364 81.0453 135.362 86.014V190.194C135.362 191.721 135.965 193.185 137.038 194.264C138.111 195.343 139.566 195.95 141.083 195.95H200V0Z" fill="currentColor"></path><mask id="mask0_1_3" maskUnits="userSpaceOnUse" x="0" y="0" width="200" height="200" style="mask-type: alpha;"><path d="M100 200C155.228 200 200 155.228 200 100C200 44.7715 155.228 0 100 0C44.7715 0 0 44.7715 0 100C0 155.228 44.7715 200 100 200Z" fill="currentColor"></path></mask><g mask="url(#mask0_1_3)"><path d="M80.5537 84.5046C80.5548 83.695 80.8769 82.9189 81.4493 82.3464C82.0216 81.7739 82.7976 81.4518 83.607 81.4506H92.4959C92.4959 83.0717 91.8521 84.6264 90.706 85.7727C89.56 86.919 88.0056 87.563 86.3848 87.563H80.2737L80.5537 84.5046Z" fill="currentColor"></path></g></svg><div><h1 class="font-semibold text-xl mb-4">Login</h1><div class="text-md text-zinc-500">Enter your email and password to login.</div></div><form class="flex flex-col gap-1"><div class="flex flex-col gap-1 border-gray-200"><label class="flex items-center justify-start gap-1 text-sm font-semibold text-gray-700">Email</label><div class="relative"><input class="block w-full h-9 rounded border bg-white px-2 text-sm font-medium transition-colors focus:ring-0 disabled:cursor-not-allowed disabled:border-gray-300 disabled:text-gray-300 disabled:placeholder:text-gray-300 focus:border-gray-500 border-gray-400 placeholder-shown:border-gray-400 text-gray-700 placeholder-gray-400" type="email" placeholder="me@example.com" data-testid="email-input" name="email" value="" style="outline: unset;"></div><p class="m-0 flex min-h-4 items-center justify-between gap-4 p-0 text-xs font-normal text-gray-500" aria-hidden="true"><span class=""></span></p></div><div class="flex flex-col gap-1 border-gray-200"><label class="flex items-center justify-start gap-1 text-sm font-semibold text-gray-700">Password</label><div class="relative"><input class="block w-full h-9 rounded border bg-white px-2 text-sm font-medium transition-colors focus:ring-0 disabled:cursor-not-allowed disabled:border-gray-300 disabled:text-gray-300 disabled:placeholder:text-gray-300 pr-9 focus:border-gray-500 border-gray-400 placeholder-shown:border-gray-400 text-gray-700 placeholder-gray-400" type="password" placeholder="••••••••••••••••" data-testid="password-input" name="password" value="" style="outline: unset;"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="flex-shrink-0 h-[20px] w-[20px] absolute top-1/2 -translate-y-1/2 transform text-xs text-gray-700 font-semibold right-2 cursor-pointer stroke-2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.451 10.451 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.894 7.894L21 21m-3.228-3.228-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88"></path></svg></div><p class="m-0 flex min-h-4 items-center justify-between gap-4 p-0 text-xs font-normal text-gray-500" aria-hidden="true"><span class=""></span></p></div><div class="flex items-center justify-between"><div class="flex items-start items-center space-x-2"><div tabindex="0" class="min-h-4 min-w-4 h-4 w-4 cursor-pointer flex items-center justify-center rounded-[5px] border border-zinc-300 bg-white focus:ring-yellow-400" id="rememberMe"></div><label class="text-zinc-900 text-sm cursor-pointer">Remember me</label></div><p class="m-0 p-0 slashed-zero text-zinc-900 underline text-sm cursor-pointer" data-testid="forgot-password-link" style="font-weight: 450;">Forgot password?</p></div><input type="submit" class="hidden"></form><div><button type="button" data-testid="login-button" class="flex items-center justify-center p-2.5 text-center focus:outline-none h-9 gap-1 py-2 px-4 text-sm font-medium rounded ease-linear transition-colors text-cool-gray-800 bg-yellow-300 hover:bg-yellow-200 focus:bg-yellow-200 active:bg-yellow-100 ring-transparent focus:ring-transparent disabled:text-cool-gray-500 disabled:bg-cool-gray-100 disabled:opacity-100 w-full mb-4">Continue</button><p class="m-0 p-0 slashed-zero text-sm text-zinc-500">Don't have an account yet? <a href="/signup" class="text-zinc-900 text-sm underline hover:underline" data-testid="create-account-link" style="font-weight: 450;">Create an account</a></p></div></div></div><footer class="w-full flex flex-col gap-4 md:max-w-5xl my-0 mx-auto text-xs leading-5 transition-all ease-in-out mt-auto"><div class="flex flex-col gap-2 text-zinc-400"><div><p class="m-0 p-0 slashed-zero leading-5 text-inherit">© 2026 AlpacaDB, Inc. All rights reserved.</p><p class="m-0 p-0 slashed-zero leading-5 text-inherit">© 2026 Alpaca Securities LLC All rights reserved.</p><p class="m-0 p-0 slashed-zero leading-5 text-inherit">© 2026 Alpaca Crypto LLC All rights reserved.</p></div><p class="m-0 p-0 slashed-zero leading-5 text-inherit">Securities Brokerage services are provided by Alpaca Securities , member FINRA/SIPC, a wholly-owned subsidiary of AlpacaDB, Inc. Technology and services are offered by AlpacaDB, Inc.</p><p class="m-0 p-0 slashed-zero leading-5 text-inherit">Cryptocurrency services are made available by Alpaca Crypto LLC ("Alpaca Crypto"), a FinCEN registered money services business (NMLS # 2160858), and a wholly-owned subsidiary of AlpacaDB, Inc. Alpaca Crypto is not a member of SIPC or FINRA. Cryptocurrencies are not stocks and your cryptocurrency investments are not protected by either FDIC or SIPC. Please see the Disclosure Library for more information.</p><p class="m-0 p-0 slashed-zero leading-5 text-inherit">This is not an offer, solicitation of an offer, or advice to buy or sell securities or cryptocurrencies, or open a brokerage account or cryptocurrency account in any jurisdiction where Alpaca Securities, Alpaca Crypto, are not registered or licensed, as applicable.</p></div><div class="flex items-center gap-2 text-zinc-500"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm16-40a8,8,0,0,1-8,8,16,16,0,0,1-16-16V128a8,8,0,0,1,0-16,16,16,0,0,1,16,16v40A8,8,0,0,1,144,176ZM112,84a12,12,0,1,1,12,12A12,12,0,0,1,112,84Z"></path></svg><div class="cursor-pointer underline" style="font-weight: 450;">View important disclosures</div></div></footer></div><section class="Toastify" aria-live="polite" aria-atomic="false" aria-relevant="additions text" aria-label="Notifications Alt+T"></section></div>
+    <!-- small cookies helper -->
+    <!-- do not remove; you will break everything -->
+    <script type="text/javascript">
+      !(function (e) {
+        var n = !1;
+        if (
+          ("function" == typeof define && define.amd && (define(e), (n = !0)),
+          "object" == typeof exports && ((module.exports = e()), (n = !0)),
+          !n)
+        ) {
+          var o = window.Cookies,
+            t = (window.Cookies = e());
+          t.noConflict = function () {
+            return ((window.Cookies = o), t);
+          };
+        }
+      })(function () {
+        function g() {
+          for (var e = 0, n = {}; e < arguments.length; e++) {
+            var o = arguments[e];
+            for (var t in o) n[t] = o[t];
+          }
+          return n;
+        }
+        return (function e(l) {
+          function C(e, n, o) {
+            var t;
+            if ("undefined" != typeof document) {
+              if (1 < arguments.length) {
+                if (
+                  "number" ==
+                  typeof (o = g({ path: "/" }, C.defaults, o)).expires
+                ) {
+                  var r = new Date();
+                  (r.setMilliseconds(r.getMilliseconds() + 864e5 * o.expires),
+                    (o.expires = r));
+                }
+                o.expires = o.expires ? o.expires.toUTCString() : "";
+                try {
+                  ((t = JSON.stringify(n)), /^[\{\[]/.test(t) && (n = t));
+                } catch (e) {}
+                ((n = l.write
+                  ? l.write(n, e)
+                  : encodeURIComponent(String(n)).replace(
+                      /%(23|24|26|2B|3A|3C|3E|3D|2F|3F|40|5B|5D|5E|60|7B|7D|7C)/g,
+                      decodeURIComponent,
+                    )),
+                  (e = (e = (e = encodeURIComponent(String(e))).replace(
+                    /%(23|24|26|2B|5E|60|7C)/g,
+                    decodeURIComponent,
+                  )).replace(/[\(\)]/g, escape)));
+                var i = "";
+                for (var c in o)
+                  o[c] && ((i += "; " + c), !0 !== o[c] && (i += "=" + o[c]));
+                return (document.cookie = e + "=" + n + i);
+              }
+              e || (t = {});
+              for (
+                var a = document.cookie ? document.cookie.split("; ") : [],
+                  s = /(%[0-9A-Z]{2})+/g,
+                  f = 0;
+                f < a.length;
+                f++
+              ) {
+                var p = a[f].split("="),
+                  d = p.slice(1).join("=");
+                this.json || '"' !== d.charAt(0) || (d = d.slice(1, -1));
+                try {
+                  var u = p[0].replace(s, decodeURIComponent);
+                  if (
+                    ((d = l.read
+                      ? l.read(d, u)
+                      : l(d, u) || d.replace(s, decodeURIComponent)),
+                    this.json)
+                  )
+                    try {
+                      d = JSON.parse(d);
+                    } catch (e) {}
+                  if (e === u) {
+                    t = d;
+                    break;
+                  }
+                  e || (t[u] = d);
+                } catch (e) {}
+              }
+              return t;
+            }
+          }
+          return (
+            ((C.set = C).get = function (e) {
+              return C.call(C, e);
+            }),
+            (C.getJSON = function () {
+              return C.apply({ json: !0 }, [].slice.call(arguments));
+            }),
+            (C.defaults = {}),
+            (C.remove = function (e, n) {
+              C(e, "", g(n, { expires: -1 }));
+            }),
+            (C.withConverter = e),
+            C
+          );
+        })(function () {});
+      });
+
+      // empty object to store query string values
+      let queryStringValues = {};
+
+      // get the query string from the current URL
+      const search = location.search.substring(1);
+
+      // if the query string is not empty, parse it as JSON and store
+      if (search) {
+        queryStringValues = JSON.parse(
+          '{"' +
+            decodeURI(search)
+              .replace(/"/g, '\\"')
+              .replace(/&/g, '","')
+              .replace(/=/g, '":"') +
+            '"}',
+        );
+
+        // get specific query string values and store them as cookies if they exist
+        const {
+          ref_by,
+          utm_campaign,
+          utm_medium,
+          utm_source,
+          utm_content,
+          utm_term,
+        } = queryStringValues;
+
+        if (ref_by && !Cookies.get("alpaca_ref_by")) {
+          Cookies.set("alpaca_ref_by", ref_by, {
+            domain: "alpaca.markets",
+            expires: 30,
+          });
+        }
+        if (utm_campaign && !Cookies.get("alpaca_referrer_campaign_name")) {
+          Cookies.set("alpaca_referrer_campaign_name", utm_campaign, {
+            domain: "alpaca.markets",
+            expires: 30,
+          });
+        }
+        if (utm_medium && !Cookies.get("alpaca_referrer_campaign_medium")) {
+          Cookies.set("alpaca_referrer_campaign_medium", utm_medium, {
+            domain: "alpaca.markets",
+            expires: 30,
+          });
+        }
+        if (utm_source && !Cookies.get("alpaca_referrer_campaign_source")) {
+          Cookies.set("alpaca_referrer_campaign_source", utm_source, {
+            domain: "alpaca.markets",
+            expires: 30,
+          });
+        }
+        if (utm_content && !Cookies.get("alpaca_referrer_campaign_content")) {
+          Cookies.set("alpaca_referrer_campaign_content", utm_content, {
+            domain: "alpaca.markets",
+            expires: 30,
+          });
+        }
+        if (utm_term && !Cookies.get("alpaca_referrer_campaign_term")) {
+          (Cookies.set("alpaca_referrer_campaign_term", utm_term),
+            { domain: "alpaca.markets", expires: 30 });
+        }
+      }
+
+      // if the page was accessed via a referring URL, extract the domain of the referring URL and store it as a cookie
+      if (document.referrer && document.referrer !== "") {
+        const matches = document.referrer.match(
+          /^https?\:\/\/([^\/?#]+)(?:[\/?#]|$)/i,
+        );
+        const refDomain = matches && matches[1];
+
+        // only store the referring URL if its domain is not the same as the current domain
+        if (refDomain && refDomain.lastIndexOf(window.location.host, 0) !== 0) {
+          Cookies.set("alpaca_referrer_url", document.referrer, {
+            domain: "alpaca.markets",
+            expires: 30,
+          });
+
+          // set the campaign source to the domain if the campaign source is not set
+          if (!Cookies.get("alpaca_referrer_campaign_source")) {
+            Cookies.set("alpaca_referrer_campaign_source", refDomain, {
+              domain: "alpaca.markets",
+              expires: 30,
+            });
+          }
+        }
+      }
+    </script>
+    <script type="text/javascript">
+      // the css files to load
+      const lazyStyles = [
+        "https://fonts.cdnfonts.com/css/graphik",
+        "https://files.alpaca.markets/fonts/gilroy/MyFontsWebfontsKit.css",
+        "https://files.alpaca.markets/fonts/carnas/stylesheet.css",
+        "https://files.alpaca.markets/fonts/Formular/stylesheet.css",
+        "https://files.alpaca.markets/fonts/BROmega/stylesheet.css",
+        "https://fonts.googleapis.com/css?family=Lato:400,700,900",
+        "/resources/fonts/font-icomoon/style.css",
+        "/resources/fonts/font-linearicons/style.css",
+        "https://use.fontawesome.com/releases/v5.3.1/css/all.css",
+        "https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css",
+      ];
+
+      // append links to head of the document
+      function lazyLoadCSS(href) {
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.type = "text/css";
+        link.href = href;
+        document.head.appendChild(link);
+      }
+
+      window.addEventListener("load", function () {
+        // loop through the files and load each one
+        for (let i = 0; i < lazyStyles.length; i++) {
+          lazyLoadCSS(lazyStyles[i]);
+        }
+      });
+    </script>
+    <!-- Vite entry point -->
+  
+
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-F38QD4C4M3"></script><iframe name="__privateStripeController2711" frameborder="0" allowtransparency="true" scrolling="no" role="presentation" allow="payment *" src="https://js.stripe.com/v3/controller-with-preconnect-d6f301f5db2ee5e4f4e49fadaa5fa80c.html#__shared_params__[version]=clover&amp;__shared_params__[light_experiment_assignments]=%7B%22token%22%3A%227dddbbae-dc8a-4685-a5c5-5697595cbeb3%22%2C%22assignments%22%3A%7B%22link_ewcs_prewarm_experiment_v2%22%3A%22treatment%22%7D%7D&amp;apiKey=pk_live_CevMhXtDk0dcoa1Z335v1Wec&amp;apiVersion=2025-09-30.clover&amp;stripeJsId=7dddbbae-dc8a-4685-a5c5-5697595cbeb3&amp;stripeObjId=sobj-f9fef0bb-71a8-4205-9742-90656503b054&amp;firstStripeInstanceCreatedLatency=10&amp;controllerCount=1&amp;isCheckout=false&amp;stripeJsLoadTime=1778326175906&amp;manualBrowserDeprecationRollout=false&amp;mids[guid]=NA&amp;mids[muid]=0bb296a5-601c-4bfd-b5a4-baf6b9ab09f0e5063a&amp;mids[sid]=44a433a7-287e-4dbd-afcd-b700c27355295988d6&amp;referrer=https%3A%2F%2Fapp.alpaca.markets%2Faccount%2Flogin&amp;controllerId=__privateStripeController2711" aria-hidden="true" tabindex="-1" style="border-width: medium !important; border-style: none !important; border-color: currentcolor !important; border-image: initial !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;"></iframe><iframe name="__privateStripeMetricsController2710" frameborder="0" allowtransparency="true" scrolling="no" role="presentation" allow="payment *" src="https://js.stripe.com/v3/m-outer-3437aaddcdf6922d623e172c2d6f9278.html#url=https%3A%2F%2Fapp.alpaca.markets%2Faccount%2Flogin&amp;title=Alpaca%20-%20Login&amp;referrer=&amp;muid=0bb296a5-601c-4bfd-b5a4-baf6b9ab09f0e5063a&amp;sid=44a433a7-287e-4dbd-afcd-b700c27355295988d6&amp;version=6&amp;preview=false&amp;__shared_params__[version]=clover" aria-hidden="true" tabindex="-1" style="border-width: medium !important; border-style: none !important; border-color: currentcolor !important; border-image: initial !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;"></iframe></body></html>

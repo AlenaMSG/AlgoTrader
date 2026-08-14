@@ -27,7 +27,7 @@ class ConfigDialog(QDialog):
         # Hint
         hint = QLabel(
             "Obtén tus claves en <b>alpaca.markets → Paper Trading → API Keys</b>.<br>"
-            "Se guardarán en <code>Readme/config.txt</code>."
+            "Se guardarán en <code>.env</code> en la raíz del proyecto."
         )
         hint.setWordWrap(True)
         hint.setTextFormat(Qt.TextFormat.RichText)

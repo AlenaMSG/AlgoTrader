@@ -11,3 +11,6 @@ build/
 .vscode/
 Readme/config.txt
 *.log
+.env
+data_cache/
+models/

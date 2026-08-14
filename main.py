@@ -1,6 +1,7 @@
 import sys
+from pathlib import Path
 from PyQt6.QtWidgets import QApplication
-from PyQt6.QtGui import QPalette, QColor, QFont
+from PyQt6.QtGui import QPalette, QColor, QFont, QIcon
 from PyQt6.QtCore import Qt
 
 from src.config.config_manager import ConfigManager
@@ -48,6 +49,10 @@ def main() -> None:
     app = QApplication(sys.argv)
     app.setFont(QFont("Segoe UI", 10))
     _dark_palette(app)
+
+    icon_path = Path(__file__).parent / "Readme" / "icono.png"
+    if icon_path.exists():
+        app.setWindowIcon(QIcon(str(icon_path)))
 
     config = ConfigManager()
 

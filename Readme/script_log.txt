@@ -1,0 +1,23 @@
+PASO 1: login
+PASO 2: MFA check
+>>> 2FA REQUERIDO - escribe en el chat de Claude:
+    ! echo TU_CODIGO > C:\proyectos\AlgoTrader\Readme\mfa_code.txt
+Esperando hasta 5 minutos...
+Timeout MFA. Abortando.
+s MFA visibles: 6
+  [img] s1_after_login.png  url=https://app.alpaca.markets/brokerage/new-account
+URL post-login: https://app.alpaca.markets/brokerage/new-account
+INTENTO 1: paper/settings/api
+  [img] s2_settings_api.png  url=https://app.alpaca.markets/brokerage/new-account
+  url: https://app.alpaca.markets/brokerage/new-account
+  [img] s2b_settings_api_loaded.png  url=https://app.alpaca.markets/brokerage/new-account
+INTENTO 2: Paper Trading dropdown
+  [img] s3_pt_dropdown.png  url=https://app.alpaca.markets/brokerage/new-account
+  [img] s4_acct_mgmt.png  url=https://app.alpaca.markets/user/profile#manage-accounts
+  url: https://app.alpaca.markets/user/profile#manage-accounts
+  click 'Generate'
+  [img] s6_final.png  url=https://app.alpaca.markets/user/profile#manage-accounts
+OK guardado en C:\proyectos\AlgoTrader\Readme\config.txt
+API_KEY=PKCH432YZBGSR6LPZI3FSJ4TEV
+SECRET_KEY=CuTahXgwLerfhfczzVZp6eC8PanVHtX4iQdYBHW8pEtF
+

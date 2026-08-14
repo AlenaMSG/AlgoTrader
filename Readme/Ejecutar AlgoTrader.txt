@@ -1,0 +1,82 @@
+Para usar AlgoTrader desde Claude Code, el flujo es simple:                                 
+                                                                                              
+  ---                                                                                         
+  Lanzar la app
+                                                                                              
+  Escribe en el chat:                                       
+  ! C:\proyectos\AlgoTrader\AlgoTrader.bat
+  Eso activa el entorno virtual y arranca main.py. La ventana de la app aparece en tu
+  escritorio.
+
+  ---
+  Entrenar y analizar un símbolo
+
+  Una vez abierta la app:
+  1. Escribe el símbolo en el campo Símbolo (ej: AAPL, TSLA, NVDA)
+  2. Ajusta los Días de historial (por defecto 60, puedes poner hasta 365)
+  3. Haz clic en Entrenar y Analizar
+  4. Espera ~30 segundos — verás el progreso en la barra de estado
+  5. El resultado muestra:
+    - Señal: COMPRAR / VENDER / NEUTRAL
+    - Probabilidad de subida
+    - Ask/Bid en tiempo real con precio límite sugerido
+    - Métricas del modelo (precisión, recall)
+    - Top features del Random Forest
+
+  ---
+  Si necesitas regenerar las API keys o cambiaron
+
+  ! C:\proyectos\AlgoTrader\obtener_api_keys.bat
+  Ese script abre el proceso automático igual que hoy.
+
+  ---
+  Si la app pide credenciales al arrancar
+
+  Significa que Readme/config.txt fue borrado o movido. Ve a Configuración → Editar API Keys
+  dentro de la app y pega las keys manualmente.
+---------------------------------- *** -----------------------------------------------------
+
+Los símbolos son los tickers bursátiles — el código de cada empresa en la bolsa americana   
+  (NYSE/NASDAQ). Son los que usa Alpaca Paper Trading.      
+                                                                                              
+  ---
+  Ejemplos por sector: ( AAPL,MSFT,NVDA,TSLA,AMZN,GOOGL,META,JPM,SPY,QQQ )                                                       
+                                                            
+  ┌─────────┬───────────────────┬────────────────────────────┐
+  │ Símbolo           Empresa                  Sector         
+  ├─────────┼───────────────────┼────────────────────────────┤
+  │ AAPL    	│ Apple             	     Tecnología      
+  ├─────────┼───────────────────┼────────────────────────────┤
+  │ MSFT   	 	│ Microsoft         		 Tecnología      
+  ├─────────┼───────────────────┼────────────────────────────┤
+  │ NVDA    	│ Nvidia            		 Semiconductores 
+  ├─────────┼───────────────────┼────────────────────────────┤
+  │ TSLA    	│ Tesla             		 Vehículos eléctricos       			
+  ├─────────┼───────────────────┼────────────────────────────┤
+  │ AMZN    	│ Amazon            		 E-commerce / Cloud       
+  ├─────────┼───────────────────┼────────────────────────────┤
+  │ GOOGL   	│ Alphabet (Google) 		 Tecnología            
+  ├─────────┼───────────────────┼────────────────────────────┤
+  │ META    	│ Meta (Facebook)   		 Redes sociales         
+  ├─────────┼───────────────────┼────────────────────────────┤
+  │ JPM     	│ JPMorgan Chase    		 Banca             
+  ├─────────┼───────────────────┼────────────────────────────┤
+  │ SPY     	│ S&P 500 ETF       		 Índice (todas las grandes) 
+  ├─────────┼───────────────────┼────────────────────────────┤
+  │ QQQ     	│ Nasdaq 100 ETF   			 Índice tecnología       
+  └─────────┴───────────────────┴────────────────────────────┘
+
+  ---
+  ¿Se pueden entrenar todos?
+
+  Casi todos. La condición es que Alpaca tenga datos históricos del símbolo. Las limitaciones
+  son:
+
+  - Funciona: cualquier acción americana cotizada en NYSE o NASDAQ con volumen alto
+  - No funciona: acciones muy pequeñas sin volumen (pocos datos), criptos (distinto endpoint),
+   empresas no-estadounidenses (Inditex, BBVA, etc. no están)
+  - Si falla: la app muestra el error en el panel de métricas — simplemente prueba otro
+  símbolo
+
+  Los ETFs como SPY o QQQ son buenos para empezar porque tienen muchísimos datos y son muy
+  líquidos.
