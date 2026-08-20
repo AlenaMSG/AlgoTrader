@@ -15,6 +15,7 @@ Opcional (para alerta Telegram):
 from __future__ import annotations
 
 import csv
+import json
 import logging
 import os
 import sys
@@ -111,6 +112,45 @@ def export_csv(signals: list[dict]) -> None:
     log.info(f"scan_log.csv actualizado — {len(rows)} entradas ({log_path})")
 
 
+def save_pending_signals(signals: list[dict]) -> None:
+    """Guarda las señales del scan en pending_signals.json para el handler de Telegram."""
+    out_path  = PROJECT_ROOT / "pending_signals.json"
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+    def _safe(obj):
+        """Convierte tipos numpy a Python nativo para JSON."""
+        import numpy as np
+        if isinstance(obj, (np.floating, float)):
+            return float(obj)
+        if isinstance(obj, (np.integer, int)):
+            return int(obj)
+        if isinstance(obj, dict):
+            return {k: _safe(v) for k, v in obj.items()}
+        if isinstance(obj, (list, tuple, np.ndarray)):
+            return [_safe(i) for i in obj]
+        return obj
+
+    pending = {
+        "scan_timestamp": timestamp,
+        "signals": [
+            {
+                "symbol":          r["symbol"],
+                "signal":          r["signal"],
+                "pred_return":     _safe(r["pred_return"]),
+                "metrics":         _safe(r["metrics"]),
+                "backtest_metrics": _safe(
+                    r["backtest"]["metrics"] if r.get("backtest") else {}
+                ),
+                "stale_quote":     _safe(r["quote"]),
+            }
+            for r in signals
+        ],
+    }
+    with out_path.open("w", encoding="utf-8") as f:
+        json.dump(pending, f, ensure_ascii=False, indent=2)
+    log.info(f"pending_signals.json guardado — {len(signals)} señales ({out_path})")
+
+
 def send_telegram(signals: list[dict], errors: list[tuple[str, str]]) -> None:
     token   = os.getenv("TELEGRAM_TOKEN", "")
     chat_id = os.getenv("TELEGRAM_CHAT_ID", "")
@@ -151,6 +191,13 @@ def send_telegram(signals: list[dict], errors: list[tuple[str, str]]) -> None:
     if errors:
         lines.append(f"\n<i>⚠️ {len(errors)} símbolos con error</i>")
 
+    if strong:
+        lines.append("\n<b>Ejecutar desde Telegram:</b>")
+        for r in strong[:5]:
+            cmd = "buy" if "COMPRAR" in r["signal"] else "sell"
+            lines.append(f"  /{cmd} {r['symbol']}")
+    lines.append("\n/positions  /account  /signals  /help")
+
     ok = send_alert(token, chat_id, "\n".join(lines))
     log.info(f"Telegram: {'mensaje enviado' if ok else 'error al enviar'}")
 
@@ -158,4 +205,5 @@ def send_telegram(signals: list[dict], errors: list[tuple[str, str]]) -> None:
 if __name__ == "__main__":
     signals, errors = run_scan()
     export_csv(signals)
+    save_pending_signals(signals)
     send_telegram(signals, errors)

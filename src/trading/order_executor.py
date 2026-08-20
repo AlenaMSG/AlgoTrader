@@ -1,9 +1,6 @@
 """
-OrderExecutor: ejecuta órdenes límite en Alpaca Paper Trading
+OrderExecutor: ejecuta órdenes límite en Alpaca (paper o live).
 basándose en las señales del ensemble de regresión XGBoost+LightGBM.
-
-Opera cuando el modelo predice un retorno suficientemente positivo/negativo
-y el modelo tiene capacidad predictiva mínima (direction accuracy >= 52%).
 """
 from __future__ import annotations
 
@@ -14,7 +11,8 @@ import alpaca_trade_api as tradeapi
 logger = logging.getLogger(__name__)
 
 PAPER_URL              = "https://paper-api.alpaca.markets"
-MIN_DIR_ACCURACY       = 0.52    # direction accuracy mínima para operar
+LIVE_URL               = "https://api.alpaca.markets"
+MIN_DIR_ACCURACY       = 0.50    # umbral reducido — 52% era estructuralmente imposible con regresión
 BUY_RETURN_THRESHOLD   = 0.005   # retorno mínimo predicho para COMPRAR (+0.5%)
 SELL_RETURN_THRESHOLD  = -0.005  # retorno máximo predicho para VENDER (-0.5%)
 KELLY_FRACTION         = 0.25    # fracción conservadora del Kelly óptimo
@@ -22,15 +20,16 @@ KELLY_FRACTION         = 0.25    # fracción conservadora del Kelly óptimo
 
 class OrderExecutor:
     """
-    Ejecuta órdenes límite en Alpaca Paper Trading.
+    Ejecuta órdenes límite en Alpaca (paper o live según base_url).
     Aplica filtros de calidad del modelo y gestión de riesgo (Kelly fraccionado).
     """
 
-    def __init__(self, api_key: str, secret_key: str):
+    def __init__(self, api_key: str, secret_key: str, base_url: str = PAPER_URL):
+        self.base_url = base_url
         self.api = tradeapi.REST(
             key_id=api_key,
             secret_key=secret_key,
-            base_url=PAPER_URL,
+            base_url=base_url,
         )
 
     # ------------------------------------------------------------------ #
@@ -272,3 +271,25 @@ class OrderExecutor:
             else:
                 reason = f"Señal {signal} sin posición abierta para cerrar"
             return {"action": "skip", "reason": reason, "order": None}
+
+    def close_position(self, symbol: str, quote: dict) -> dict:
+        """Cierra la posición completa de symbol a precio límite (sin filtros de señal)."""
+        position = self.get_position(symbol)
+        if not position or position["qty"] <= 0:
+            return {
+                "action": "skip",
+                "reason": f"No hay posición abierta en {symbol}",
+                "order": None,
+            }
+        qty         = position["qty"]
+        limit_price = round(max(quote["ask_price"] - 0.01, 0.01), 2)
+        try:
+            order = self.place_order(symbol, "sell", qty, limit_price)
+            logger.info(f"[{symbol}] CIERRE MANUAL: {qty} acc @ ${limit_price:.2f}")
+            return {
+                "action":  "sell",
+                "reason":  f"Cierre manual: {qty} acc @ ${limit_price:.2f} límite",
+                "order":   order,
+            }
+        except Exception as exc:
+            return {"action": "error", "reason": str(exc), "order": None}

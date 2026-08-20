@@ -490,7 +490,7 @@ class MainWindow(QMainWindow):
         if self.config.has_valid_config():
             api_key, secret_key = self.config.get_credentials()
             loader = DataLoader(api_key, secret_key, cache_dir=CACHE_DIR)
-            self.executor = OrderExecutor(api_key, secret_key)
+            self.executor = OrderExecutor(api_key, secret_key, base_url=self.config.get_base_url())
             return TradingBot(loader, model_dir=MODEL_DIR)
         self.executor = None
         return None

@@ -17,8 +17,30 @@ class ConfigManager:
         k, s = self.get_credentials()
         return bool(k) and bool(s)
 
+    def get_trading_mode(self) -> str:
+        """Devuelve 'paper' o 'live' según TRADING_MODE en .env."""
+        return os.getenv("TRADING_MODE", "paper").lower().strip()
+
+    def get_base_url(self) -> str:
+        if self.get_trading_mode() == "live":
+            return "https://api.alpaca.markets"
+        return "https://paper-api.alpaca.markets"
+
+    def get_trade_amount(self) -> float:
+        try:
+            return float(os.getenv("DEFAULT_TRADE_AMOUNT", "1000"))
+        except ValueError:
+            return 1000.0
+
     def get_credentials(self) -> tuple[str, str]:
-        # Prioridad: .env / variables de entorno → config.txt legado
+        # En modo live usa las keys de cuenta real si están configuradas
+        if self.get_trading_mode() == "live":
+            api_key    = os.getenv("LIVE_ALPACA_API_KEY", "").strip()
+            secret_key = os.getenv("LIVE_ALPACA_SECRET_KEY", "").strip()
+            if api_key and secret_key:
+                return api_key, secret_key
+
+        # Modo paper (default) o fallback si live keys no están configuradas
         api_key    = os.getenv("ALPACA_API_KEY", "")
         secret_key = os.getenv("ALPACA_SECRET_KEY", "")
 

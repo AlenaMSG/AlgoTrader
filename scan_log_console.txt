@@ -1,0 +1,1747 @@
+14:45:39  INFO      Iniciando scan de 100 símbolos del S&P100…
+14:45:39  INFO      [  1/100] AAPL…
+14:45:40  INFO      [AAPL] Caché local: 4178 filas
+14:45:46  INFO      [AAPL] Caché válido — ensemble cargado sin reentrenar.
+14:45:46  INFO      [  2/100] MSFT…
+14:45:46  INFO      [MSFT] Caché local: 4178 filas
+14:45:49  INFO      [MSFT] Caché válido — ensemble cargado sin reentrenar.
+14:45:49  INFO      [  3/100] NVDA…
+14:45:49  INFO      [NVDA] Caché local: 4178 filas
+14:45:52  INFO      [NVDA] Caché válido — ensemble cargado sin reentrenar.
+14:45:52  INFO                 \u2192 VENDER (débil)             ret=-0.35%  DA=49%
+14:45:52  INFO      [  4/100] AVGO…
+14:45:52  INFO      [AVGO] Caché local: 4178 filas
+14:45:55  INFO      [AVGO] Caché válido — ensemble cargado sin reentrenar.
+14:45:55  INFO                 \u2192 COMPRAR (débil)            ret=+0.24%  DA=50%
+14:45:55  INFO      [  5/100] ORCL…
+14:45:55  INFO      [ORCL] Caché local: 4178 filas
+14:45:58  INFO      [ORCL] Caché válido — ensemble cargado sin reentrenar.
+14:45:58  INFO                 \u2192 COMPRAR                    ret=+0.70%  DA=49%
+14:45:58  INFO      [  6/100] CSCO…
+14:45:58  INFO      [CSCO] Caché local: 4178 filas
+14:46:01  INFO      [CSCO] Caché válido — ensemble cargado sin reentrenar.
+14:46:01  INFO                 \u2192 COMPRAR                    ret=+1.33%  DA=49%
+14:46:01  INFO      [  7/100] IBM…
+14:46:01  INFO      [IBM] Caché local: 4178 filas
+14:46:04  INFO      [IBM] Caché válido — ensemble cargado sin reentrenar.
+14:46:05  INFO      [  8/100] INTC…
+14:46:05  INFO      [INTC] Caché local: 4178 filas
+14:46:07  INFO      [INTC] Caché válido — ensemble cargado sin reentrenar.
+14:46:07  INFO                 \u2192 VENDER                     ret=-0.76%  DA=49%
+14:46:07  INFO      [  9/100] TXN…
+14:46:07  INFO      [TXN] Caché local: 4178 filas
+14:46:09  INFO      [TXN] Caché válido — ensemble cargado sin reentrenar.
+14:46:10  INFO      [ 10/100] QCOM…
+14:46:10  INFO      [QCOM] Caché local: 4178 filas
+14:46:12  INFO      [QCOM] Caché válido — ensemble cargado sin reentrenar.
+14:46:13  INFO      [ 11/100] ADI…
+14:46:13  INFO      [ADI] Caché local: 4178 filas
+14:46:15  INFO      [ADI] Caché válido — ensemble cargado sin reentrenar.
+14:46:15  INFO                 \u2192 COMPRAR (débil)            ret=+0.25%  DA=52%
+14:46:15  INFO      [ 12/100] AMAT…
+14:46:15  INFO      [AMAT] Caché local: 4178 filas
+14:46:18  INFO      [AMAT] Caché válido — ensemble cargado sin reentrenar.
+14:46:18  INFO                 \u2192 COMPRAR                    ret=+0.55%  DA=50%
+14:46:18  INFO      [ 13/100] NOW…
+14:46:18  INFO      [NOW] Caché local: 3550 filas
+14:46:20  INFO      [NOW] Caché válido — ensemble cargado sin reentrenar.
+14:46:20  INFO                 \u2192 COMPRAR (débil)            ret=+0.46%  DA=50%
+14:46:20  INFO      [ 14/100] ADBE…
+14:46:20  INFO      [ADBE] Caché local: 4178 filas
+14:46:23  INFO      [ADBE] Caché válido — ensemble cargado sin reentrenar.
+14:46:24  INFO      [ 15/100] CRM…
+14:46:24  INFO      [CRM] Caché local: 4178 filas
+14:46:26  INFO      [CRM] Caché válido — ensemble cargado sin reentrenar.
+14:46:26  INFO                 \u2192 VENDER (débil)             ret=-0.39%  DA=50%
+14:46:26  INFO      [ 16/100] INTU…
+14:46:26  INFO      [INTU] Caché local: 4178 filas
+14:46:28  INFO      [INTU] Caché válido — ensemble cargado sin reentrenar.
+14:46:29  INFO                 \u2192 VENDER                     ret=-1.39%  DA=51%
+14:46:29  INFO      [ 17/100] GOOGL…
+14:46:29  INFO      [GOOGL] Caché local: 4178 filas
+14:46:31  INFO      [GOOGL] Caché válido — ensemble cargado sin reentrenar.
+14:46:32  INFO      [ 18/100] META…
+14:46:32  INFO      [META] Caché local: 3579 filas
+14:46:35  INFO      [META] Caché válido — ensemble cargado sin reentrenar.
+14:46:35  INFO      [ 19/100] T…
+14:46:35  INFO      [T] Caché local: 4178 filas
+14:46:38  INFO      [T] Caché válido — ensemble cargado sin reentrenar.
+14:46:38  INFO      [ 20/100] VZ…
+14:46:38  INFO      [VZ] Caché local: 4178 filas
+14:46:41  INFO      [VZ] Caché válido — ensemble cargado sin reentrenar.
+14:46:41  INFO      [ 21/100] AMZN…
+14:46:41  INFO      [AMZN] Caché local: 4178 filas
+14:46:44  INFO      [AMZN] Caché válido — ensemble cargado sin reentrenar.
+14:46:44  INFO      [ 22/100] TSLA…
+14:46:44  INFO      [TSLA] Caché local: 4056 filas
+14:46:47  INFO      [TSLA] Caché válido — ensemble cargado sin reentrenar.
+14:46:47  INFO                 \u2192 VENDER (débil)             ret=-0.37%  DA=51%
+14:46:47  INFO      [ 23/100] MCD…
+14:46:47  INFO      [MCD] Caché local: 4178 filas
+14:46:50  INFO      [MCD] Caché válido — ensemble cargado sin reentrenar.
+14:46:50  INFO      [ 24/100] NKE…
+14:46:50  INFO      [NKE] Caché local: 4178 filas
+14:46:53  INFO      [NKE] Caché válido — ensemble cargado sin reentrenar.
+14:46:53  INFO      [ 25/100] LOW…
+14:46:53  INFO      [LOW] Caché local: 4178 filas
+14:46:56  INFO      [LOW] Caché válido — ensemble cargado sin reentrenar.
+14:46:56  INFO      [ 26/100] HD…
+14:46:56  INFO      [HD] Caché local: 4178 filas
+14:46:59  INFO      [HD] Caché válido — ensemble cargado sin reentrenar.
+14:46:59  INFO                 \u2192 COMPRAR (débil)            ret=+0.48%  DA=50%
+14:46:59  INFO      [ 27/100] SBUX…
+14:46:59  INFO      [SBUX] Caché local: 4178 filas
+14:47:01  INFO      [SBUX] Caché válido — ensemble cargado sin reentrenar.
+14:47:01  INFO      [ 28/100] TGT…
+14:47:01  INFO      [TGT] Caché local: 4178 filas
+14:47:04  INFO      [TGT] Caché válido — ensemble cargado sin reentrenar.
+14:47:05  INFO                 \u2192 VENDER (débil)             ret=-0.45%  DA=50%
+14:47:05  INFO      [ 29/100] BKNG…
+14:47:05  INFO      [BKNG] Caché local: 4178 filas
+14:47:07  INFO      [BKNG] Caché válido — ensemble cargado sin reentrenar.
+14:47:07  INFO      [ 30/100] PG…
+14:47:07  INFO      [PG] Caché local: 4178 filas
+14:47:10  INFO      [PG] Caché válido — ensemble cargado sin reentrenar.
+14:47:10  INFO      [ 31/100] KO…
+14:47:10  INFO      [KO] Caché local: 4178 filas
+14:47:13  INFO      [KO] Caché válido — ensemble cargado sin reentrenar.
+14:47:14  INFO      [ 32/100] PEP…
+14:47:14  INFO      [PEP] Caché local: 4178 filas
+14:47:16  INFO      [PEP] Caché válido — ensemble cargado sin reentrenar.
+14:47:16  INFO      [ 33/100] WMT…
+14:47:17  INFO      [WMT] Caché local: 4178 filas
+14:47:19  INFO      [WMT] Caché válido — ensemble cargado sin reentrenar.
+14:47:19  INFO      [ 34/100] COST…
+14:47:19  INFO      [COST] Caché local: 4178 filas
+14:47:22  INFO      [COST] Caché válido — ensemble cargado sin reentrenar.
+14:47:22  INFO      [ 35/100] PM…
+14:47:22  INFO      [PM] Caché local: 4178 filas
+14:47:24  INFO      [PM] Caché válido — ensemble cargado sin reentrenar.
+14:47:25  INFO      [ 36/100] MO…
+14:47:25  INFO      [MO] Caché local: 4178 filas
+14:47:28  INFO      [MO] Caché válido — ensemble cargado sin reentrenar.
+14:47:28  INFO                 \u2192 VENDER                     ret=-0.54%  DA=48%
+14:47:28  INFO      [ 37/100] MDLZ…
+14:47:28  INFO      [MDLZ] Caché local: 4178 filas
+14:47:30  INFO      [MDLZ] Caché válido — ensemble cargado sin reentrenar.
+14:47:30  INFO      [ 38/100] CL…
+14:47:30  INFO      [CL] Caché local: 4178 filas
+14:47:33  INFO      [CL] Caché válido — ensemble cargado sin reentrenar.
+14:47:33  INFO      [ 39/100] UNH…
+14:47:33  INFO      [UNH] Caché local: 4178 filas
+14:47:35  INFO      [UNH] Caché válido — ensemble cargado sin reentrenar.
+14:47:36  INFO                 \u2192 COMPRAR (débil)            ret=+0.36%  DA=51%
+14:47:36  INFO      [ 40/100] JNJ…
+14:47:36  INFO      [JNJ] Caché local: 4178 filas
+14:47:38  INFO      [JNJ] Caché válido — ensemble cargado sin reentrenar.
+14:47:38  INFO      [ 41/100] LLY…
+14:47:38  INFO      [LLY] Caché local: 4178 filas
+14:47:41  INFO      [LLY] Caché válido — ensemble cargado sin reentrenar.
+14:47:41  INFO      [ 42/100] ABBV…
+14:47:41  INFO      [ABBV] Caché local: 3423 filas
+14:47:44  INFO      [ABBV] Caché válido — ensemble cargado sin reentrenar.
+14:47:44  INFO                 \u2192 COMPRAR (débil)            ret=+0.33%  DA=48%
+14:47:44  INFO      [ 43/100] MRK…
+14:47:44  INFO      [MRK] Caché local: 4178 filas
+14:47:46  INFO      [MRK] Caché válido — ensemble cargado sin reentrenar.
+14:47:47  INFO      [ 44/100] ABT…
+14:47:47  INFO      [ABT] Caché local: 4178 filas
+14:47:49  INFO      [ABT] Caché válido — ensemble cargado sin reentrenar.
+14:47:49  INFO                 \u2192 COMPRAR (débil)            ret=+0.42%  DA=49%
+14:47:49  INFO      [ 45/100] TMO…
+14:47:49  INFO      [TMO] Caché local: 4178 filas
+14:47:52  INFO      [TMO] Caché válido — ensemble cargado sin reentrenar.
+14:47:53  INFO      [ 46/100] DHR…
+14:47:53  INFO      [DHR] Caché local: 4178 filas
+14:47:55  INFO      [DHR] Caché válido — ensemble cargado sin reentrenar.
+14:47:56  INFO                 \u2192 COMPRAR (débil)            ret=+0.48%  DA=50%
+14:47:56  INFO      [ 47/100] BMY…
+14:47:56  INFO      [BMY] Caché local: 4178 filas
+14:47:58  INFO      [BMY] Caché válido — ensemble cargado sin reentrenar.
+14:47:59  INFO      [ 48/100] AMGN…
+14:47:59  INFO      [AMGN] Caché local: 4178 filas
+14:48:01  INFO      [AMGN] Caché válido — ensemble cargado sin reentrenar.
+14:48:01  INFO                 \u2192 COMPRAR (débil)            ret=+0.41%  DA=51%
+14:48:01  INFO      [ 49/100] GILD…
+14:48:01  INFO      [GILD] Caché local: 4178 filas
+14:48:04  INFO      [GILD] Caché válido — ensemble cargado sin reentrenar.
+14:48:05  INFO                 \u2192 VENDER (débil)             ret=-0.29%  DA=51%
+14:48:05  INFO      [ 50/100] ISRG…
+14:48:05  INFO      [ISRG] Caché local: 4178 filas
+14:48:07  INFO      [ISRG] Caché válido — ensemble cargado sin reentrenar.
+14:48:07  INFO      [ 51/100] MDT…
+14:48:07  INFO      [MDT] Caché local: 4178 filas
+14:48:10  INFO      [MDT] Caché válido — ensemble cargado sin reentrenar.
+14:48:11  INFO                 \u2192 VENDER (débil)             ret=-0.20%  DA=49%
+14:48:11  INFO      [ 52/100] SYK…
+14:48:11  INFO      [SYK] Caché local: 4178 filas
+14:48:13  INFO      [SYK] Caché válido — ensemble cargado sin reentrenar.
+14:48:14  INFO      [ 53/100] ZTS…
+14:48:14  INFO      [ZTS] Caché local: 3403 filas
+14:48:16  INFO      [ZTS] Caché válido — ensemble cargado sin reentrenar.
+14:48:16  INFO      [ 54/100] BDX…
+14:48:16  INFO      [BDX] Caché local: 4178 filas
+14:48:19  INFO      [BDX] Caché válido — ensemble cargado sin reentrenar.
+14:48:20  INFO                 \u2192 COMPRAR (débil)            ret=+0.27%  DA=48%
+14:48:20  INFO      [ 55/100] CVS…
+14:48:20  INFO      [CVS] Caché local: 4178 filas
+14:48:23  INFO      [CVS] Caché válido — ensemble cargado sin reentrenar.
+14:48:24  INFO                 \u2192 VENDER                     ret=-0.51%  DA=49%
+14:48:24  INFO      [ 56/100] CI…
+14:48:24  INFO      [CI] Caché local: 4178 filas
+14:48:26  INFO      [CI] Caché válido — ensemble cargado sin reentrenar.
+14:48:27  INFO      [ 57/100] ELV…
+14:48:27  INFO      [ELV] Caché local: 4178 filas
+14:48:29  INFO      [ELV] Caché válido — ensemble cargado sin reentrenar.
+14:48:29  INFO      [ 58/100] VRTX…
+14:48:29  INFO      [VRTX] Caché local: 4178 filas
+14:48:32  INFO      [VRTX] Caché válido — ensemble cargado sin reentrenar.
+14:48:33  INFO                 \u2192 VENDER                     ret=-0.60%  DA=50%
+14:48:33  INFO      [ 59/100] JPM…
+14:48:33  INFO      [JPM] Caché local: 4178 filas
+14:48:36  INFO      [JPM] Caché válido — ensemble cargado sin reentrenar.
+14:48:36  INFO      [ 60/100] BAC…
+14:48:36  INFO      [BAC] Caché local: 4178 filas
+14:48:39  INFO      [BAC] Caché válido — ensemble cargado sin reentrenar.
+14:48:39  INFO      [ 61/100] WFC…
+14:48:39  INFO      [WFC] Caché local: 4178 filas
+14:48:41  INFO      [WFC] Caché válido — ensemble cargado sin reentrenar.
+14:48:42  INFO                 \u2192 COMPRAR (débil)            ret=+0.23%  DA=51%
+14:48:42  INFO      [ 62/100] MS…
+14:48:42  INFO      [MS] Caché local: 4178 filas
+14:48:46  INFO      [MS] Caché válido — ensemble cargado sin reentrenar.
+14:48:46  INFO      [ 63/100] GS…
+14:48:46  INFO      [GS] Caché local: 4178 filas
+14:48:48  INFO      [GS] Caché válido — ensemble cargado sin reentrenar.
+14:48:48  INFO                 \u2192 COMPRAR (débil)            ret=+0.34%  DA=48%
+14:48:48  INFO      [ 64/100] BLK…
+14:48:48  INFO      [BLK] Caché local: 4178 filas
+14:48:50  INFO      [BLK] Caché válido — ensemble cargado sin reentrenar.
+14:48:51  INFO      [ 65/100] SCHW…
+14:48:51  INFO      [SCHW] Caché local: 4178 filas
+14:48:53  INFO      [SCHW] Caché válido — ensemble cargado sin reentrenar.
+14:48:54  INFO      [ 66/100] USB…
+14:48:54  INFO      [USB] Caché local: 4178 filas
+14:48:56  INFO      [USB] Caché válido — ensemble cargado sin reentrenar.
+14:48:57  INFO      [ 67/100] PNC…
+14:48:57  INFO      [PNC] Caché local: 4178 filas
+14:48:59  INFO      [PNC] Caché válido — ensemble cargado sin reentrenar.
+14:48:59  INFO      [ 68/100] TFC…
+14:48:59  INFO      [TFC] Caché local: 4178 filas
+14:49:02  INFO      [TFC] Caché válido — ensemble cargado sin reentrenar.
+14:49:02  INFO      [ 69/100] COF…
+14:49:02  INFO      [COF] Caché local: 4178 filas
+14:49:05  INFO      [COF] Caché válido — ensemble cargado sin reentrenar.
+14:49:05  INFO      [ 70/100] C…
+14:49:05  INFO      [C] Caché local: 4178 filas
+14:49:08  INFO      [C] Caché válido — ensemble cargado sin reentrenar.
+14:49:09  INFO      [ 71/100] AXP…
+14:49:09  INFO      [AXP] Caché local: 4178 filas
+14:49:11  INFO      [AXP] Caché válido — ensemble cargado sin reentrenar.
+14:49:12  INFO      [ 72/100] CME…
+14:49:12  INFO      [CME] Caché local: 4178 filas
+14:49:14  INFO      [CME] Caché válido — ensemble cargado sin reentrenar.
+14:49:14  INFO      [ 73/100] SPGI…
+14:49:14  INFO      [SPGI] Caché local: 4178 filas
+14:49:17  INFO      [SPGI] Caché válido — ensemble cargado sin reentrenar.
+14:49:17  INFO                 \u2192 VENDER                     ret=-0.66%  DA=50%
+14:49:17  INFO      [ 74/100] AON…
+14:49:17  INFO      [AON] Caché local: 4178 filas
+14:49:20  INFO      [AON] Caché válido — ensemble cargado sin reentrenar.
+14:49:20  INFO                 \u2192 COMPRAR (débil)            ret=+0.30%  DA=50%
+14:49:20  INFO      [ 75/100] MMC…
+14:49:21  ERROR     $MMC: possibly delisted; no timezone found
+14:49:21  WARNING              \u2192 ERROR: Yahoo Finance no devolvió datos para 'MMC'. Comprueba que el ticker sea correcto.
+14:49:21  INFO      [ 76/100] XOM…
+14:49:21  INFO      [XOM] Caché local: 4178 filas
+14:49:25  INFO      [XOM] Caché válido — ensemble cargado sin reentrenar.
+14:49:25  INFO                 \u2192 COMPRAR (débil)            ret=+0.25%  DA=50%
+14:49:25  INFO      [ 77/100] CVX…
+14:49:25  INFO      [CVX] Caché local: 4178 filas
+14:49:27  INFO      [CVX] Caché válido — ensemble cargado sin reentrenar.
+14:49:28  INFO      [ 78/100] EOG…
+14:49:28  INFO      [EOG] Caché local: 4178 filas
+14:49:30  INFO      [EOG] Caché válido — ensemble cargado sin reentrenar.
+14:49:30  INFO      [ 79/100] SLB…
+14:49:30  INFO      [SLB] Caché local: 4178 filas
+14:49:33  INFO      [SLB] Caché válido — ensemble cargado sin reentrenar.
+14:49:33  INFO                 \u2192 COMPRAR (débil)            ret=+0.30%  DA=51%
+14:49:33  INFO      [ 80/100] FCX…
+14:49:33  INFO      [FCX] Caché local: 4178 filas
+14:49:36  INFO      [FCX] Caché válido — ensemble cargado sin reentrenar.
+14:49:36  INFO                 \u2192 COMPRAR                    ret=+1.12%  DA=51%
+14:49:36  INFO      [ 81/100] HON…
+14:49:36  INFO      [HON] Caché local: 4178 filas
+14:49:39  INFO      [HON] Caché válido — ensemble cargado sin reentrenar.
+14:49:39  INFO      [ 82/100] CAT…
+14:49:39  INFO      [CAT] Caché local: 4178 filas
+14:49:41  INFO      [CAT] Caché válido — ensemble cargado sin reentrenar.
+14:49:42  INFO                 \u2192 COMPRAR                    ret=+0.65%  DA=50%
+14:49:42  INFO      [ 83/100] DE…
+14:49:42  INFO      [DE] Caché local: 4178 filas
+14:49:45  INFO      [DE] Caché válido — ensemble cargado sin reentrenar.
+14:49:45  INFO                 \u2192 COMPRAR (débil)            ret=+0.26%  DA=50%
+14:49:45  INFO      [ 84/100] BA…
+14:49:45  INFO      [BA] Caché local: 4178 filas
+14:49:47  INFO      [BA] Caché válido — ensemble cargado sin reentrenar.
+14:49:48  INFO                 \u2192 VENDER (débil)             ret=-0.23%  DA=49%
+14:49:48  INFO      [ 85/100] GE…
+14:49:48  INFO      [GE] Caché local: 4178 filas
+14:49:51  INFO      [GE] Caché válido — ensemble cargado sin reentrenar.
+14:49:51  INFO      [ 86/100] UPS…
+14:49:51  INFO      [UPS] Caché local: 4178 filas
+14:49:53  INFO      [UPS] Caché válido — ensemble cargado sin reentrenar.
+14:49:54  INFO      [ 87/100] RTX…
+14:49:54  INFO      [RTX] Caché local: 4178 filas
+14:49:56  INFO      [RTX] Caché válido — ensemble cargado sin reentrenar.
+14:49:57  INFO      [ 88/100] ETN…
+14:49:57  INFO      [ETN] Caché local: 4178 filas
+14:49:59  INFO      [ETN] Caché válido — ensemble cargado sin reentrenar.
+14:50:00  INFO                 \u2192 COMPRAR (débil)            ret=+0.47%  DA=49%
+14:50:00  INFO      [ 89/100] ITW…
+14:50:00  INFO      [ITW] Caché local: 4178 filas
+14:50:03  INFO      [ITW] Caché válido — ensemble cargado sin reentrenar.
+14:50:03  INFO      [ 90/100] FDX…
+14:50:03  INFO      [FDX] Caché local: 4178 filas
+14:50:06  INFO      [FDX] Caché válido — ensemble cargado sin reentrenar.
+14:50:07  INFO                 \u2192 VENDER (débil)             ret=-0.35%  DA=50%
+14:50:07  INFO      [ 91/100] LIN…
+14:50:07  INFO      [LIN] Caché local: 4178 filas
+14:50:09  INFO      [LIN] Caché válido — ensemble cargado sin reentrenar.
+14:50:09  INFO      [ 92/100] PLD…
+14:50:09  INFO      [PLD] Caché local: 4178 filas
+14:50:11  INFO      [PLD] Caché válido — ensemble cargado sin reentrenar.
+14:50:12  INFO      [ 93/100] AMT…
+14:50:12  INFO      [AMT] Caché local: 4178 filas
+14:50:14  INFO      [AMT] Caché válido — ensemble cargado sin reentrenar.
+14:50:15  INFO                 \u2192 VENDER (débil)             ret=-0.49%  DA=51%
+14:50:15  INFO      [ 94/100] NEE…
+14:50:15  INFO      [NEE] Caché local: 4178 filas
+14:50:17  INFO      [NEE] Caché válido — ensemble cargado sin reentrenar.
+14:50:17  INFO                 \u2192 VENDER (débil)             ret=-0.34%  DA=50%
+14:50:17  INFO      [ 95/100] DUK…
+14:50:17  INFO      [DUK] Caché local: 4178 filas
+14:50:20  INFO      [DUK] Caché válido — ensemble cargado sin reentrenar.
+14:50:20  INFO      [ 96/100] SO…
+14:50:20  INFO      [SO] Caché local: 4178 filas
+14:50:23  INFO      [SO] Caché válido — ensemble cargado sin reentrenar.
+14:50:23  INFO      [ 97/100] V…
+14:50:23  INFO      [V] Caché local: 4178 filas
+14:50:25  INFO      [V] Caché válido — ensemble cargado sin reentrenar.
+14:50:26  INFO      [ 98/100] MA…
+14:50:26  INFO      [MA] Caché local: 4178 filas
+14:50:28  INFO      [MA] Caché válido — ensemble cargado sin reentrenar.
+14:50:28  INFO      [ 99/100] ACN…
+14:50:28  INFO      [ACN] Caché local: 4178 filas
+14:50:31  INFO      [ACN] Caché válido — ensemble cargado sin reentrenar.
+14:50:32  INFO                 \u2192 COMPRAR (débil)            ret=+0.23%  DA=52%
+14:50:32  INFO      [100/100] ADP…
+14:50:32  INFO      [ADP] Caché local: 4178 filas
+14:50:34  INFO      [ADP] Caché válido — ensemble cargado sin reentrenar.
+14:50:35  INFO      
+Scan completado — 39 señales, 1 errores de 100 símbolos
+14:50:35  INFO      scan_log.csv actualizado — 39 entradas (C:\proyectos\AlgoTrader\scan_log.csv)
+14:50:35  INFO      Telegram: mensaje enviado correctamente
+14:50:35  INFO      Telegram: mensaje enviado
+14:45:18  INFO      Iniciando scan de 100 símbolos del S&P100…
+14:45:18  INFO      [  1/100] AAPL…
+14:45:25  INFO      [AAPL] yfinance: 4180 filas desde 2010-01-01
+14:45:36  INFO      [AAPL] Ensemble guardado — IC=0.038 DirAcc=50.2%
+14:45:37  INFO      [  2/100] MSFT…
+14:45:38  INFO      [MSFT] yfinance: 4180 filas desde 2010-01-01
+14:45:44  INFO      [MSFT] Ensemble guardado — IC=0.060 DirAcc=50.0%
+14:45:44  INFO                 \u2192 VENDER (débil)             ret=-0.24%  DA=50%
+14:45:44  INFO      [  3/100] NVDA…
+14:45:45  INFO      [NVDA] yfinance: 4180 filas desde 2010-01-01
+14:45:52  INFO      [NVDA] Ensemble guardado — IC=0.017 DirAcc=48.4%
+14:45:52  INFO      [  4/100] AVGO…
+14:45:52  INFO      [AVGO] yfinance: 4180 filas desde 2010-01-01
+14:45:59  INFO      [AVGO] Ensemble guardado — IC=0.020 DirAcc=50.0%
+14:45:59  INFO                 \u2192 VENDER (débil)             ret=-0.38%  DA=50%
+14:45:59  INFO      [  5/100] ORCL…
+14:46:00  INFO      [ORCL] yfinance: 4180 filas desde 2010-01-01
+14:46:06  INFO      [ORCL] Ensemble guardado — IC=0.038 DirAcc=49.7%
+14:46:06  INFO      [  6/100] CSCO…
+14:46:06  INFO      [CSCO] yfinance: 4180 filas desde 2010-01-01
+14:46:13  INFO      [CSCO] Ensemble guardado — IC=0.065 DirAcc=49.9%
+14:46:13  INFO                 \u2192 COMPRAR (débil)            ret=+0.45%  DA=50%
+14:46:13  INFO      [  7/100] IBM…
+14:46:14  INFO      [IBM] yfinance: 4180 filas desde 2010-01-01
+14:46:22  INFO      [IBM] Ensemble guardado — IC=0.023 DirAcc=50.5%
+14:46:22  INFO                 \u2192 VENDER (débil)             ret=-0.48%  DA=51%
+14:46:22  INFO      [  8/100] INTC…
+14:46:22  INFO      [INTC] yfinance: 4180 filas desde 2010-01-01
+14:46:30  INFO      [INTC] Ensemble guardado — IC=0.036 DirAcc=49.9%
+14:46:30  INFO                 \u2192 VENDER (débil)             ret=-0.25%  DA=50%
+14:46:30  INFO      [  9/100] TXN…
+14:46:30  INFO      [TXN] yfinance: 4180 filas desde 2010-01-01
+14:46:36  INFO      [TXN] Ensemble guardado — IC=0.077 DirAcc=51.4%
+14:46:36  INFO      [ 10/100] QCOM…
+14:46:36  INFO      [QCOM] yfinance: 4180 filas desde 2010-01-01
+14:46:41  INFO      [QCOM] Ensemble guardado — IC=0.049 DirAcc=50.4%
+14:46:41  INFO                 \u2192 COMPRAR (débil)            ret=+0.35%  DA=50%
+14:46:41  INFO      [ 11/100] ADI…
+14:46:42  INFO      [ADI] yfinance: 4180 filas desde 2010-01-01
+14:46:47  INFO      [ADI] Ensemble guardado — IC=0.066 DirAcc=51.9%
+14:46:47  INFO                 \u2192 VENDER (débil)             ret=-0.23%  DA=52%
+14:46:47  INFO      [ 12/100] AMAT…
+14:46:48  INFO      [AMAT] yfinance: 4180 filas desde 2010-01-01
+14:46:53  INFO      [AMAT] Ensemble guardado — IC=0.023 DirAcc=49.9%
+14:46:53  INFO                 \u2192 VENDER                     ret=-0.62%  DA=50%
+14:46:53  INFO      [ 13/100] NOW…
+14:46:53  INFO      [NOW] yfinance: 3552 filas desde 2010-01-01
+14:46:58  INFO      [NOW] Ensemble guardado — IC=0.022 DirAcc=50.3%
+14:46:59  INFO      [ 14/100] ADBE…
+14:46:59  INFO      [ADBE] yfinance: 4180 filas desde 2010-01-01
+14:47:03  INFO      [ADBE] Ensemble guardado — IC=0.057 DirAcc=49.9%
+14:47:04  INFO      [ 15/100] CRM…
+14:47:04  INFO      [CRM] yfinance: 4180 filas desde 2010-01-01
+14:47:09  INFO      [CRM] Ensemble guardado — IC=0.074 DirAcc=49.6%
+14:47:09  INFO      [ 16/100] INTU…
+14:47:10  INFO      [INTU] yfinance: 4180 filas desde 2010-01-01
+14:47:14  INFO      [INTU] Ensemble guardado — IC=0.045 DirAcc=50.6%
+14:47:15  INFO                 \u2192 COMPRAR                    ret=+0.69%  DA=51%
+14:47:15  INFO      [ 17/100] GOOGL…
+14:47:15  INFO      [GOOGL] yfinance: 4180 filas desde 2010-01-01
+14:47:19  INFO      [GOOGL] Ensemble guardado — IC=0.042 DirAcc=50.5%
+14:47:20  INFO                 \u2192 COMPRAR (débil)            ret=+0.21%  DA=50%
+14:47:20  INFO      [ 18/100] META…
+14:47:20  INFO      [META] yfinance: 3581 filas desde 2010-01-01
+14:47:24  INFO      [META] Ensemble guardado — IC=0.059 DirAcc=51.1%
+14:47:25  INFO      [ 19/100] T…
+14:47:25  INFO      [T] yfinance: 4180 filas desde 2010-01-01
+14:47:29  INFO      [T] Ensemble guardado — IC=0.050 DirAcc=50.9%
+14:47:30  INFO                 \u2192 COMPRAR (débil)            ret=+0.48%  DA=51%
+14:47:30  INFO      [ 20/100] VZ…
+14:47:30  INFO      [VZ] yfinance: 4180 filas desde 2010-01-01
+14:47:35  INFO      [VZ] Ensemble guardado — IC=0.030 DirAcc=49.0%
+14:47:36  INFO      [ 21/100] AMZN…
+14:47:36  INFO      [AMZN] yfinance: 4180 filas desde 2010-01-01
+14:47:41  INFO      [AMZN] Ensemble guardado — IC=0.060 DirAcc=50.2%
+14:47:41  INFO      [ 22/100] TSLA…
+14:47:41  INFO      [TSLA] yfinance: 4058 filas desde 2010-01-01
+14:47:46  INFO      [TSLA] Ensemble guardado — IC=0.027 DirAcc=50.9%
+14:47:46  INFO                 \u2192 VENDER                     ret=-0.93%  DA=51%
+14:47:46  INFO      [ 23/100] MCD…
+14:47:47  INFO      [MCD] yfinance: 4180 filas desde 2010-01-01
+14:47:51  INFO      [MCD] Ensemble guardado — IC=0.016 DirAcc=49.6%
+14:47:52  INFO                 \u2192 VENDER (débil)             ret=-0.21%  DA=50%
+14:47:52  INFO      [ 24/100] NKE…
+14:47:52  INFO      [NKE] yfinance: 4180 filas desde 2010-01-01
+14:47:57  INFO      [NKE] Ensemble guardado — IC=0.023 DirAcc=50.3%
+14:47:57  INFO                 \u2192 COMPRAR (débil)            ret=+0.28%  DA=50%
+14:47:57  INFO      [ 25/100] LOW…
+14:47:58  INFO      [LOW] yfinance: 4180 filas desde 2010-01-01
+14:48:02  INFO      [LOW] Ensemble guardado — IC=0.002 DirAcc=50.2%
+14:48:03  INFO                 \u2192 COMPRAR                    ret=+0.59%  DA=50%
+14:48:03  INFO      [ 26/100] HD…
+14:48:03  INFO      [HD] yfinance: 4180 filas desde 2010-01-01
+14:48:09  INFO      [HD] Ensemble guardado — IC=0.027 DirAcc=50.3%
+14:48:09  INFO      [ 27/100] SBUX…
+14:48:09  INFO      [SBUX] yfinance: 4180 filas desde 2010-01-01
+15:53:37  INFO      [SBUX] Ensemble guardado — IC=0.053 DirAcc=51.7%
+15:53:44  INFO      [ 28/100] TGT…
+15:53:45  INFO      [TGT] yfinance: 4180 filas desde 2010-01-01
+15:53:51  INFO      [TGT] Ensemble guardado — IC=0.005 DirAcc=51.0%
+15:53:52  INFO      [ 29/100] BKNG…
+15:53:52  INFO      [BKNG] yfinance: 4180 filas desde 2010-01-01
+15:53:59  INFO      [BKNG] Ensemble guardado — IC=-0.022 DirAcc=50.2%
+15:53:59  INFO                 \u2192 COMPRAR (débil)            ret=+0.23%  DA=50%
+15:53:59  INFO      [ 30/100] PG…
+15:53:59  INFO      [PG] yfinance: 4180 filas desde 2010-01-01
+15:54:04  INFO      [PG] Ensemble guardado — IC=0.041 DirAcc=49.5%
+15:54:05  INFO      [ 31/100] KO…
+15:54:05  INFO      [KO] yfinance: 4180 filas desde 2010-01-01
+15:54:11  INFO      [KO] Ensemble guardado — IC=0.043 DirAcc=49.0%
+15:54:11  INFO      [ 32/100] PEP…
+15:54:11  INFO      [PEP] yfinance: 4180 filas desde 2010-01-01
+15:54:17  INFO      [PEP] Ensemble guardado — IC=0.052 DirAcc=50.1%
+15:54:18  INFO      [ 33/100] WMT…
+15:54:18  INFO      [WMT] yfinance: 4180 filas desde 2010-01-01
+15:54:23  INFO      [WMT] Ensemble guardado — IC=0.052 DirAcc=50.6%
+15:54:24  INFO      [ 34/100] COST…
+15:54:24  INFO      [COST] yfinance: 4180 filas desde 2010-01-01
+15:54:29  INFO      [COST] Ensemble guardado — IC=0.000 DirAcc=49.3%
+15:54:30  INFO                 \u2192 COMPRAR (débil)            ret=+0.32%  DA=49%
+15:54:30  INFO      [ 35/100] PM…
+15:54:30  INFO      [PM] yfinance: 4180 filas desde 2010-01-01
+15:54:35  INFO      [PM] Ensemble guardado — IC=0.034 DirAcc=48.6%
+15:54:36  INFO      [ 36/100] MO…
+15:54:37  INFO      [MO] yfinance: 4180 filas desde 2010-01-01
+15:54:47  INFO      [MO] Ensemble guardado — IC=0.004 DirAcc=48.1%
+15:54:47  INFO      [ 37/100] MDLZ…
+15:54:47  INFO      [MDLZ] yfinance: 4180 filas desde 2010-01-01
+15:54:54  INFO      [MDLZ] Ensemble guardado — IC=0.038 DirAcc=49.6%
+15:54:55  INFO      [ 38/100] CL…
+15:54:55  INFO      [CL] yfinance: 4180 filas desde 2010-01-01
+15:55:01  INFO      [CL] Ensemble guardado — IC=0.048 DirAcc=50.8%
+15:55:02  INFO      [ 39/100] UNH…
+15:55:02  INFO      [UNH] yfinance: 4180 filas desde 2010-01-01
+15:55:07  INFO      [UNH] Ensemble guardado — IC=0.018 DirAcc=51.3%
+15:55:08  INFO                 \u2192 COMPRAR (débil)            ret=+0.27%  DA=51%
+15:55:08  INFO      [ 40/100] JNJ…
+15:55:08  INFO      [JNJ] yfinance: 4180 filas desde 2010-01-01
+15:55:14  INFO      [JNJ] Ensemble guardado — IC=0.039 DirAcc=50.6%
+15:55:14  INFO                 \u2192 COMPRAR (débil)            ret=+0.20%  DA=51%
+15:55:14  INFO      [ 41/100] LLY…
+15:55:14  INFO      [LLY] yfinance: 4180 filas desde 2010-01-01
+15:55:20  INFO      [LLY] Ensemble guardado — IC=0.038 DirAcc=51.2%
+15:55:21  INFO                 \u2192 COMPRAR (débil)            ret=+0.21%  DA=51%
+15:55:21  INFO      [ 42/100] ABBV…
+15:55:21  INFO      [ABBV] yfinance: 3425 filas desde 2010-01-01
+15:55:26  INFO      [ABBV] Ensemble guardado — IC=0.030 DirAcc=48.2%
+15:55:26  INFO      [ 43/100] MRK…
+15:55:27  INFO      [MRK] yfinance: 4180 filas desde 2010-01-01
+15:55:32  INFO      [MRK] Ensemble guardado — IC=0.002 DirAcc=48.1%
+15:55:32  INFO      [ 44/100] ABT…
+15:55:33  INFO      [ABT] yfinance: 4180 filas desde 2010-01-01
+15:55:39  INFO      [ABT] Ensemble guardado — IC=0.049 DirAcc=49.3%
+15:55:39  INFO                 \u2192 COMPRAR (débil)            ret=+0.25%  DA=49%
+15:55:39  INFO      [ 45/100] TMO…
+15:55:39  INFO      [TMO] yfinance: 4180 filas desde 2010-01-01
+15:55:45  INFO      [TMO] Ensemble guardado — IC=0.034 DirAcc=49.9%
+15:55:45  INFO                 \u2192 COMPRAR (débil)            ret=+0.35%  DA=50%
+15:55:45  INFO      [ 46/100] DHR…
+15:55:46  INFO      [DHR] yfinance: 4180 filas desde 2010-01-01
+15:55:51  INFO      [DHR] Ensemble guardado — IC=0.046 DirAcc=49.3%
+15:55:51  INFO                 \u2192 COMPRAR (débil)            ret=+0.33%  DA=49%
+15:55:51  INFO      [ 47/100] BMY…
+15:55:52  INFO      [BMY] yfinance: 4180 filas desde 2010-01-01
+15:55:57  INFO      [BMY] Ensemble guardado — IC=0.003 DirAcc=50.1%
+15:55:58  INFO      [ 48/100] AMGN…
+15:55:58  INFO      [AMGN] yfinance: 4180 filas desde 2010-01-01
+15:56:03  INFO      [AMGN] Ensemble guardado — IC=0.055 DirAcc=51.9%
+15:56:04  INFO      [ 49/100] GILD…
+15:56:04  INFO      [GILD] yfinance: 4180 filas desde 2010-01-01
+15:56:10  INFO      [GILD] Ensemble guardado — IC=0.032 DirAcc=50.4%
+15:56:10  INFO                 \u2192 VENDER (débil)             ret=-0.38%  DA=50%
+15:56:10  INFO      [ 50/100] ISRG…
+15:56:11  INFO      [ISRG] yfinance: 4180 filas desde 2010-01-01
+15:56:15  INFO      [ISRG] Ensemble guardado — IC=0.052 DirAcc=50.3%
+15:56:16  INFO                 \u2192 COMPRAR (débil)            ret=+0.36%  DA=50%
+15:56:16  INFO      [ 51/100] MDT…
+15:56:16  INFO      [MDT] yfinance: 4180 filas desde 2010-01-01
+15:56:21  INFO      [MDT] Ensemble guardado — IC=0.014 DirAcc=49.1%
+15:56:22  INFO      [ 52/100] SYK…
+15:56:22  INFO      [SYK] yfinance: 4180 filas desde 2010-01-01
+15:56:27  INFO      [SYK] Ensemble guardado — IC=0.011 DirAcc=48.7%
+15:56:27  INFO      [ 53/100] ZTS…
+15:56:28  INFO      [ZTS] yfinance: 3405 filas desde 2010-01-01
+15:56:32  INFO      [ZTS] Ensemble guardado — IC=0.014 DirAcc=50.4%
+15:56:33  INFO                 \u2192 COMPRAR                    ret=+0.68%  DA=50%
+15:56:33  INFO      [ 54/100] BDX…
+15:56:33  INFO      [BDX] yfinance: 4180 filas desde 2010-01-01
+15:56:39  INFO      [BDX] Ensemble guardado — IC=0.031 DirAcc=47.4%
+15:56:39  INFO      [ 55/100] CVS…
+15:56:40  INFO      [CVS] yfinance: 4180 filas desde 2010-01-01
+15:56:45  INFO      [CVS] Ensemble guardado — IC=0.007 DirAcc=49.2%
+15:56:45  INFO      [ 56/100] CI…
+15:56:46  INFO      [CI] yfinance: 4180 filas desde 2010-01-01
+15:56:52  INFO      [CI] Ensemble guardado — IC=0.054 DirAcc=51.0%
+15:56:52  INFO                 \u2192 COMPRAR (débil)            ret=+0.45%  DA=51%
+15:56:52  INFO      [ 57/100] ELV…
+15:56:53  INFO      [ELV] yfinance: 4180 filas desde 2010-01-01
+15:56:57  INFO      [ELV] Ensemble guardado — IC=0.019 DirAcc=49.4%
+15:56:58  INFO      [ 58/100] VRTX…
+15:56:58  INFO      [VRTX] yfinance: 4180 filas desde 2010-01-01
+15:57:03  INFO      [VRTX] Ensemble guardado — IC=0.042 DirAcc=50.3%
+15:57:04  INFO                 \u2192 VENDER                     ret=-0.62%  DA=50%
+15:57:04  INFO      [ 59/100] JPM…
+15:57:04  INFO      [JPM] yfinance: 4180 filas desde 2010-01-01
+15:57:10  INFO      [JPM] Ensemble guardado — IC=0.018 DirAcc=48.2%
+15:57:10  INFO      [ 60/100] BAC…
+15:57:10  INFO      [BAC] yfinance: 4180 filas desde 2010-01-01
+15:57:15  INFO      [BAC] Ensemble guardado — IC=0.042 DirAcc=49.8%
+15:57:16  INFO      [ 61/100] WFC…
+15:57:16  INFO      [WFC] yfinance: 4180 filas desde 2010-01-01
+15:57:22  INFO      [WFC] Ensemble guardado — IC=0.039 DirAcc=50.7%
+15:57:22  INFO      [ 62/100] MS…
+15:57:22  INFO      [MS] yfinance: 4180 filas desde 2010-01-01
+15:57:27  INFO      [MS] Ensemble guardado — IC=0.046 DirAcc=48.4%
+15:57:28  INFO      [ 63/100] GS…
+15:57:28  INFO      [GS] yfinance: 4180 filas desde 2010-01-01
+15:57:33  INFO      [GS] Ensemble guardado — IC=0.014 DirAcc=48.5%
+15:57:33  INFO      [ 64/100] BLK…
+15:57:34  INFO      [BLK] yfinance: 4180 filas desde 2010-01-01
+15:57:38  INFO      [BLK] Ensemble guardado — IC=0.027 DirAcc=49.2%
+15:57:39  INFO                 \u2192 COMPRAR (débil)            ret=+0.27%  DA=49%
+15:57:39  INFO      [ 65/100] SCHW…
+15:57:39  INFO      [SCHW] yfinance: 4180 filas desde 2010-01-01
+15:57:44  INFO      [SCHW] Ensemble guardado — IC=0.000 DirAcc=49.1%
+15:57:44  INFO      [ 66/100] USB…
+15:57:45  INFO      [USB] yfinance: 4180 filas desde 2010-01-01
+15:57:50  INFO      [USB] Ensemble guardado — IC=0.022 DirAcc=50.2%
+15:57:50  INFO      [ 67/100] PNC…
+15:57:51  INFO      [PNC] yfinance: 4180 filas desde 2010-01-01
+15:57:56  INFO      [PNC] Ensemble guardado — IC=0.044 DirAcc=50.1%
+15:57:56  INFO      [ 68/100] TFC…
+15:57:57  INFO      [TFC] yfinance: 4180 filas desde 2010-01-01
+15:58:01  INFO      [TFC] Ensemble guardado — IC=0.028 DirAcc=48.8%
+15:58:02  INFO                 \u2192 VENDER (débil)             ret=-0.31%  DA=49%
+15:58:02  INFO      [ 69/100] COF…
+15:58:02  INFO      [COF] yfinance: 4180 filas desde 2010-01-01
+15:58:07  INFO      [COF] Ensemble guardado — IC=-0.004 DirAcc=50.1%
+15:58:07  INFO      [ 70/100] C…
+15:58:08  INFO      [C] yfinance: 4180 filas desde 2010-01-01
+15:58:13  INFO      [C] Ensemble guardado — IC=0.006 DirAcc=49.1%
+15:58:14  INFO                 \u2192 COMPRAR (débil)            ret=+0.21%  DA=49%
+15:58:14  INFO      [ 71/100] AXP…
+15:58:14  INFO      [AXP] yfinance: 4180 filas desde 2010-01-01
+15:58:23  INFO      [AXP] Ensemble guardado — IC=0.025 DirAcc=49.8%
+15:58:24  INFO      [ 72/100] CME…
+15:58:24  INFO      [CME] yfinance: 4180 filas desde 2010-01-01
+15:58:34  INFO      [CME] Ensemble guardado — IC=0.051 DirAcc=50.8%
+15:58:34  INFO      [ 73/100] SPGI…
+15:58:35  INFO      [SPGI] yfinance: 4180 filas desde 2010-01-01
+15:58:42  INFO      [SPGI] Ensemble guardado — IC=0.048 DirAcc=51.5%
+15:58:42  INFO                 \u2192 COMPRAR (débil)            ret=+0.29%  DA=51%
+15:58:42  INFO      [ 74/100] AON…
+15:58:43  INFO      [AON] yfinance: 4180 filas desde 2010-01-01
+15:58:51  INFO      [AON] Ensemble guardado — IC=0.036 DirAcc=50.4%
+15:58:51  INFO      [ 75/100] MMC…
+15:58:53  ERROR     $MMC: possibly delisted; no timezone found
+15:58:53  WARNING              \u2192 ERROR: Yahoo Finance no devolvió datos para 'MMC'. Comprueba que el ticker sea correcto.
+15:58:53  INFO      [ 76/100] XOM…
+15:58:53  INFO      [XOM] yfinance: 4180 filas desde 2010-01-01
+15:58:59  INFO      [XOM] Ensemble guardado — IC=0.052 DirAcc=50.2%
+15:59:00  INFO                 \u2192 COMPRAR (débil)            ret=+0.22%  DA=50%
+15:59:00  INFO      [ 77/100] CVX…
+15:59:00  INFO      [CVX] yfinance: 4180 filas desde 2010-01-01
+15:59:05  INFO      [CVX] Ensemble guardado — IC=0.031 DirAcc=50.5%
+15:59:05  INFO                 \u2192 VENDER (débil)             ret=-0.30%  DA=50%
+15:59:05  INFO      [ 78/100] EOG…
+15:59:06  INFO      [EOG] yfinance: 4180 filas desde 2010-01-01
+15:59:11  INFO      [EOG] Ensemble guardado — IC=0.040 DirAcc=50.7%
+15:59:11  INFO                 \u2192 VENDER (débil)             ret=-0.40%  DA=51%
+15:59:11  INFO      [ 79/100] SLB…
+15:59:12  INFO      [SLB] yfinance: 4180 filas desde 2010-01-01
+15:59:17  INFO      [SLB] Ensemble guardado — IC=0.028 DirAcc=51.3%
+15:59:18  INFO      [ 80/100] FCX…
+15:59:18  INFO      [FCX] yfinance: 4180 filas desde 2010-01-01
+15:59:24  INFO      [FCX] Ensemble guardado — IC=0.030 DirAcc=50.8%
+15:59:24  INFO                 \u2192 VENDER (débil)             ret=-0.40%  DA=51%
+15:59:24  INFO      [ 81/100] HON…
+15:59:25  INFO      [HON] yfinance: 4180 filas desde 2010-01-01
+15:59:31  INFO      [HON] Ensemble guardado — IC=0.011 DirAcc=49.9%
+15:59:31  INFO                 \u2192 VENDER (débil)             ret=-0.29%  DA=50%
+15:59:31  INFO      [ 82/100] CAT…
+15:59:32  INFO      [CAT] yfinance: 4180 filas desde 2010-01-01
+15:59:38  INFO      [CAT] Ensemble guardado — IC=0.011 DirAcc=49.9%
+15:59:38  INFO                 \u2192 COMPRAR (débil)            ret=+0.32%  DA=50%
+15:59:38  INFO      [ 83/100] DE…
+15:59:39  INFO      [DE] yfinance: 4180 filas desde 2010-01-01
+15:59:45  INFO      [DE] Ensemble guardado — IC=0.008 DirAcc=49.3%
+15:59:45  INFO      [ 84/100] BA…
+15:59:46  INFO      [BA] yfinance: 4180 filas desde 2010-01-01
+15:59:52  INFO      [BA] Ensemble guardado — IC=0.021 DirAcc=48.8%
+15:59:52  INFO                 \u2192 VENDER (débil)             ret=-0.36%  DA=49%
+15:59:52  INFO      [ 85/100] GE…
+15:59:52  INFO      [GE] yfinance: 4180 filas desde 2010-01-01
+15:59:58  INFO      [GE] Ensemble guardado — IC=-0.008 DirAcc=47.8%
+15:59:59  INFO      [ 86/100] UPS…
+15:59:59  INFO      [UPS] yfinance: 4180 filas desde 2010-01-01
+16:00:07  INFO      [UPS] Ensemble guardado — IC=0.045 DirAcc=49.2%
+16:00:08  INFO                 \u2192 COMPRAR (débil)            ret=+0.48%  DA=49%
+16:00:08  INFO      [ 87/100] RTX…
+16:00:09  INFO      [RTX] yfinance: 4180 filas desde 2010-01-01
+16:00:15  INFO      [RTX] Ensemble guardado — IC=0.031 DirAcc=47.9%
+16:00:15  INFO      [ 88/100] ETN…
+16:00:16  INFO      [ETN] yfinance: 4180 filas desde 2010-01-01
+16:00:22  INFO      [ETN] Ensemble guardado — IC=0.033 DirAcc=49.7%
+16:00:22  INFO      [ 89/100] ITW…
+16:00:23  INFO      [ITW] yfinance: 4180 filas desde 2010-01-01
+16:00:28  INFO      [ITW] Ensemble guardado — IC=0.002 DirAcc=49.3%
+16:00:28  INFO      [ 90/100] FDX…
+16:00:29  INFO      [FDX] yfinance: 4180 filas desde 2010-01-01
+16:00:35  INFO      [FDX] Ensemble guardado — IC=0.020 DirAcc=49.0%
+16:00:35  INFO      [ 91/100] LIN…
+16:00:35  INFO      [LIN] yfinance: 4180 filas desde 2010-01-01
+16:00:43  INFO      [LIN] Ensemble guardado — IC=0.015 DirAcc=49.4%
+16:00:43  INFO      [ 92/100] PLD…
+16:00:44  INFO      [PLD] yfinance: 4180 filas desde 2010-01-01
+16:00:50  INFO      [PLD] Ensemble guardado — IC=0.047 DirAcc=48.9%
+16:00:51  INFO      [ 93/100] AMT…
+16:00:51  INFO      [AMT] yfinance: 4180 filas desde 2010-01-01
+16:00:56  INFO      [AMT] Ensemble guardado — IC=0.069 DirAcc=50.3%
+16:00:57  INFO      [ 94/100] NEE…
+16:00:57  INFO      [NEE] yfinance: 4180 filas desde 2010-01-01
+16:01:02  INFO      [NEE] Ensemble guardado — IC=0.040 DirAcc=50.3%
+16:01:03  INFO      [ 95/100] DUK…
+16:01:03  INFO      [DUK] yfinance: 4180 filas desde 2010-01-01
+16:01:08  INFO      [DUK] Ensemble guardado — IC=0.015 DirAcc=48.2%
+16:01:08  INFO                 \u2192 COMPRAR (débil)            ret=+0.29%  DA=48%
+16:01:08  INFO      [ 96/100] SO…
+16:01:09  INFO      [SO] yfinance: 4180 filas desde 2010-01-01
+16:01:16  INFO      [SO] Ensemble guardado — IC=0.040 DirAcc=49.8%
+16:01:17  INFO                 \u2192 COMPRAR (débil)            ret=+0.28%  DA=50%
+16:01:17  INFO      [ 97/100] V…
+16:01:17  INFO      [V] yfinance: 4180 filas desde 2010-01-01
+16:01:22  INFO      [V] Ensemble guardado — IC=0.063 DirAcc=51.5%
+16:01:22  INFO      [ 98/100] MA…
+16:01:23  INFO      [MA] yfinance: 4180 filas desde 2010-01-01
+16:01:28  INFO      [MA] Ensemble guardado — IC=0.084 DirAcc=52.3%
+16:01:29  INFO      [ 99/100] ACN…
+16:01:29  INFO      [ACN] yfinance: 4180 filas desde 2010-01-01
+16:01:35  INFO      [ACN] Ensemble guardado — IC=0.029 DirAcc=51.4%
+16:01:35  INFO      [100/100] ADP…
+16:01:35  INFO      [ADP] yfinance: 4180 filas desde 2010-01-01
+16:01:41  INFO      [ADP] Ensemble guardado — IC=0.028 DirAcc=50.6%
+16:01:41  INFO                 \u2192 COMPRAR (débil)            ret=+0.50%  DA=51%
+16:01:41  INFO      
+Scan completado — 43 señales, 1 errores de 100 símbolos
+16:01:41  INFO      scan_log.csv actualizado — 43 entradas (C:\proyectos\AlgoTrader\scan_log.csv)
+16:01:41  INFO      pending_signals.json guardado — 43 señales (C:\proyectos\AlgoTrader\pending_signals.json)
+16:01:42  INFO      Telegram: mensaje enviado correctamente
+16:01:42  INFO      Telegram: mensaje enviado
+07:32:40  INFO      Iniciando scan de 100 símbolos del S&P100…
+07:32:40  INFO      [  1/100] AAPL…
+07:32:44  INFO      [AAPL] yfinance: 4180 filas desde 2010-01-01
+07:32:51  INFO      [AAPL] Ensemble guardado — IC=0.043 DirAcc=50.3%
+07:32:53  INFO      [  2/100] MSFT…
+07:32:56  INFO      [MSFT] yfinance: 4180 filas desde 2010-01-01
+07:33:02  INFO      [MSFT] Ensemble guardado — IC=0.061 DirAcc=50.6%
+07:33:02  INFO      [  3/100] NVDA…
+07:33:03  INFO      [NVDA] yfinance: 4181 filas desde 2010-01-01
+07:33:08  INFO      [NVDA] Ensemble guardado — IC=0.032 DirAcc=49.4%
+07:33:09  INFO                 \u2192 VENDER (débil)             ret=-0.41%  DA=49%
+07:33:09  INFO      [  4/100] AVGO…
+07:33:09  INFO      [AVGO] yfinance: 4180 filas desde 2010-01-01
+07:33:14  INFO      [AVGO] Ensemble guardado — IC=0.018 DirAcc=50.1%
+07:33:15  INFO      [  5/100] ORCL…
+07:33:15  INFO      [ORCL] yfinance: 4180 filas desde 2010-01-01
+07:33:21  INFO      [ORCL] Ensemble guardado — IC=0.036 DirAcc=49.4%
+07:33:21  INFO                 \u2192 VENDER (débil)             ret=-0.27%  DA=49%
+07:33:21  INFO      [  6/100] CSCO…
+07:33:21  INFO      [CSCO] yfinance: 4180 filas desde 2010-01-01
+07:33:27  INFO      [CSCO] Ensemble guardado — IC=0.057 DirAcc=49.2%
+07:33:27  INFO                 \u2192 COMPRAR (débil)            ret=+0.27%  DA=49%
+07:33:27  INFO      [  7/100] IBM…
+07:33:28  INFO      [IBM] yfinance: 4181 filas desde 2010-01-01
+07:33:34  INFO      [IBM] Ensemble guardado — IC=0.024 DirAcc=50.0%
+07:33:35  INFO                 \u2192 VENDER                     ret=-0.63%  DA=50%
+07:33:35  INFO      [  8/100] INTC…
+07:33:35  INFO      [INTC] yfinance: 4181 filas desde 2010-01-01
+07:33:41  INFO      [INTC] Ensemble guardado — IC=0.038 DirAcc=49.5%
+07:33:42  INFO                 \u2192 COMPRAR                    ret=+1.33%  DA=50%
+07:33:42  INFO      [  9/100] TXN…
+07:33:42  INFO      [TXN] yfinance: 4180 filas desde 2010-01-01
+07:33:47  INFO      [TXN] Ensemble guardado — IC=0.072 DirAcc=50.6%
+07:33:48  INFO      [ 10/100] QCOM…
+07:33:48  INFO      [QCOM] yfinance: 4181 filas desde 2010-01-01
+07:33:54  INFO      [QCOM] Ensemble guardado — IC=0.052 DirAcc=49.7%
+07:33:54  INFO      [ 11/100] ADI…
+07:33:55  INFO      [ADI] yfinance: 4181 filas desde 2010-01-01
+07:34:00  INFO      [ADI] Ensemble guardado — IC=0.070 DirAcc=52.2%
+07:34:00  INFO                 \u2192 COMPRAR                    ret=+1.52%  DA=52%
+07:34:00  INFO      [ 12/100] AMAT…
+07:34:01  INFO      [AMAT] yfinance: 4180 filas desde 2010-01-01
+07:34:07  INFO      [AMAT] Ensemble guardado — IC=0.030 DirAcc=50.0%
+07:34:08  INFO                 \u2192 COMPRAR (débil)            ret=+0.27%  DA=50%
+07:34:08  INFO      [ 13/100] NOW…
+07:34:08  INFO      [NOW] yfinance: 3553 filas desde 2010-01-01
+07:34:13  INFO      [NOW] Ensemble guardado — IC=0.020 DirAcc=51.1%
+07:34:13  INFO                 \u2192 VENDER                     ret=-0.88%  DA=51%
+07:34:13  INFO      [ 14/100] ADBE…
+07:34:14  INFO      [ADBE] yfinance: 4181 filas desde 2010-01-01
+07:34:19  INFO      [ADBE] Ensemble guardado — IC=0.065 DirAcc=50.0%
+07:34:19  INFO                 \u2192 VENDER (débil)             ret=-0.23%  DA=50%
+07:34:19  INFO      [ 15/100] CRM…
+07:34:20  INFO      [CRM] yfinance: 4181 filas desde 2010-01-01
+07:34:25  INFO      [CRM] Ensemble guardado — IC=0.077 DirAcc=49.9%
+07:34:25  INFO                 \u2192 COMPRAR                    ret=+0.74%  DA=50%
+07:34:25  INFO      [ 16/100] INTU…
+07:34:26  INFO      [INTU] yfinance: 4180 filas desde 2010-01-01
+07:34:32  INFO      [INTU] Ensemble guardado — IC=0.048 DirAcc=50.6%
+07:34:32  INFO                 \u2192 COMPRAR (débil)            ret=+0.36%  DA=51%
+07:34:32  INFO      [ 17/100] GOOGL…
+07:34:33  INFO      [GOOGL] yfinance: 4181 filas desde 2010-01-01
+07:34:38  INFO      [GOOGL] Ensemble guardado — IC=0.038 DirAcc=49.5%
+07:34:38  INFO                 \u2192 VENDER (débil)             ret=-0.27%  DA=50%
+07:34:38  INFO      [ 18/100] META…
+07:34:39  INFO      [META] yfinance: 3582 filas desde 2010-01-01
+07:34:44  INFO      [META] Ensemble guardado — IC=0.046 DirAcc=50.5%
+07:34:44  INFO      [ 19/100] T…
+07:34:45  INFO      [T] yfinance: 4180 filas desde 2010-01-01
+07:34:50  INFO      [T] Ensemble guardado — IC=0.054 DirAcc=51.3%
+07:34:51  INFO                 \u2192 COMPRAR (débil)            ret=+0.32%  DA=51%
+07:34:51  INFO      [ 20/100] VZ…
+07:34:51  INFO      [VZ] yfinance: 4181 filas desde 2010-01-01
+07:34:57  INFO      [VZ] Ensemble guardado — IC=0.035 DirAcc=48.5%
+07:34:57  INFO                 \u2192 VENDER (débil)             ret=-0.25%  DA=49%
+07:34:57  INFO      [ 21/100] AMZN…
+07:34:58  INFO      [AMZN] yfinance: 4180 filas desde 2010-01-01
+07:35:03  INFO      [AMZN] Ensemble guardado — IC=0.061 DirAcc=50.5%
+07:35:03  INFO      [ 22/100] TSLA…
+07:35:04  INFO      [TSLA] yfinance: 4059 filas desde 2010-01-01
+07:35:10  INFO      [TSLA] Ensemble guardado — IC=0.031 DirAcc=50.4%
+07:35:10  INFO                 \u2192 VENDER                     ret=-0.82%  DA=50%
+07:35:10  INFO      [ 23/100] MCD…
+07:35:10  INFO      [MCD] yfinance: 4181 filas desde 2010-01-01
+07:35:17  INFO      [MCD] Ensemble guardado — IC=0.026 DirAcc=50.0%
+07:35:18  INFO      [ 24/100] NKE…
+07:35:18  INFO      [NKE] yfinance: 4180 filas desde 2010-01-01
+07:35:24  INFO      [NKE] Ensemble guardado — IC=0.018 DirAcc=49.8%
+07:35:24  INFO      [ 25/100] LOW…
+07:35:25  INFO      [LOW] yfinance: 4180 filas desde 2010-01-01
+07:35:30  INFO      [LOW] Ensemble guardado — IC=-0.004 DirAcc=49.7%
+07:35:30  INFO      [ 26/100] HD…
+07:35:31  INFO      [HD] yfinance: 4179 filas desde 2010-01-01
+07:35:36  INFO      [HD] Ensemble guardado — IC=0.020 DirAcc=49.8%
+07:35:37  INFO      [ 27/100] SBUX…
+07:35:37  INFO      [SBUX] yfinance: 4180 filas desde 2010-01-01
+07:35:43  INFO      [SBUX] Ensemble guardado — IC=0.053 DirAcc=51.0%
+07:35:43  INFO      [ 28/100] TGT…
+07:35:44  INFO      [TGT] yfinance: 4178 filas desde 2010-01-01
+07:35:49  INFO      [TGT] Ensemble guardado — IC=-0.009 DirAcc=50.0%
+07:35:49  INFO                 \u2192 COMPRAR                    ret=+1.16%  DA=50%
+07:35:49  INFO      [ 29/100] BKNG…
+07:35:50  INFO      [BKNG] yfinance: 4179 filas desde 2010-01-01
+07:35:55  INFO      [BKNG] Ensemble guardado — IC=-0.012 DirAcc=49.8%
+07:35:56  INFO      [ 30/100] PG…
+07:35:56  INFO      [PG] yfinance: 4181 filas desde 2010-01-01
+07:36:02  INFO      [PG] Ensemble guardado — IC=0.037 DirAcc=48.7%
+07:36:02  INFO      [ 31/100] KO…
+07:36:03  INFO      [KO] yfinance: 4181 filas desde 2010-01-01
+07:36:09  INFO      [KO] Ensemble guardado — IC=0.043 DirAcc=49.9%
+07:36:09  INFO      [ 32/100] PEP…
+07:36:10  INFO      [PEP] yfinance: 4180 filas desde 2010-01-01
+07:36:16  INFO      [PEP] Ensemble guardado — IC=0.050 DirAcc=50.2%
+07:36:16  INFO      [ 33/100] WMT…
+07:36:17  INFO      [WMT] yfinance: 4180 filas desde 2010-01-01
+07:36:23  INFO      [WMT] Ensemble guardado — IC=0.048 DirAcc=49.1%
+07:36:23  INFO      [ 34/100] COST…
+07:36:23  INFO      [COST] yfinance: 4181 filas desde 2010-01-01
+07:36:29  INFO      [COST] Ensemble guardado — IC=0.004 DirAcc=49.0%
+07:36:29  INFO      [ 35/100] PM…
+07:36:30  INFO      [PM] yfinance: 4181 filas desde 2010-01-01
+07:36:35  INFO      [PM] Ensemble guardado — IC=0.038 DirAcc=48.9%
+07:36:35  INFO      [ 36/100] MO…
+07:36:36  INFO      [MO] yfinance: 4181 filas desde 2010-01-01
+07:36:42  INFO      [MO] Ensemble guardado — IC=0.003 DirAcc=48.9%
+07:36:42  INFO                 \u2192 VENDER (débil)             ret=-0.20%  DA=49%
+07:36:42  INFO      [ 37/100] MDLZ…
+07:36:43  INFO      [MDLZ] yfinance: 4181 filas desde 2010-01-01
+07:36:48  INFO      [MDLZ] Ensemble guardado — IC=0.045 DirAcc=49.2%
+07:36:48  INFO                 \u2192 COMPRAR (débil)            ret=+0.32%  DA=49%
+07:36:48  INFO      [ 38/100] CL…
+07:51:52  ERROR     $CL: possibly delisted; no price data found  (1d 2010-01-01 -> 2026-08-19)
+07:51:52  WARNING              \u2192 ERROR: Yahoo Finance no devolvió datos para 'CL'. Comprueba que el ticker sea correcto.
+07:51:52  INFO      [ 39/100] UNH…
+07:58:31  ERROR     $UNH: possibly delisted; no price data found  (1d 2010-01-01 -> 2026-08-19)
+07:58:31  WARNING              \u2192 ERROR: Yahoo Finance no devolvió datos para 'UNH'. Comprueba que el ticker sea correcto.
+07:58:31  INFO      [ 40/100] JNJ…
+07:58:36  INFO      [JNJ] yfinance: 4180 filas desde 2010-01-01
+07:58:42  INFO      [JNJ] Ensemble guardado — IC=0.038 DirAcc=50.1%
+07:58:43  INFO                 \u2192 COMPRAR (débil)            ret=+0.20%  DA=50%
+07:58:43  INFO      [ 41/100] LLY…
+07:58:44  INFO      [LLY] yfinance: 4180 filas desde 2010-01-01
+07:58:50  INFO      [LLY] Ensemble guardado — IC=0.034 DirAcc=51.6%
+07:58:50  INFO      [ 42/100] ABBV…
+07:58:51  INFO      [ABBV] yfinance: 3427 filas desde 2010-01-01
+07:58:56  INFO      [ABBV] Ensemble guardado — IC=0.019 DirAcc=47.9%
+07:58:56  INFO                 \u2192 COMPRAR (débil)            ret=+0.26%  DA=48%
+07:58:56  INFO      [ 43/100] MRK…
+07:58:57  INFO      [MRK] yfinance: 4181 filas desde 2010-01-01
+07:59:04  INFO      [MRK] Ensemble guardado — IC=0.002 DirAcc=48.5%
+07:59:04  INFO      [ 44/100] ABT…
+07:59:05  INFO      [ABT] yfinance: 4180 filas desde 2010-01-01
+07:59:11  INFO      [ABT] Ensemble guardado — IC=0.044 DirAcc=49.4%
+07:59:12  INFO                 \u2192 COMPRAR (débil)            ret=+0.27%  DA=49%
+07:59:12  INFO      [ 45/100] TMO…
+07:59:12  INFO      [TMO] yfinance: 4181 filas desde 2010-01-01
+07:59:18  INFO      [TMO] Ensemble guardado — IC=0.035 DirAcc=49.2%
+07:59:18  INFO      [ 46/100] DHR…
+07:59:19  INFO      [DHR] yfinance: 4180 filas desde 2010-01-01
+07:59:26  INFO      [DHR] Ensemble guardado — IC=0.049 DirAcc=49.4%
+07:59:26  INFO                 \u2192 COMPRAR (débil)            ret=+0.45%  DA=49%
+07:59:26  INFO      [ 47/100] BMY…
+07:59:27  INFO      [BMY] yfinance: 4181 filas desde 2010-01-01
+07:59:33  INFO      [BMY] Ensemble guardado — IC=0.009 DirAcc=50.9%
+07:59:33  INFO      [ 48/100] AMGN…
+07:59:34  INFO      [AMGN] yfinance: 4179 filas desde 2010-01-01
+07:59:40  INFO      [AMGN] Ensemble guardado — IC=0.049 DirAcc=51.9%
+07:59:41  INFO      [ 49/100] GILD…
+07:59:42  INFO      [GILD] yfinance: 4180 filas desde 2010-01-01
+07:59:49  INFO      [GILD] Ensemble guardado — IC=0.032 DirAcc=50.1%
+07:59:50  INFO                 \u2192 VENDER                     ret=-0.62%  DA=50%
+07:59:50  INFO      [ 50/100] ISRG…
+07:59:51  INFO      [ISRG] yfinance: 4181 filas desde 2010-01-01
+07:59:57  INFO      [ISRG] Ensemble guardado — IC=0.037 DirAcc=49.0%
+07:59:58  INFO                 \u2192 COMPRAR                    ret=+0.54%  DA=49%
+07:59:58  INFO      [ 51/100] MDT…
+07:59:58  INFO      [MDT] yfinance: 4181 filas desde 2010-01-01
+08:00:05  INFO      [MDT] Ensemble guardado — IC=0.011 DirAcc=49.2%
+08:00:05  INFO      [ 52/100] SYK…
+08:00:06  INFO      [SYK] yfinance: 4178 filas desde 2010-01-01
+08:00:11  INFO      [SYK] Ensemble guardado — IC=-0.000 DirAcc=49.3%
+08:00:11  INFO                 \u2192 COMPRAR                    ret=+0.83%  DA=49%
+08:00:11  INFO      [ 53/100] ZTS…
+08:00:12  INFO      [ZTS] yfinance: 3406 filas desde 2010-01-01
+08:00:18  INFO      [ZTS] Ensemble guardado — IC=0.012 DirAcc=50.3%
+08:00:19  INFO      [ 54/100] BDX…
+08:00:19  INFO      [BDX] yfinance: 4177 filas desde 2010-01-01
+08:00:26  INFO      [BDX] Ensemble guardado — IC=0.042 DirAcc=47.9%
+08:00:26  INFO      [ 55/100] CVS…
+08:00:28  INFO      [CVS] yfinance: 4180 filas desde 2010-01-01
+08:00:36  INFO      [CVS] Ensemble guardado — IC=0.007 DirAcc=49.4%
+08:00:36  INFO                 \u2192 COMPRAR (débil)            ret=+0.49%  DA=49%
+08:00:36  INFO      [ 56/100] CI…
+08:00:37  INFO      [CI] yfinance: 4178 filas desde 2010-01-01
+08:00:42  INFO      [CI] Ensemble guardado — IC=0.047 DirAcc=50.9%
+08:00:43  INFO                 \u2192 COMPRAR (débil)            ret=+0.39%  DA=51%
+08:00:43  INFO      [ 57/100] ELV…
+08:00:44  INFO      [ELV] yfinance: 4177 filas desde 2010-01-01
+08:00:49  INFO      [ELV] Ensemble guardado — IC=0.012 DirAcc=50.1%
+08:00:49  INFO                 \u2192 COMPRAR (débil)            ret=+0.22%  DA=50%
+08:00:49  INFO      [ 58/100] VRTX…
+08:00:50  INFO      [VRTX] yfinance: 4179 filas desde 2010-01-01
+08:00:57  INFO      [VRTX] Ensemble guardado — IC=0.037 DirAcc=50.1%
+08:00:57  INFO                 \u2192 VENDER                     ret=-0.60%  DA=50%
+08:00:57  INFO      [ 59/100] JPM…
+08:00:59  INFO      [JPM] yfinance: 4180 filas desde 2010-01-01
+08:01:09  INFO      [JPM] Ensemble guardado — IC=0.015 DirAcc=48.6%
+08:01:10  INFO      [ 60/100] BAC…
+08:01:11  INFO      [BAC] yfinance: 4180 filas desde 2010-01-01
+08:01:19  INFO      [BAC] Ensemble guardado — IC=0.040 DirAcc=49.3%
+08:01:20  INFO                 \u2192 COMPRAR (débil)            ret=+0.33%  DA=49%
+08:01:20  INFO      [ 61/100] WFC…
+08:01:21  INFO      [WFC] yfinance: 4181 filas desde 2010-01-01
+08:01:28  INFO      [WFC] Ensemble guardado — IC=0.041 DirAcc=50.8%
+08:01:28  INFO      [ 62/100] MS…
+08:01:29  INFO      [MS] yfinance: 4179 filas desde 2010-01-01
+08:01:36  INFO      [MS] Ensemble guardado — IC=0.037 DirAcc=48.5%
+08:01:37  INFO      [ 63/100] GS…
+08:01:37  INFO      [GS] yfinance: 4180 filas desde 2010-01-01
+08:01:43  INFO      [GS] Ensemble guardado — IC=0.006 DirAcc=48.4%
+08:01:43  INFO                 \u2192 VENDER (débil)             ret=-0.32%  DA=48%
+08:01:43  INFO      [ 64/100] BLK…
+08:01:45  INFO      [BLK] yfinance: 4177 filas desde 2010-01-01
+08:01:52  INFO      [BLK] Ensemble guardado — IC=0.041 DirAcc=49.8%
+08:01:53  INFO      [ 65/100] SCHW…
+08:01:53  INFO      [SCHW] yfinance: 4181 filas desde 2010-01-01
+08:02:00  INFO      [SCHW] Ensemble guardado — IC=-0.002 DirAcc=49.4%
+08:02:02  INFO      [ 66/100] USB…
+08:02:02  INFO      [USB] yfinance: 4181 filas desde 2010-01-01
+08:02:09  INFO      [USB] Ensemble guardado — IC=0.025 DirAcc=49.2%
+08:02:09  INFO      [ 67/100] PNC…
+08:02:10  INFO      [PNC] yfinance: 4179 filas desde 2010-01-01
+08:02:35  INFO      [PNC] Ensemble guardado — IC=0.046 DirAcc=49.2%
+08:02:35  INFO      [ 68/100] TFC…
+08:02:36  INFO      [TFC] yfinance: 4181 filas desde 2010-01-01
+08:02:42  INFO      [TFC] Ensemble guardado — IC=0.016 DirAcc=49.0%
+08:02:43  INFO                 \u2192 VENDER                     ret=-0.69%  DA=49%
+08:02:43  INFO      [ 69/100] COF…
+08:02:43  INFO      [COF] yfinance: 4179 filas desde 2010-01-01
+08:02:50  INFO      [COF] Ensemble guardado — IC=-0.002 DirAcc=50.5%
+08:02:50  INFO      [ 70/100] C…
+08:02:51  INFO      [C] yfinance: 4181 filas desde 2010-01-01
+08:02:58  INFO      [C] Ensemble guardado — IC=0.001 DirAcc=48.8%
+08:02:58  INFO      [ 71/100] AXP…
+08:02:59  INFO      [AXP] yfinance: 4179 filas desde 2010-01-01
+08:03:05  INFO      [AXP] Ensemble guardado — IC=0.031 DirAcc=50.0%
+08:03:05  INFO                 \u2192 VENDER (débil)             ret=-0.33%  DA=50%
+08:03:05  INFO      [ 72/100] CME…
+08:03:07  INFO      [CME] yfinance: 4181 filas desde 2010-01-01
+08:03:13  INFO      [CME] Ensemble guardado — IC=0.055 DirAcc=50.8%
+08:03:13  INFO      [ 73/100] SPGI…
+08:03:14  INFO      [SPGI] yfinance: 4178 filas desde 2010-01-01
+08:03:23  INFO      [SPGI] Ensemble guardado — IC=0.041 DirAcc=51.4%
+08:03:24  INFO                 \u2192 COMPRAR (débil)            ret=+0.23%  DA=51%
+08:03:24  INFO      [ 74/100] AON…
+08:03:24  INFO      [AON] yfinance: 4178 filas desde 2010-01-01
+08:03:30  INFO      [AON] Ensemble guardado — IC=0.045 DirAcc=50.0%
+08:03:31  INFO      [ 75/100] MMC…
+08:03:32  ERROR     $MMC: possibly delisted; no timezone found
+08:03:32  WARNING              \u2192 ERROR: Yahoo Finance no devolvió datos para 'MMC'. Comprueba que el ticker sea correcto.
+08:03:32  INFO      [ 76/100] XOM…
+08:03:33  INFO      [XOM] yfinance: 4180 filas desde 2010-01-01
+08:03:39  INFO      [XOM] Ensemble guardado — IC=0.048 DirAcc=50.4%
+08:03:39  INFO      [ 77/100] CVX…
+08:03:42  INFO      [CVX] yfinance: 4181 filas desde 2010-01-01
+08:03:48  INFO      [CVX] Ensemble guardado — IC=0.032 DirAcc=49.4%
+08:03:48  INFO      [ 78/100] EOG…
+08:03:49  INFO      [EOG] yfinance: 4180 filas desde 2010-01-01
+08:03:54  INFO      [EOG] Ensemble guardado — IC=0.035 DirAcc=50.6%
+08:03:55  INFO                 \u2192 VENDER (débil)             ret=-0.33%  DA=51%
+08:03:55  INFO      [ 79/100] SLB…
+08:03:57  INFO      [SLB] yfinance: 4180 filas desde 2010-01-01
+08:04:08  INFO      [SLB] Ensemble guardado — IC=0.024 DirAcc=52.0%
+08:04:08  INFO                 \u2192 VENDER (débil)             ret=-0.24%  DA=52%
+08:04:08  INFO      [ 80/100] FCX…
+08:04:09  INFO      [FCX] yfinance: 4181 filas desde 2010-01-01
+08:04:14  INFO      [FCX] Ensemble guardado — IC=0.040 DirAcc=50.1%
+08:04:15  INFO                 \u2192 COMPRAR (débil)            ret=+0.29%  DA=50%
+08:04:15  INFO      [ 81/100] HON…
+08:04:15  INFO      [HON] yfinance: 4179 filas desde 2010-01-01
+08:04:21  INFO      [HON] Ensemble guardado — IC=0.002 DirAcc=49.1%
+08:04:21  INFO                 \u2192 VENDER (débil)             ret=-0.39%  DA=49%
+08:04:21  INFO      [ 82/100] CAT…
+08:04:22  INFO      [CAT] yfinance: 4180 filas desde 2010-01-01
+08:04:29  INFO      [CAT] Ensemble guardado — IC=0.014 DirAcc=49.5%
+08:04:29  INFO                 \u2192 COMPRAR                    ret=+0.64%  DA=50%
+08:04:29  INFO      [ 83/100] DE…
+08:04:29  INFO      [DE] yfinance: 4177 filas desde 2010-01-01
+08:04:38  INFO      [DE] Ensemble guardado — IC=0.008 DirAcc=49.5%
+08:04:38  INFO      [ 84/100] BA…
+08:04:39  INFO      [BA] yfinance: 4180 filas desde 2010-01-01
+08:04:45  INFO      [BA] Ensemble guardado — IC=0.019 DirAcc=48.1%
+08:04:46  INFO      [ 85/100] GE…
+08:04:46  INFO      [GE] yfinance: 4181 filas desde 2010-01-01
+08:04:52  INFO      [GE] Ensemble guardado — IC=-0.009 DirAcc=48.3%
+08:04:52  INFO                 \u2192 VENDER (débil)             ret=-0.24%  DA=48%
+08:04:52  INFO      [ 86/100] UPS…
+08:04:53  INFO      [UPS] yfinance: 4181 filas desde 2010-01-01
+08:04:59  INFO      [UPS] Ensemble guardado — IC=0.052 DirAcc=48.8%
+08:04:59  INFO      [ 87/100] RTX…
+08:05:00  INFO      [RTX] yfinance: 4181 filas desde 2010-01-01
+08:05:07  INFO      [RTX] Ensemble guardado — IC=0.017 DirAcc=48.3%
+08:05:07  INFO      [ 88/100] ETN…
+08:05:08  INFO      [ETN] yfinance: 4181 filas desde 2010-01-01
+08:05:14  INFO      [ETN] Ensemble guardado — IC=0.036 DirAcc=49.9%
+08:05:14  INFO                 \u2192 COMPRAR (débil)            ret=+0.26%  DA=50%
+08:05:14  INFO      [ 89/100] ITW…
+08:05:15  INFO      [ITW] yfinance: 4181 filas desde 2010-01-01
+08:05:21  INFO      [ITW] Ensemble guardado — IC=-0.002 DirAcc=49.1%
+08:05:21  INFO      [ 90/100] FDX…
+08:05:22  INFO      [FDX] yfinance: 4179 filas desde 2010-01-01
+08:05:28  INFO      [FDX] Ensemble guardado — IC=0.023 DirAcc=50.0%
+08:05:28  INFO      [ 91/100] LIN…
+08:05:31  INFO      [LIN] yfinance: 4178 filas desde 2010-01-01
+08:05:37  INFO      [LIN] Ensemble guardado — IC=0.019 DirAcc=49.9%
+08:05:38  INFO      [ 92/100] PLD…
+08:05:38  INFO      [PLD] yfinance: 4181 filas desde 2010-01-01
+08:05:44  INFO      [PLD] Ensemble guardado — IC=0.030 DirAcc=48.0%
+08:05:44  INFO                 \u2192 VENDER (débil)             ret=-0.29%  DA=48%
+08:05:44  INFO      [ 93/100] AMT…
+08:05:45  INFO      [AMT] yfinance: 4181 filas desde 2010-01-01
+08:05:51  INFO      [AMT] Ensemble guardado — IC=0.066 DirAcc=50.6%
+08:05:51  INFO      [ 94/100] NEE…
+08:05:52  INFO      [NEE] yfinance: 4181 filas desde 2010-01-01
+08:05:58  INFO      [NEE] Ensemble guardado — IC=0.041 DirAcc=50.5%
+08:05:58  INFO      [ 95/100] DUK…
+08:05:59  INFO      [DUK] yfinance: 4178 filas desde 2010-01-01
+08:06:04  INFO      [DUK] Ensemble guardado — IC=0.009 DirAcc=47.7%
+08:06:05  INFO                 \u2192 VENDER (débil)             ret=-0.28%  DA=48%
+08:06:05  INFO      [ 96/100] SO…
+08:06:07  INFO      [SO] yfinance: 4178 filas desde 2010-01-01
+08:06:13  INFO      [SO] Ensemble guardado — IC=0.036 DirAcc=50.1%
+08:06:13  INFO      [ 97/100] V…
+08:06:14  INFO      [V] yfinance: 4181 filas desde 2010-01-01
+08:06:20  INFO      [V] Ensemble guardado — IC=0.062 DirAcc=51.6%
+08:06:20  INFO                 \u2192 VENDER (débil)             ret=-0.27%  DA=52%
+08:06:20  INFO      [ 98/100] MA…
+08:06:22  INFO      [MA] yfinance: 4180 filas desde 2010-01-01
+08:06:29  INFO      [MA] Ensemble guardado — IC=0.083 DirAcc=52.0%
+08:06:29  INFO                 \u2192 COMPRAR (débil)            ret=+0.21%  DA=52%
+08:06:29  INFO      [ 99/100] ACN…
+08:06:30  INFO      [ACN] yfinance: 4180 filas desde 2010-01-01
+08:06:36  INFO      [ACN] Ensemble guardado — IC=0.028 DirAcc=51.3%
+08:06:37  INFO                 \u2192 VENDER (débil)             ret=-0.24%  DA=51%
+08:06:37  INFO      [100/100] ADP…
+08:06:37  INFO      [ADP] yfinance: 4181 filas desde 2010-01-01
+08:06:43  INFO      [ADP] Ensemble guardado — IC=0.031 DirAcc=50.3%
+08:06:43  INFO      
+Scan completado — 46 señales, 3 errores de 100 símbolos
+08:06:43  INFO      scan_log.csv actualizado — 46 entradas (C:\proyectos\AlgoTrader\scan_log.csv)
+08:06:43  INFO      pending_signals.json guardado — 46 señales (C:\proyectos\AlgoTrader\pending_signals.json)
+08:06:44  INFO      Telegram: mensaje enviado correctamente
+08:06:44  INFO      Telegram: mensaje enviado
+14:45:14  INFO      Iniciando scan de 100 símbolos del S&P100…
+14:45:14  INFO      [  1/100] AAPL…
+14:45:14  INFO      [AAPL] Caché local: 4180 filas
+14:45:23  INFO      [AAPL] Caché válido — ensemble cargado sin reentrenar.
+14:45:24  INFO      [  2/100] MSFT…
+14:45:24  INFO      [MSFT] Caché local: 4180 filas
+14:45:32  INFO      [MSFT] Caché válido — ensemble cargado sin reentrenar.
+14:45:32  INFO      [  3/100] NVDA…
+14:45:32  INFO      [NVDA] Caché local: 4181 filas
+14:45:35  INFO      [NVDA] Caché válido — ensemble cargado sin reentrenar.
+14:45:35  INFO                 \u2192 VENDER (débil)             ret=-0.41%  DA=49%
+14:45:35  INFO      [  4/100] AVGO…
+14:45:35  INFO      [AVGO] Caché local: 4180 filas
+14:45:39  INFO      [AVGO] Caché válido — ensemble cargado sin reentrenar.
+14:45:39  INFO      [  5/100] ORCL…
+14:45:39  INFO      [ORCL] Caché local: 4180 filas
+14:45:43  INFO      [ORCL] Caché válido — ensemble cargado sin reentrenar.
+14:45:44  INFO                 \u2192 VENDER (débil)             ret=-0.27%  DA=49%
+14:45:44  INFO      [  6/100] CSCO…
+14:45:44  INFO      [CSCO] Caché local: 4180 filas
+14:45:47  INFO      [CSCO] Caché válido — ensemble cargado sin reentrenar.
+14:45:48  INFO                 \u2192 COMPRAR (débil)            ret=+0.27%  DA=49%
+14:45:48  INFO      [  7/100] IBM…
+14:45:48  INFO      [IBM] Caché local: 4181 filas
+14:45:52  INFO      [IBM] Caché válido — ensemble cargado sin reentrenar.
+14:45:52  INFO                 \u2192 VENDER                     ret=-0.63%  DA=50%
+14:45:52  INFO      [  8/100] INTC…
+14:45:52  INFO      [INTC] Caché local: 4181 filas
+14:45:57  INFO      [INTC] Caché válido — ensemble cargado sin reentrenar.
+14:45:57  INFO                 \u2192 COMPRAR                    ret=+1.33%  DA=50%
+14:45:57  INFO      [  9/100] TXN…
+14:45:57  INFO      [TXN] Caché local: 4180 filas
+14:46:01  INFO      [TXN] Caché válido — ensemble cargado sin reentrenar.
+14:46:02  INFO      [ 10/100] QCOM…
+14:46:02  INFO      [QCOM] Caché local: 4181 filas
+14:46:05  INFO      [QCOM] Caché válido — ensemble cargado sin reentrenar.
+14:46:05  INFO      [ 11/100] ADI…
+14:46:05  INFO      [ADI] Caché local: 4181 filas
+14:46:09  INFO      [ADI] Caché válido — ensemble cargado sin reentrenar.
+14:46:10  INFO                 \u2192 COMPRAR                    ret=+1.52%  DA=52%
+14:46:10  INFO      [ 12/100] AMAT…
+14:46:10  INFO      [AMAT] Caché local: 4180 filas
+14:46:13  INFO      [AMAT] Caché válido — ensemble cargado sin reentrenar.
+14:46:14  INFO                 \u2192 COMPRAR (débil)            ret=+0.27%  DA=50%
+14:46:14  INFO      [ 13/100] NOW…
+14:46:14  INFO      [NOW] Caché local: 3553 filas
+14:46:17  INFO      [NOW] Caché válido — ensemble cargado sin reentrenar.
+14:46:18  INFO                 \u2192 VENDER                     ret=-0.88%  DA=51%
+14:46:18  INFO      [ 14/100] ADBE…
+14:46:18  INFO      [ADBE] Caché local: 4181 filas
+14:46:21  INFO      [ADBE] Caché válido — ensemble cargado sin reentrenar.
+14:46:22  INFO                 \u2192 VENDER (débil)             ret=-0.23%  DA=50%
+14:46:22  INFO      [ 15/100] CRM…
+14:46:22  INFO      [CRM] Caché local: 4181 filas
+14:46:24  INFO      [CRM] Caché válido — ensemble cargado sin reentrenar.
+14:46:25  INFO                 \u2192 COMPRAR                    ret=+0.74%  DA=50%
+14:46:25  INFO      [ 16/100] INTU…
+14:46:25  INFO      [INTU] Caché local: 4180 filas
+14:46:28  INFO      [INTU] Caché válido — ensemble cargado sin reentrenar.
+14:46:29  INFO                 \u2192 COMPRAR (débil)            ret=+0.36%  DA=51%
+14:46:29  INFO      [ 17/100] GOOGL…
+14:46:29  INFO      [GOOGL] Caché local: 4181 filas
+14:46:32  INFO      [GOOGL] Caché válido — ensemble cargado sin reentrenar.
+14:46:33  INFO                 \u2192 VENDER (débil)             ret=-0.27%  DA=50%
+14:46:33  INFO      [ 18/100] META…
+14:46:33  INFO      [META] Caché local: 3582 filas
+14:46:35  INFO      [META] Caché válido — ensemble cargado sin reentrenar.
+14:46:35  INFO      [ 19/100] T…
+14:46:35  INFO      [T] Caché local: 4180 filas
+14:46:40  INFO      [T] Caché válido — ensemble cargado sin reentrenar.
+14:46:40  INFO                 \u2192 COMPRAR (débil)            ret=+0.32%  DA=51%
+14:46:40  INFO      [ 20/100] VZ…
+14:46:40  INFO      [VZ] Caché local: 4181 filas
+14:46:44  INFO      [VZ] Caché válido — ensemble cargado sin reentrenar.
+14:46:44  INFO                 \u2192 VENDER (débil)             ret=-0.25%  DA=49%
+14:46:44  INFO      [ 21/100] AMZN…
+14:46:44  INFO      [AMZN] Caché local: 4180 filas
+14:46:47  INFO      [AMZN] Caché válido — ensemble cargado sin reentrenar.
+14:46:48  INFO      [ 22/100] TSLA…
+14:46:48  INFO      [TSLA] Caché local: 4059 filas
+14:46:51  INFO      [TSLA] Caché válido — ensemble cargado sin reentrenar.
+14:46:51  INFO                 \u2192 VENDER                     ret=-0.82%  DA=50%
+14:46:51  INFO      [ 23/100] MCD…
+14:46:51  INFO      [MCD] Caché local: 4181 filas
+14:46:55  INFO      [MCD] Caché válido — ensemble cargado sin reentrenar.
+14:46:56  INFO      [ 24/100] NKE…
+14:46:56  INFO      [NKE] Caché local: 4180 filas
+14:46:59  INFO      [NKE] Caché válido — ensemble cargado sin reentrenar.
+14:47:00  INFO      [ 25/100] LOW…
+14:47:00  INFO      [LOW] Caché local: 4180 filas
+14:47:04  INFO      [LOW] Caché válido — ensemble cargado sin reentrenar.
+14:47:04  INFO      [ 26/100] HD…
+14:47:04  INFO      [HD] Caché local: 4179 filas
+14:47:08  INFO      [HD] Caché válido — ensemble cargado sin reentrenar.
+14:47:09  INFO      [ 27/100] SBUX…
+14:47:09  INFO      [SBUX] Caché local: 4180 filas
+14:47:13  INFO      [SBUX] Caché válido — ensemble cargado sin reentrenar.
+14:47:13  INFO      [ 28/100] TGT…
+14:47:13  INFO      [TGT] Caché local: 4178 filas
+14:47:17  INFO      [TGT] Caché válido — ensemble cargado sin reentrenar.
+14:47:17  INFO                 \u2192 COMPRAR                    ret=+1.16%  DA=50%
+14:47:17  INFO      [ 29/100] BKNG…
+14:47:17  INFO      [BKNG] Caché local: 4179 filas
+14:47:21  INFO      [BKNG] Caché válido — ensemble cargado sin reentrenar.
+14:47:22  INFO      [ 30/100] PG…
+14:47:22  INFO      [PG] Caché local: 4181 filas
+14:47:25  INFO      [PG] Caché válido — ensemble cargado sin reentrenar.
+14:47:26  INFO      [ 31/100] KO…
+14:47:26  INFO      [KO] Caché local: 4181 filas
+14:47:29  INFO      [KO] Caché válido — ensemble cargado sin reentrenar.
+14:47:29  INFO      [ 32/100] PEP…
+14:47:30  INFO      [PEP] Caché local: 4180 filas
+14:47:34  INFO      [PEP] Caché válido — ensemble cargado sin reentrenar.
+14:47:34  INFO      [ 33/100] WMT…
+14:47:34  INFO      [WMT] Caché local: 4180 filas
+14:47:38  INFO      [WMT] Caché válido — ensemble cargado sin reentrenar.
+14:47:39  INFO      [ 34/100] COST…
+14:47:39  INFO      [COST] Caché local: 4181 filas
+14:47:43  INFO      [COST] Caché válido — ensemble cargado sin reentrenar.
+14:47:43  INFO      [ 35/100] PM…
+14:47:43  INFO      [PM] Caché local: 4181 filas
+14:47:46  INFO      [PM] Caché válido — ensemble cargado sin reentrenar.
+14:47:46  INFO      [ 36/100] MO…
+14:47:46  INFO      [MO] Caché local: 4181 filas
+14:47:50  INFO      [MO] Caché válido — ensemble cargado sin reentrenar.
+14:47:51  INFO                 \u2192 VENDER (débil)             ret=-0.20%  DA=49%
+14:47:51  INFO      [ 37/100] MDLZ…
+14:47:51  INFO      [MDLZ] Caché local: 4181 filas
+14:47:54  INFO      [MDLZ] Caché válido — ensemble cargado sin reentrenar.
+14:47:55  INFO                 \u2192 COMPRAR (débil)            ret=+0.32%  DA=49%
+14:47:55  INFO      [ 38/100] CL…
+14:47:55  INFO      [CL] yfinance: 4181 filas desde 2010-01-01
+14:48:01  INFO      [CL] Ensemble guardado — IC=0.050 DirAcc=51.7%
+14:48:02  INFO      [ 39/100] UNH…
+14:48:03  INFO      [UNH] yfinance: 4182 filas desde 2010-01-01
+14:48:09  INFO      [UNH] Ensemble guardado — IC=0.022 DirAcc=51.5%
+14:48:10  INFO                 \u2192 COMPRAR (débil)            ret=+0.22%  DA=51%
+14:48:10  INFO      [ 40/100] JNJ…
+14:48:10  INFO      [JNJ] Caché local: 4180 filas
+14:48:13  INFO      [JNJ] Caché válido — ensemble cargado sin reentrenar.
+14:48:14  INFO                 \u2192 COMPRAR (débil)            ret=+0.20%  DA=50%
+14:48:14  INFO      [ 41/100] LLY…
+14:48:14  INFO      [LLY] Caché local: 4180 filas
+14:48:17  INFO      [LLY] Caché válido — ensemble cargado sin reentrenar.
+14:48:17  INFO      [ 42/100] ABBV…
+14:48:17  INFO      [ABBV] Caché local: 3427 filas
+14:48:20  INFO      [ABBV] Caché válido — ensemble cargado sin reentrenar.
+14:48:21  INFO                 \u2192 COMPRAR (débil)            ret=+0.26%  DA=48%
+14:48:21  INFO      [ 43/100] MRK…
+14:48:21  INFO      [MRK] Caché local: 4181 filas
+14:48:24  INFO      [MRK] Caché válido — ensemble cargado sin reentrenar.
+14:48:24  INFO      [ 44/100] ABT…
+14:48:24  INFO      [ABT] Caché local: 4180 filas
+14:48:27  INFO      [ABT] Caché válido — ensemble cargado sin reentrenar.
+14:48:27  INFO                 \u2192 COMPRAR (débil)            ret=+0.27%  DA=49%
+14:48:27  INFO      [ 45/100] TMO…
+14:48:27  INFO      [TMO] Caché local: 4181 filas
+14:48:31  INFO      [TMO] Caché válido — ensemble cargado sin reentrenar.
+14:48:31  INFO      [ 46/100] DHR…
+14:48:31  INFO      [DHR] Caché local: 4180 filas
+14:48:34  INFO      [DHR] Caché válido — ensemble cargado sin reentrenar.
+14:48:35  INFO                 \u2192 COMPRAR (débil)            ret=+0.45%  DA=49%
+14:48:35  INFO      [ 47/100] BMY…
+14:48:35  INFO      [BMY] Caché local: 4181 filas
+14:48:39  INFO      [BMY] Caché válido — ensemble cargado sin reentrenar.
+14:48:39  INFO      [ 48/100] AMGN…
+14:48:39  INFO      [AMGN] Caché local: 4179 filas
+14:48:42  INFO      [AMGN] Caché válido — ensemble cargado sin reentrenar.
+14:48:42  INFO      [ 49/100] GILD…
+14:48:42  INFO      [GILD] Caché local: 4180 filas
+14:48:45  INFO      [GILD] Caché válido — ensemble cargado sin reentrenar.
+14:48:46  INFO                 \u2192 VENDER                     ret=-0.62%  DA=50%
+14:48:46  INFO      [ 50/100] ISRG…
+14:48:46  INFO      [ISRG] Caché local: 4181 filas
+14:48:48  INFO      [ISRG] Caché válido — ensemble cargado sin reentrenar.
+14:48:49  INFO                 \u2192 COMPRAR                    ret=+0.54%  DA=49%
+14:48:49  INFO      [ 51/100] MDT…
+14:48:49  INFO      [MDT] Caché local: 4181 filas
+14:48:53  INFO      [MDT] Caché válido — ensemble cargado sin reentrenar.
+14:48:53  INFO      [ 52/100] SYK…
+14:48:53  INFO      [SYK] Caché local: 4178 filas
+14:48:57  INFO      [SYK] Caché válido — ensemble cargado sin reentrenar.
+14:48:57  INFO                 \u2192 COMPRAR                    ret=+0.83%  DA=49%
+14:48:57  INFO      [ 53/100] ZTS…
+14:48:57  INFO      [ZTS] Caché local: 3406 filas
+14:49:01  INFO      [ZTS] Caché válido — ensemble cargado sin reentrenar.
+14:49:01  INFO      [ 54/100] BDX…
+14:49:01  INFO      [BDX] Caché local: 4177 filas
+14:49:04  INFO      [BDX] Caché válido — ensemble cargado sin reentrenar.
+14:49:05  INFO      [ 55/100] CVS…
+14:49:05  INFO      [CVS] Caché local: 4180 filas
+14:49:08  INFO      [CVS] Caché válido — ensemble cargado sin reentrenar.
+14:49:08  INFO                 \u2192 COMPRAR (débil)            ret=+0.49%  DA=49%
+14:49:08  INFO      [ 56/100] CI…
+14:49:08  INFO      [CI] Caché local: 4178 filas
+14:49:11  INFO      [CI] Caché válido — ensemble cargado sin reentrenar.
+14:49:11  INFO                 \u2192 COMPRAR (débil)            ret=+0.39%  DA=51%
+14:49:11  INFO      [ 57/100] ELV…
+14:49:11  INFO      [ELV] Caché local: 4177 filas
+14:49:14  INFO      [ELV] Caché válido — ensemble cargado sin reentrenar.
+14:49:14  INFO                 \u2192 COMPRAR (débil)            ret=+0.22%  DA=50%
+14:49:14  INFO      [ 58/100] VRTX…
+14:49:14  INFO      [VRTX] Caché local: 4179 filas
+14:49:17  INFO      [VRTX] Caché válido — ensemble cargado sin reentrenar.
+14:49:18  INFO                 \u2192 VENDER                     ret=-0.60%  DA=50%
+14:49:18  INFO      [ 59/100] JPM…
+14:49:18  INFO      [JPM] Caché local: 4180 filas
+14:49:21  INFO      [JPM] Caché válido — ensemble cargado sin reentrenar.
+14:49:21  INFO      [ 60/100] BAC…
+14:49:21  INFO      [BAC] Caché local: 4180 filas
+14:49:24  INFO      [BAC] Caché válido — ensemble cargado sin reentrenar.
+14:49:24  INFO                 \u2192 COMPRAR (débil)            ret=+0.33%  DA=49%
+14:49:24  INFO      [ 61/100] WFC…
+14:49:24  INFO      [WFC] Caché local: 4181 filas
+14:49:28  INFO      [WFC] Caché válido — ensemble cargado sin reentrenar.
+14:49:28  INFO      [ 62/100] MS…
+14:49:28  INFO      [MS] Caché local: 4179 filas
+14:49:31  INFO      [MS] Caché válido — ensemble cargado sin reentrenar.
+14:49:31  INFO      [ 63/100] GS…
+14:49:31  INFO      [GS] Caché local: 4180 filas
+14:49:34  INFO      [GS] Caché válido — ensemble cargado sin reentrenar.
+14:49:34  INFO                 \u2192 VENDER (débil)             ret=-0.32%  DA=48%
+14:49:34  INFO      [ 64/100] BLK…
+14:49:34  INFO      [BLK] Caché local: 4177 filas
+14:49:37  INFO      [BLK] Caché válido — ensemble cargado sin reentrenar.
+14:49:37  INFO      [ 65/100] SCHW…
+14:49:37  INFO      [SCHW] Caché local: 4181 filas
+14:49:40  INFO      [SCHW] Caché válido — ensemble cargado sin reentrenar.
+14:49:40  INFO      [ 66/100] USB…
+14:49:40  INFO      [USB] Caché local: 4181 filas
+14:49:43  INFO      [USB] Caché válido — ensemble cargado sin reentrenar.
+14:49:44  INFO      [ 67/100] PNC…
+14:49:44  INFO      [PNC] Caché local: 4179 filas
+14:49:46  INFO      [PNC] Caché válido — ensemble cargado sin reentrenar.
+14:49:47  INFO      [ 68/100] TFC…
+14:49:47  INFO      [TFC] Caché local: 4181 filas
+14:49:50  INFO      [TFC] Caché válido — ensemble cargado sin reentrenar.
+14:49:50  INFO                 \u2192 VENDER                     ret=-0.69%  DA=49%
+14:49:50  INFO      [ 69/100] COF…
+14:49:50  INFO      [COF] Caché local: 4179 filas
+14:49:53  INFO      [COF] Caché válido — ensemble cargado sin reentrenar.
+14:49:53  INFO      [ 70/100] C…
+14:49:53  INFO      [C] Caché local: 4181 filas
+14:49:56  INFO      [C] Caché válido — ensemble cargado sin reentrenar.
+14:49:56  INFO      [ 71/100] AXP…
+14:49:56  INFO      [AXP] Caché local: 4179 filas
+14:49:59  INFO      [AXP] Caché válido — ensemble cargado sin reentrenar.
+14:50:00  INFO                 \u2192 VENDER (débil)             ret=-0.33%  DA=50%
+14:50:00  INFO      [ 72/100] CME…
+14:50:00  INFO      [CME] Caché local: 4181 filas
+14:50:03  INFO      [CME] Caché válido — ensemble cargado sin reentrenar.
+14:50:03  INFO      [ 73/100] SPGI…
+14:50:03  INFO      [SPGI] Caché local: 4178 filas
+14:50:08  INFO      [SPGI] Caché válido — ensemble cargado sin reentrenar.
+14:50:08  INFO                 \u2192 COMPRAR (débil)            ret=+0.23%  DA=51%
+14:50:08  INFO      [ 74/100] AON…
+14:50:08  INFO      [AON] Caché local: 4178 filas
+14:50:11  INFO      [AON] Caché válido — ensemble cargado sin reentrenar.
+14:50:11  INFO      [ 75/100] MMC…
+14:50:13  ERROR     $MMC: possibly delisted; no timezone found
+14:50:13  WARNING              \u2192 ERROR: Yahoo Finance no devolvió datos para 'MMC'. Comprueba que el ticker sea correcto.
+14:50:13  INFO      [ 76/100] XOM…
+14:50:13  INFO      [XOM] Caché local: 4180 filas
+14:50:18  INFO      [XOM] Caché válido — ensemble cargado sin reentrenar.
+14:50:18  INFO      [ 77/100] CVX…
+14:50:19  INFO      [CVX] Caché local: 4181 filas
+14:50:24  INFO      [CVX] Caché válido — ensemble cargado sin reentrenar.
+14:50:24  INFO      [ 78/100] EOG…
+14:50:24  INFO      [EOG] Caché local: 4180 filas
+14:50:28  INFO      [EOG] Caché válido — ensemble cargado sin reentrenar.
+14:50:28  INFO                 \u2192 VENDER (débil)             ret=-0.33%  DA=51%
+14:50:28  INFO      [ 79/100] SLB…
+14:50:28  INFO      [SLB] Caché local: 4180 filas
+14:50:32  INFO      [SLB] Caché válido — ensemble cargado sin reentrenar.
+14:50:32  INFO                 \u2192 VENDER (débil)             ret=-0.24%  DA=52%
+14:50:32  INFO      [ 80/100] FCX…
+14:50:32  INFO      [FCX] Caché local: 4181 filas
+14:50:36  INFO      [FCX] Caché válido — ensemble cargado sin reentrenar.
+14:50:37  INFO                 \u2192 COMPRAR (débil)            ret=+0.29%  DA=50%
+14:50:37  INFO      [ 81/100] HON…
+14:50:37  INFO      [HON] Caché local: 4179 filas
+14:50:41  INFO      [HON] Caché válido — ensemble cargado sin reentrenar.
+14:50:41  INFO                 \u2192 VENDER (débil)             ret=-0.39%  DA=49%
+14:50:41  INFO      [ 82/100] CAT…
+14:50:41  INFO      [CAT] Caché local: 4180 filas
+14:50:45  INFO      [CAT] Caché válido — ensemble cargado sin reentrenar.
+14:50:45  INFO                 \u2192 COMPRAR                    ret=+0.64%  DA=50%
+14:50:45  INFO      [ 83/100] DE…
+14:50:45  INFO      [DE] Caché local: 4177 filas
+14:50:50  INFO      [DE] Caché válido — ensemble cargado sin reentrenar.
+14:50:50  INFO      [ 84/100] BA…
+14:50:50  INFO      [BA] Caché local: 4180 filas
+14:50:55  INFO      [BA] Caché válido — ensemble cargado sin reentrenar.
+14:50:56  INFO      [ 85/100] GE…
+14:50:56  INFO      [GE] Caché local: 4181 filas
+14:51:00  INFO      [GE] Caché válido — ensemble cargado sin reentrenar.
+14:51:00  INFO                 \u2192 VENDER (débil)             ret=-0.24%  DA=48%
+14:51:00  INFO      [ 86/100] UPS…
+14:51:00  INFO      [UPS] Caché local: 4181 filas
+14:51:04  INFO      [UPS] Caché válido — ensemble cargado sin reentrenar.
+14:51:04  INFO      [ 87/100] RTX…
+14:51:04  INFO      [RTX] Caché local: 4181 filas
+14:51:09  INFO      [RTX] Caché válido — ensemble cargado sin reentrenar.
+14:51:09  INFO      [ 88/100] ETN…
+14:51:09  INFO      [ETN] Caché local: 4181 filas
+14:51:13  INFO      [ETN] Caché válido — ensemble cargado sin reentrenar.
+14:51:13  INFO                 \u2192 COMPRAR (débil)            ret=+0.26%  DA=50%
+14:51:13  INFO      [ 89/100] ITW…
+14:51:13  INFO      [ITW] Caché local: 4181 filas
+14:51:18  INFO      [ITW] Caché válido — ensemble cargado sin reentrenar.
+14:51:18  INFO      [ 90/100] FDX…
+14:51:18  INFO      [FDX] Caché local: 4179 filas
+14:51:22  INFO      [FDX] Caché válido — ensemble cargado sin reentrenar.
+14:51:22  INFO      [ 91/100] LIN…
+14:51:22  INFO      [LIN] Caché local: 4178 filas
+14:51:26  INFO      [LIN] Caché válido — ensemble cargado sin reentrenar.
+14:51:26  INFO      [ 92/100] PLD…
+14:51:26  INFO      [PLD] Caché local: 4181 filas
+14:51:30  INFO      [PLD] Caché válido — ensemble cargado sin reentrenar.
+14:51:31  INFO                 \u2192 VENDER (débil)             ret=-0.29%  DA=48%
+14:51:31  INFO      [ 93/100] AMT…
+14:51:31  INFO      [AMT] Caché local: 4181 filas
+14:51:34  INFO      [AMT] Caché válido — ensemble cargado sin reentrenar.
+14:51:34  INFO      [ 94/100] NEE…
+14:51:34  INFO      [NEE] Caché local: 4181 filas
+14:51:39  INFO      [NEE] Caché válido — ensemble cargado sin reentrenar.
+14:51:39  INFO      [ 95/100] DUK…
+14:51:39  INFO      [DUK] Caché local: 4178 filas
+14:51:43  INFO      [DUK] Caché válido — ensemble cargado sin reentrenar.
+14:51:43  INFO                 \u2192 VENDER (débil)             ret=-0.28%  DA=48%
+14:51:43  INFO      [ 96/100] SO…
+14:51:43  INFO      [SO] Caché local: 4178 filas
+14:51:47  INFO      [SO] Caché válido — ensemble cargado sin reentrenar.
+14:51:48  INFO      [ 97/100] V…
+14:51:48  INFO      [V] Caché local: 4181 filas
+14:51:52  INFO      [V] Caché válido — ensemble cargado sin reentrenar.
+14:51:52  INFO                 \u2192 VENDER (débil)             ret=-0.27%  DA=52%
+14:51:52  INFO      [ 98/100] MA…
+14:51:52  INFO      [MA] Caché local: 4180 filas
+14:51:56  INFO      [MA] Caché válido — ensemble cargado sin reentrenar.
+14:51:57  INFO                 \u2192 COMPRAR (débil)            ret=+0.21%  DA=52%
+14:51:57  INFO      [ 99/100] ACN…
+14:51:57  INFO      [ACN] Caché local: 4180 filas
+14:52:01  INFO      [ACN] Caché válido — ensemble cargado sin reentrenar.
+14:52:01  INFO                 \u2192 VENDER (débil)             ret=-0.24%  DA=51%
+14:52:01  INFO      [100/100] ADP…
+14:52:01  INFO      [ADP] Caché local: 4181 filas
+14:52:04  INFO      [ADP] Caché válido — ensemble cargado sin reentrenar.
+14:52:05  INFO      
+Scan completado — 47 señales, 1 errores de 100 símbolos
+14:52:05  INFO      scan_log.csv actualizado — 47 entradas (C:\proyectos\AlgoTrader\scan_log.csv)
+14:52:05  INFO      pending_signals.json guardado — 47 señales (C:\proyectos\AlgoTrader\pending_signals.json)
+14:52:05  INFO      Telegram: mensaje enviado correctamente
+14:52:05  INFO      Telegram: mensaje enviado
+14:45:15  INFO      Iniciando scan de 100 símbolos del S&P100…
+14:45:15  INFO      [  1/100] AAPL…
+14:45:19  INFO      [AAPL] yfinance: 4183 filas desde 2010-01-01
+14:45:28  INFO      [AAPL] Ensemble guardado — IC=0.039 DirAcc=49.6%
+14:45:29  INFO                 \u2192 COMPRAR (débil)            ret=+0.38%  DA=50%
+14:45:29  INFO      [  2/100] MSFT…
+14:45:31  INFO      [MSFT] yfinance: 4183 filas desde 2010-01-01
+14:45:39  INFO      [MSFT] Ensemble guardado — IC=0.066 DirAcc=50.5%
+14:45:40  INFO                 \u2192 VENDER (débil)             ret=-0.31%  DA=50%
+14:45:40  INFO      [  3/100] NVDA…
+14:45:40  INFO      [NVDA] yfinance: 4183 filas desde 2010-01-01
+14:45:45  INFO      [NVDA] Ensemble guardado — IC=0.034 DirAcc=49.1%
+14:45:46  INFO      [  4/100] AVGO…
+14:45:46  INFO      [AVGO] yfinance: 4183 filas desde 2010-01-01
+14:45:54  INFO      [AVGO] Ensemble guardado — IC=0.021 DirAcc=50.4%
+14:45:54  INFO                 \u2192 COMPRAR (débil)            ret=+0.23%  DA=50%
+14:45:54  INFO      [  5/100] ORCL…
+14:45:54  INFO      [ORCL] yfinance: 4183 filas desde 2010-01-01
+14:46:00  INFO      [ORCL] Ensemble guardado — IC=0.040 DirAcc=49.5%
+14:46:00  INFO                 \u2192 VENDER (débil)             ret=-0.37%  DA=50%
+14:46:00  INFO      [  6/100] CSCO…
+14:46:01  INFO      [CSCO] yfinance: 4183 filas desde 2010-01-01
+14:46:08  INFO      [CSCO] Ensemble guardado — IC=0.059 DirAcc=49.7%
+14:46:08  INFO                 \u2192 COMPRAR (débil)            ret=+0.43%  DA=50%
+14:46:08  INFO      [  7/100] IBM…
+14:46:09  INFO      [IBM] yfinance: 4183 filas desde 2010-01-01
+14:46:16  INFO      [IBM] Ensemble guardado — IC=0.027 DirAcc=50.6%
+14:46:17  INFO                 \u2192 VENDER (débil)             ret=-0.32%  DA=51%
+14:46:17  INFO      [  8/100] INTC…
+14:46:17  INFO      [INTC] yfinance: 4183 filas desde 2010-01-01
+14:46:24  INFO      [INTC] Ensemble guardado — IC=0.037 DirAcc=49.8%
+14:46:24  INFO                 \u2192 VENDER (débil)             ret=-0.24%  DA=50%
+14:46:24  INFO      [  9/100] TXN…
+14:46:25  INFO      [TXN] yfinance: 4183 filas desde 2010-01-01
+14:46:31  INFO      [TXN] Ensemble guardado — IC=0.075 DirAcc=50.8%
+14:46:32  INFO                 \u2192 COMPRAR (débil)            ret=+0.24%  DA=51%
+14:46:32  INFO      [ 10/100] QCOM…
+14:46:32  INFO      [QCOM] yfinance: 4183 filas desde 2010-01-01
+14:46:39  INFO      [QCOM] Ensemble guardado — IC=0.048 DirAcc=49.9%
+14:46:39  INFO                 \u2192 VENDER (débil)             ret=-0.25%  DA=50%
+14:46:39  INFO      [ 11/100] ADI…
+14:46:42  INFO      [ADI] yfinance: 4183 filas desde 2010-01-01
+14:46:48  INFO      [ADI] Ensemble guardado — IC=0.064 DirAcc=52.4%
+14:46:49  INFO                 \u2192 COMPRAR (débil)            ret=+0.34%  DA=52%
+14:46:49  INFO      [ 12/100] AMAT…
+14:46:49  INFO      [AMAT] yfinance: 4183 filas desde 2010-01-01
+14:46:55  INFO      [AMAT] Ensemble guardado — IC=0.014 DirAcc=50.1%
+14:46:56  INFO                 \u2192 COMPRAR (débil)            ret=+0.45%  DA=50%
+14:46:56  INFO      [ 13/100] NOW…
+14:46:56  INFO      [NOW] yfinance: 3555 filas desde 2010-01-01
+14:47:01  INFO      [NOW] Ensemble guardado — IC=0.020 DirAcc=50.0%
+14:47:01  INFO                 \u2192 VENDER (débil)             ret=-0.26%  DA=50%
+14:47:01  INFO      [ 14/100] ADBE…
+14:47:01  INFO      [ADBE] yfinance: 4183 filas desde 2010-01-01
+14:47:07  INFO      [ADBE] Ensemble guardado — IC=0.059 DirAcc=50.3%
+14:47:07  INFO      [ 15/100] CRM…
+14:47:08  INFO      [CRM] yfinance: 4183 filas desde 2010-01-01
+14:47:15  INFO      [CRM] Ensemble guardado — IC=0.077 DirAcc=50.4%
+14:47:15  INFO                 \u2192 VENDER (débil)             ret=-0.45%  DA=50%
+14:47:15  INFO      [ 16/100] INTU…
+14:47:15  INFO      [INTU] yfinance: 4183 filas desde 2010-01-01
+14:47:21  INFO      [INTU] Ensemble guardado — IC=0.045 DirAcc=50.6%
+14:47:22  INFO                 \u2192 COMPRAR                    ret=+0.52%  DA=51%
+14:47:22  INFO      [ 17/100] GOOGL…
+14:47:22  INFO      [GOOGL] yfinance: 4183 filas desde 2010-01-01
+14:47:28  INFO      [GOOGL] Ensemble guardado — IC=0.048 DirAcc=49.4%
+14:47:28  INFO                 \u2192 VENDER (débil)             ret=-0.41%  DA=49%
+14:47:28  INFO      [ 18/100] META…
+14:47:29  INFO      [META] yfinance: 3584 filas desde 2010-01-01
+14:47:36  INFO      [META] Ensemble guardado — IC=0.048 DirAcc=50.8%
+14:47:37  INFO                 \u2192 COMPRAR (débil)            ret=+0.22%  DA=51%
+14:47:37  INFO      [ 19/100] T…
+14:47:37  INFO      [T] yfinance: 4183 filas desde 2010-01-01
+14:47:45  INFO      [T] Ensemble guardado — IC=0.042 DirAcc=50.8%
+14:47:45  INFO      [ 20/100] VZ…
+14:47:46  INFO      [VZ] yfinance: 4183 filas desde 2010-01-01
+14:47:51  INFO      [VZ] Ensemble guardado — IC=0.018 DirAcc=48.1%
+14:47:52  INFO                 \u2192 VENDER (débil)             ret=-0.25%  DA=48%
+14:47:52  INFO      [ 21/100] AMZN…
+14:47:53  INFO      [AMZN] yfinance: 4183 filas desde 2010-01-01
+14:47:59  INFO      [AMZN] Ensemble guardado — IC=0.069 DirAcc=50.8%
+14:48:00  INFO      [ 22/100] TSLA…
+14:48:00  INFO      [TSLA] yfinance: 4061 filas desde 2010-01-01
+14:48:07  INFO      [TSLA] Ensemble guardado — IC=0.025 DirAcc=50.4%
+14:48:07  INFO      [ 23/100] MCD…
+14:48:08  INFO      [MCD] yfinance: 4183 filas desde 2010-01-01
+14:48:18  INFO      [MCD] Ensemble guardado — IC=0.019 DirAcc=49.7%
+14:48:18  INFO      [ 24/100] NKE…
+14:48:19  INFO      [NKE] yfinance: 4183 filas desde 2010-01-01
+14:48:26  INFO      [NKE] Ensemble guardado — IC=0.022 DirAcc=50.3%
+14:48:26  INFO      [ 25/100] LOW…
+14:48:28  INFO      [LOW] yfinance: 4183 filas desde 2010-01-01
+14:48:36  INFO      [LOW] Ensemble guardado — IC=0.002 DirAcc=49.4%
+14:48:37  INFO      [ 26/100] HD…
+14:48:37  INFO      [HD] yfinance: 4183 filas desde 2010-01-01
+14:48:44  INFO      [HD] Ensemble guardado — IC=0.033 DirAcc=50.4%
+14:48:44  INFO      [ 27/100] SBUX…
+14:48:44  INFO      [SBUX] yfinance: 4183 filas desde 2010-01-01
+14:48:51  INFO      [SBUX] Ensemble guardado — IC=0.056 DirAcc=51.6%
+14:48:52  INFO      [ 28/100] TGT…
+14:48:53  INFO      [TGT] yfinance: 4183 filas desde 2010-01-01
+14:48:59  INFO      [TGT] Ensemble guardado — IC=0.004 DirAcc=50.6%
+14:49:00  INFO      [ 29/100] BKNG…
+14:49:00  INFO      [BKNG] yfinance: 4183 filas desde 2010-01-01
+14:49:07  INFO      [BKNG] Ensemble guardado — IC=-0.012 DirAcc=50.5%
+14:49:07  INFO      [ 30/100] PG…
+14:49:07  INFO      [PG] yfinance: 4183 filas desde 2010-01-01
+14:49:16  INFO      [PG] Ensemble guardado — IC=0.044 DirAcc=49.2%
+14:49:16  INFO      [ 31/100] KO…
+14:49:21  INFO      [KO] yfinance: 4183 filas desde 2010-01-01
+14:49:31  INFO      [KO] Ensemble guardado — IC=0.045 DirAcc=49.1%
+14:49:31  INFO                 \u2192 VENDER (débil)             ret=-0.26%  DA=49%
+14:49:31  INFO      [ 32/100] PEP…
+14:49:32  INFO      [PEP] yfinance: 4183 filas desde 2010-01-01
+14:49:38  INFO      [PEP] Ensemble guardado — IC=0.049 DirAcc=49.7%
+14:49:39  INFO      [ 33/100] WMT…
+14:49:40  INFO      [WMT] yfinance: 4183 filas desde 2010-01-01
+14:49:47  INFO      [WMT] Ensemble guardado — IC=0.048 DirAcc=49.0%
+14:49:48  INFO      [ 34/100] COST…
+14:49:48  INFO      [COST] yfinance: 4183 filas desde 2010-01-01
+14:49:55  INFO      [COST] Ensemble guardado — IC=0.002 DirAcc=48.7%
+14:49:55  INFO      [ 35/100] PM…
+14:49:56  INFO      [PM] yfinance: 4183 filas desde 2010-01-01
+14:50:02  INFO      [PM] Ensemble guardado — IC=0.027 DirAcc=48.5%
+14:50:02  INFO                 \u2192 VENDER                     ret=-0.55%  DA=48%
+14:50:02  INFO      [ 36/100] MO…
+14:50:04  INFO      [MO] yfinance: 4183 filas desde 2010-01-01
+14:50:18  INFO      [MO] Ensemble guardado — IC=0.010 DirAcc=48.5%
+14:50:18  INFO      [ 37/100] MDLZ…
+14:50:19  INFO      [MDLZ] yfinance: 4183 filas desde 2010-01-01
+14:50:26  INFO      [MDLZ] Ensemble guardado — IC=0.035 DirAcc=48.9%
+14:50:27  INFO      [ 38/100] CL…
+14:50:27  INFO      [CL] yfinance: 4183 filas desde 2010-01-01
+14:50:33  INFO      [CL] Ensemble guardado — IC=0.044 DirAcc=50.7%
+14:50:34  INFO                 \u2192 VENDER (débil)             ret=-0.27%  DA=51%
+14:50:34  INFO      [ 39/100] UNH…
+14:50:34  INFO      [UNH] yfinance: 4183 filas desde 2010-01-01
+14:50:40  INFO      [UNH] Ensemble guardado — IC=0.023 DirAcc=51.8%
+14:50:41  INFO      [ 40/100] JNJ…
+14:50:42  INFO      [JNJ] yfinance: 4183 filas desde 2010-01-01
+14:50:50  INFO      [JNJ] Ensemble guardado — IC=0.036 DirAcc=50.3%
+14:50:50  INFO      [ 41/100] LLY…
+14:50:51  INFO      [LLY] yfinance: 4183 filas desde 2010-01-01
+14:50:58  INFO      [LLY] Ensemble guardado — IC=0.041 DirAcc=51.0%
+14:50:58  INFO      [ 42/100] ABBV…
+14:50:58  INFO      [ABBV] yfinance: 3428 filas desde 2010-01-01
+14:51:03  INFO      [ABBV] Ensemble guardado — IC=0.005 DirAcc=48.0%
+14:51:04  INFO      [ 43/100] MRK…
+14:51:04  INFO      [MRK] yfinance: 4183 filas desde 2010-01-01
+14:51:17  INFO      [MRK] Ensemble guardado — IC=0.004 DirAcc=48.3%
+14:51:18  INFO      [ 44/100] ABT…
+14:51:18  INFO      [ABT] yfinance: 4183 filas desde 2010-01-01
+14:51:27  INFO      [ABT] Ensemble guardado — IC=0.037 DirAcc=49.2%
+14:51:27  INFO      [ 45/100] TMO…
+14:51:28  INFO      [TMO] yfinance: 4183 filas desde 2010-01-01
+14:51:37  INFO      [TMO] Ensemble guardado — IC=0.033 DirAcc=49.1%
+14:51:37  INFO                 \u2192 VENDER (débil)             ret=-0.31%  DA=49%
+14:51:37  INFO      [ 46/100] DHR…
+14:51:38  INFO      [DHR] yfinance: 4183 filas desde 2010-01-01
+14:51:43  INFO      [DHR] Ensemble guardado — IC=0.048 DirAcc=49.4%
+14:51:44  INFO      [ 47/100] BMY…
+14:51:44  INFO      [BMY] yfinance: 4183 filas desde 2010-01-01
+14:51:50  INFO      [BMY] Ensemble guardado — IC=0.013 DirAcc=50.9%
+14:51:51  INFO      [ 48/100] AMGN…
+14:51:51  INFO      [AMGN] yfinance: 4183 filas desde 2010-01-01
+14:51:57  INFO      [AMGN] Ensemble guardado — IC=0.045 DirAcc=51.0%
+14:51:58  INFO      [ 49/100] GILD…
+14:51:58  INFO      [GILD] yfinance: 4183 filas desde 2010-01-01
+14:52:06  INFO      [GILD] Ensemble guardado — IC=0.036 DirAcc=50.9%
+14:52:06  INFO                 \u2192 COMPRAR (débil)            ret=+0.38%  DA=51%
+14:52:06  INFO      [ 50/100] ISRG…
+14:52:07  INFO      [ISRG] yfinance: 4183 filas desde 2010-01-01
+14:52:12  INFO      [ISRG] Ensemble guardado — IC=0.056 DirAcc=50.2%
+14:52:13  INFO                 \u2192 COMPRAR (débil)            ret=+0.24%  DA=50%
+14:52:13  INFO      [ 51/100] MDT…
+14:52:13  INFO      [MDT] yfinance: 4183 filas desde 2010-01-01
+14:52:19  INFO      [MDT] Ensemble guardado — IC=0.016 DirAcc=48.2%
+14:52:19  INFO      [ 52/100] SYK…
+14:52:19  INFO      [SYK] yfinance: 4183 filas desde 2010-01-01
+14:52:25  INFO      [SYK] Ensemble guardado — IC=0.002 DirAcc=48.9%
+14:52:26  INFO                 \u2192 VENDER (débil)             ret=-0.23%  DA=49%
+14:52:26  INFO      [ 53/100] ZTS…
+14:52:26  INFO      [ZTS] yfinance: 3408 filas desde 2010-01-01
+14:52:31  INFO      [ZTS] Ensemble guardado — IC=0.010 DirAcc=49.0%
+14:52:31  INFO                 \u2192 COMPRAR (débil)            ret=+0.42%  DA=49%
+14:52:31  INFO      [ 54/100] BDX…
+14:52:32  INFO      [BDX] yfinance: 4183 filas desde 2010-01-01
+14:52:37  INFO      [BDX] Ensemble guardado — IC=0.028 DirAcc=47.6%
+14:52:37  INFO      [ 55/100] CVS…
+14:52:38  INFO      [CVS] yfinance: 4183 filas desde 2010-01-01
+14:52:45  INFO      [CVS] Ensemble guardado — IC=0.003 DirAcc=49.2%
+14:52:45  INFO      [ 56/100] CI…
+14:52:45  INFO      [CI] yfinance: 4183 filas desde 2010-01-01
+14:52:51  INFO      [CI] Ensemble guardado — IC=0.053 DirAcc=51.0%
+14:52:51  INFO      [ 57/100] ELV…
+14:52:52  INFO      [ELV] yfinance: 4183 filas desde 2010-01-01
+14:52:57  INFO      [ELV] Ensemble guardado — IC=0.010 DirAcc=50.5%
+14:52:57  INFO      [ 58/100] VRTX…
+14:52:57  INFO      [VRTX] yfinance: 4183 filas desde 2010-01-01
+14:53:03  INFO      [VRTX] Ensemble guardado — IC=0.048 DirAcc=50.6%
+14:53:03  INFO                 \u2192 VENDER (débil)             ret=-0.26%  DA=51%
+14:53:03  INFO      [ 59/100] JPM…
+14:53:04  INFO      [JPM] yfinance: 4183 filas desde 2010-01-01
+14:53:10  INFO      [JPM] Ensemble guardado — IC=0.022 DirAcc=49.0%
+14:53:10  INFO      [ 60/100] BAC…
+14:53:11  INFO      [BAC] yfinance: 4183 filas desde 2010-01-01
+14:53:16  INFO      [BAC] Ensemble guardado — IC=0.041 DirAcc=48.6%
+14:53:17  INFO                 \u2192 COMPRAR (débil)            ret=+0.48%  DA=49%
+14:53:17  INFO      [ 61/100] WFC…
+14:53:17  INFO      [WFC] yfinance: 4183 filas desde 2010-01-01
+14:53:23  INFO      [WFC] Ensemble guardado — IC=0.048 DirAcc=51.0%
+14:53:24  INFO      [ 62/100] MS…
+14:53:25  INFO      [MS] yfinance: 4183 filas desde 2010-01-01
+14:53:32  INFO      [MS] Ensemble guardado — IC=0.046 DirAcc=49.2%
+14:53:32  INFO                 \u2192 COMPRAR (débil)            ret=+0.48%  DA=49%
+14:53:32  INFO      [ 63/100] GS…
+14:53:33  INFO      [GS] yfinance: 4183 filas desde 2010-01-01
+14:53:39  INFO      [GS] Ensemble guardado — IC=0.009 DirAcc=48.7%
+14:53:39  INFO                 \u2192 COMPRAR                    ret=+0.64%  DA=49%
+14:53:39  INFO      [ 64/100] BLK…
+14:53:40  INFO      [BLK] yfinance: 4183 filas desde 2010-01-01
+14:53:47  INFO      [BLK] Ensemble guardado — IC=0.034 DirAcc=49.8%
+14:53:48  INFO      [ 65/100] SCHW…
+14:53:49  INFO      [SCHW] yfinance: 4183 filas desde 2010-01-01
+14:53:58  INFO      [SCHW] Ensemble guardado — IC=-0.006 DirAcc=49.2%
+14:53:58  INFO      [ 66/100] USB…
+14:53:59  INFO      [USB] yfinance: 4183 filas desde 2010-01-01
+14:54:06  INFO      [USB] Ensemble guardado — IC=0.016 DirAcc=48.8%
+14:54:07  INFO      [ 67/100] PNC…
+14:54:07  INFO      [PNC] yfinance: 4183 filas desde 2010-01-01
+14:54:15  INFO      [PNC] Ensemble guardado — IC=0.044 DirAcc=50.1%
+14:54:15  INFO      [ 68/100] TFC…
+14:54:15  INFO      [TFC] yfinance: 4183 filas desde 2010-01-01
+14:54:21  INFO      [TFC] Ensemble guardado — IC=0.026 DirAcc=48.1%
+14:54:22  INFO                 \u2192 VENDER (débil)             ret=-0.35%  DA=48%
+14:54:22  INFO      [ 69/100] COF…
+14:54:22  INFO      [COF] yfinance: 4183 filas desde 2010-01-01
+14:54:31  INFO      [COF] Ensemble guardado — IC=-0.011 DirAcc=50.8%
+14:54:32  INFO      [ 70/100] C…
+14:54:32  INFO      [C] yfinance: 4183 filas desde 2010-01-01
+14:54:38  INFO      [C] Ensemble guardado — IC=0.012 DirAcc=50.0%
+14:54:39  INFO                 \u2192 COMPRAR (débil)            ret=+0.41%  DA=50%
+14:54:39  INFO      [ 71/100] AXP…
+14:54:39  INFO      [AXP] yfinance: 4183 filas desde 2010-01-01
+14:54:47  INFO      [AXP] Ensemble guardado — IC=0.023 DirAcc=50.1%
+14:54:48  INFO      [ 72/100] CME…
+14:54:49  INFO      [CME] yfinance: 4183 filas desde 2010-01-01
+14:54:55  INFO      [CME] Ensemble guardado — IC=0.054 DirAcc=50.9%
+14:54:56  INFO      [ 73/100] SPGI…
+14:54:56  INFO      [SPGI] yfinance: 4183 filas desde 2010-01-01
+14:55:03  INFO      [SPGI] Ensemble guardado — IC=0.030 DirAcc=50.4%
+14:55:03  INFO      [ 74/100] AON…
+14:55:04  INFO      [AON] yfinance: 4183 filas desde 2010-01-01
+14:55:10  INFO      [AON] Ensemble guardado — IC=0.042 DirAcc=50.3%
+14:55:11  INFO                 \u2192 VENDER (débil)             ret=-0.24%  DA=50%
+14:55:11  INFO      [ 75/100] MMC…
+14:55:13  ERROR     $MMC: possibly delisted; no timezone found
+14:55:13  WARNING              \u2192 ERROR: Yahoo Finance no devolvió datos para 'MMC'. Comprueba que el ticker sea correcto.
+14:55:13  INFO      [ 76/100] XOM…
+14:55:13  INFO      [XOM] yfinance: 4183 filas desde 2010-01-01
+14:55:20  INFO      [XOM] Ensemble guardado — IC=0.045 DirAcc=49.4%
+14:55:20  INFO      [ 77/100] CVX…
+14:55:21  INFO      [CVX] yfinance: 4183 filas desde 2010-01-01
+14:55:26  INFO      [CVX] Ensemble guardado — IC=0.042 DirAcc=50.0%
+14:55:27  INFO      [ 78/100] EOG…
+14:55:27  INFO      [EOG] yfinance: 4183 filas desde 2010-01-01
+14:55:34  INFO      [EOG] Ensemble guardado — IC=0.030 DirAcc=49.3%
+14:55:34  INFO      [ 79/100] SLB…
+14:55:34  INFO      [SLB] yfinance: 4183 filas desde 2010-01-01
+14:55:40  INFO      [SLB] Ensemble guardado — IC=0.023 DirAcc=51.9%
+14:55:41  INFO                 \u2192 VENDER (débil)             ret=-0.45%  DA=52%
+14:55:41  INFO      [ 80/100] FCX…
+14:55:41  INFO      [FCX] yfinance: 4183 filas desde 2010-01-01
+14:55:46  INFO      [FCX] Ensemble guardado — IC=0.037 DirAcc=50.9%
+14:55:47  INFO      [ 81/100] HON…
+14:55:47  INFO      [HON] yfinance: 4183 filas desde 2010-01-01
+14:55:56  INFO      [HON] Ensemble guardado — IC=0.007 DirAcc=49.1%
+14:55:56  INFO      [ 82/100] CAT…
+14:55:56  INFO      [CAT] yfinance: 4183 filas desde 2010-01-01
+14:56:04  INFO      [CAT] Ensemble guardado — IC=0.011 DirAcc=50.1%
+14:56:05  INFO                 \u2192 COMPRAR                    ret=+0.71%  DA=50%
+14:56:05  INFO      [ 83/100] DE…
+14:56:05  INFO      [DE] yfinance: 4183 filas desde 2010-01-01
+14:56:12  INFO      [DE] Ensemble guardado — IC=0.018 DirAcc=50.1%
+14:56:13  INFO      [ 84/100] BA…
+14:56:13  INFO      [BA] yfinance: 4183 filas desde 2010-01-01
+14:56:20  INFO      [BA] Ensemble guardado — IC=0.018 DirAcc=48.3%
+14:56:21  INFO      [ 85/100] GE…
+14:56:21  INFO      [GE] yfinance: 4183 filas desde 2010-01-01
+14:56:28  INFO      [GE] Ensemble guardado — IC=-0.010 DirAcc=48.2%
+14:56:29  INFO      [ 86/100] UPS…
+14:56:29  INFO      [UPS] yfinance: 4183 filas desde 2010-01-01
+14:56:36  INFO      [UPS] Ensemble guardado — IC=0.049 DirAcc=49.7%
+14:56:37  INFO      [ 87/100] RTX…
+14:56:37  INFO      [RTX] yfinance: 4183 filas desde 2010-01-01
+14:56:44  INFO      [RTX] Ensemble guardado — IC=0.021 DirAcc=48.0%
+14:56:45  INFO                 \u2192 COMPRAR (débil)            ret=+0.27%  DA=48%
+14:56:45  INFO      [ 88/100] ETN…
+14:56:45  INFO      [ETN] yfinance: 4183 filas desde 2010-01-01
+14:56:54  INFO      [ETN] Ensemble guardado — IC=0.032 DirAcc=50.0%
+14:56:54  INFO      [ 89/100] ITW…
+14:56:54  INFO      [ITW] yfinance: 4183 filas desde 2010-01-01
+14:57:02  INFO      [ITW] Ensemble guardado — IC=0.004 DirAcc=49.5%
+14:57:02  INFO      [ 90/100] FDX…
+14:57:03  INFO      [FDX] yfinance: 4183 filas desde 2010-01-01
+14:57:12  INFO      [FDX] Ensemble guardado — IC=0.024 DirAcc=50.1%
+14:57:12  INFO                 \u2192 COMPRAR (débil)            ret=+0.28%  DA=50%
+14:57:12  INFO      [ 91/100] LIN…
+14:57:12  INFO      [LIN] yfinance: 4183 filas desde 2010-01-01
+14:57:20  INFO      [LIN] Ensemble guardado — IC=0.020 DirAcc=49.9%
+14:57:20  INFO                 \u2192 VENDER (débil)             ret=-0.22%  DA=50%
+14:57:20  INFO      [ 92/100] PLD…
+14:57:20  INFO      [PLD] yfinance: 4183 filas desde 2010-01-01
+14:57:28  INFO      [PLD] Ensemble guardado — IC=0.041 DirAcc=49.4%
+14:57:28  INFO                 \u2192 VENDER (débil)             ret=-0.20%  DA=49%
+14:57:28  INFO      [ 93/100] AMT…
+14:57:28  INFO      [AMT] yfinance: 4183 filas desde 2010-01-01
+14:57:36  INFO      [AMT] Ensemble guardado — IC=0.066 DirAcc=51.2%
+14:57:37  INFO      [ 94/100] NEE…
+14:57:37  INFO      [NEE] yfinance: 4183 filas desde 2010-01-01
+14:57:44  INFO      [NEE] Ensemble guardado — IC=0.045 DirAcc=50.2%
+14:57:44  INFO      [ 95/100] DUK…
+14:57:45  INFO      [DUK] yfinance: 4183 filas desde 2010-01-01
+14:57:52  INFO      [DUK] Ensemble guardado — IC=0.016 DirAcc=48.2%
+14:57:52  INFO      [ 96/100] SO…
+14:57:53  INFO      [SO] yfinance: 4183 filas desde 2010-01-01
+14:58:00  INFO      [SO] Ensemble guardado — IC=0.035 DirAcc=49.4%
+14:58:01  INFO      [ 97/100] V…
+14:58:01  INFO      [V] yfinance: 4183 filas desde 2010-01-01
+14:58:09  INFO      [V] Ensemble guardado — IC=0.063 DirAcc=51.3%
+14:58:09  INFO      [ 98/100] MA…
+14:58:10  INFO      [MA] yfinance: 4183 filas desde 2010-01-01
+14:58:16  INFO      [MA] Ensemble guardado — IC=0.076 DirAcc=52.7%
+14:58:16  INFO      [ 99/100] ACN…
+14:58:16  INFO      [ACN] yfinance: 4183 filas desde 2010-01-01
+14:58:23  INFO      [ACN] Ensemble guardado — IC=0.026 DirAcc=51.9%
+14:58:23  INFO      [100/100] ADP…
+14:58:24  INFO      [ADP] yfinance: 4183 filas desde 2010-01-01
+14:58:31  INFO      [ADP] Ensemble guardado — IC=0.033 DirAcc=51.1%
+14:58:32  INFO      
+Scan completado — 38 señales, 1 errores de 100 símbolos
+14:58:32  INFO      scan_log.csv actualizado — 38 entradas (C:\proyectos\AlgoTrader\scan_log.csv)
+14:58:32  INFO      pending_signals.json guardado — 38 señales (C:\proyectos\AlgoTrader\pending_signals.json)
+14:58:32  INFO      Telegram: mensaje enviado correctamente
+14:58:32  INFO      Telegram: mensaje enviado
