@@ -44,6 +44,23 @@ class OrderExecutor:
             "cash":            float(a.cash),
         }
 
+    def get_portfolio_pnl(self, date_start: str, date_end: str) -> dict:
+        """Retorna P&L del rango. date_start/date_end en formato YYYY-MM-DD."""
+        try:
+            hist      = self.api.get_portfolio_history(
+                timeframe="1D", date_start=date_start, date_end=date_end
+            )
+            equities  = [e for e in hist.equity if e is not None]
+            if len(equities) < 2:
+                return {"pnl": 0.0, "pnl_pct": 0.0}
+            start_eq  = float(equities[0])
+            end_eq    = float(equities[-1])
+            pnl       = end_eq - start_eq
+            pnl_pct   = (pnl / start_eq * 100) if start_eq > 0 else 0.0
+            return {"pnl": pnl, "pnl_pct": pnl_pct}
+        except Exception:
+            return {"pnl": 0.0, "pnl_pct": 0.0}
+
     def get_position(self, symbol: str) -> dict | None:
         try:
             p = self.api.get_position(symbol.upper())

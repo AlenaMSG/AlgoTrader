@@ -56,7 +56,7 @@ class PortfolioWidget(QWidget):
         # ── Header: título + cuenta + botón actualizar ─────────────────
         header = QHBoxLayout()
 
-        title = QLabel("Portfolio  —  Alpaca Paper Trading")
+        title = QLabel("Mi Cartera  —  Alpaca Paper Trading")
         title.setFont(QFont("Segoe UI", 11, QFont.Weight.Bold))
         title.setStyleSheet("color: #c0c0e0;")
         header.addWidget(title)
@@ -126,14 +126,14 @@ class PortfolioWidget(QWidget):
         )
         pos_layout = QVBoxLayout(pos_frame)
         pos_layout.setContentsMargins(8, 6, 8, 6)
-        pos_title = QLabel("Posiciones abiertas")
+        pos_title = QLabel("Lo que tengo comprado ahora")
         pos_title.setFont(QFont("Segoe UI", 9, QFont.Weight.Bold))
         pos_title.setStyleSheet("color: #8888aa;")
         pos_layout.addWidget(pos_title)
 
         self._pos_table = QTableWidget(0, 7)
         self._pos_table.setHorizontalHeaderLabels(
-            ["Símbolo", "Lado", "Qty", "Precio entrada", "Precio actual", "P&L $", "P&L %"]
+            ["Accion", "Tipo", "Cantidad", "Compre a", "Vale ahora", "Ganancia $", "Ganancia %"]
         )
         self._pos_table.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Stretch)
         self._pos_table.horizontalHeader().setFont(QFont("Segoe UI", 8, QFont.Weight.Bold))
@@ -158,7 +158,7 @@ class PortfolioWidget(QWidget):
         )
         pnl_layout = QVBoxLayout(pnl_frame)
         pnl_layout.setContentsMargins(6, 4, 6, 4)
-        pnl_title = QLabel("P&L realizado acumulado  (orders_log.csv)")
+        pnl_title = QLabel("Ganancias / perdidas acumuladas")
         pnl_title.setFont(QFont("Segoe UI", 9, QFont.Weight.Bold))
         pnl_title.setStyleSheet("color: #8888aa;")
         pnl_layout.addWidget(pnl_title)
@@ -181,38 +181,7 @@ class PortfolioWidget(QWidget):
         left.setSizes([260, 200])
 
         splitter.addWidget(left)
-
-        # ── Derecha: historial de alertas ──────────────────────────────
-        right_frame = QFrame()
-        right_frame.setStyleSheet(
-            "QFrame { background: #12121c; border: 1px solid #2a2a3a; border-radius: 6px; }"
-        )
-        right_layout = QVBoxLayout(right_frame)
-        right_layout.setContentsMargins(8, 6, 8, 6)
-        scan_title = QLabel("Historial de alertas del scanner  (scan_log.csv)")
-        scan_title.setFont(QFont("Segoe UI", 9, QFont.Weight.Bold))
-        scan_title.setStyleSheet("color: #8888aa;")
-        right_layout.addWidget(scan_title)
-
-        self._scan_table = QTableWidget(0, 6)
-        self._scan_table.setHorizontalHeaderLabels(
-            ["Fecha", "Símbolo", "Señal", "Ret. %", "Dir.Acc", "Sentim."]
-        )
-        self._scan_table.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Stretch)
-        self._scan_table.horizontalHeader().setFont(QFont("Segoe UI", 8, QFont.Weight.Bold))
-        self._scan_table.setFont(QFont("Consolas", 9))
-        self._scan_table.setAlternatingRowColors(True)
-        self._scan_table.setEditTriggers(QTableWidget.EditTrigger.NoEditTriggers)
-        self._scan_table.setStyleSheet(
-            "QTableWidget { background: #0d0d14; alternate-background-color: #12121c; "
-            "  color: #c0c0e0; gridline-color: #2a2a3a; }"
-            "QHeaderView::section { background: #1a1a28; color: #8888aa; "
-            "  border: 1px solid #2a2a3a; padding: 3px; }"
-            "QTableWidget::item:selected { background: #0055aa; }"
-        )
-        right_layout.addWidget(self._scan_table)
-        splitter.addWidget(right_frame)
-        splitter.setSizes([560, 360])
+        splitter.setSizes([900])
 
         root.addWidget(splitter, stretch=1)
 
@@ -222,7 +191,6 @@ class PortfolioWidget(QWidget):
         self._load_account()
         self._load_positions()
         self._load_pnl_chart()
-        self._load_scan_history()
         self._update_lbl.setText(
             f"Actualizado: {datetime.now().strftime('%H:%M:%S')}"
         )
@@ -282,7 +250,7 @@ class PortfolioWidget(QWidget):
 
         if not positions:
             self._pos_table.setRowCount(1)
-            item = QTableWidgetItem("Sin posiciones abiertas")
+            item = QTableWidgetItem("Sin nada comprado todavia")
             item.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
             item.setForeground(QColor("#666688"))
             self._pos_table.setSpan(0, 0, 1, 7)
@@ -353,54 +321,3 @@ class PortfolioWidget(QWidget):
 
         self._canvas_pnl.draw_idle()
 
-    # ── Historial de alertas ─────────────────────────────────────────────
-
-    def _load_scan_history(self) -> None:
-        log_path = self._root / "scan_log.csv"
-        self._scan_table.setRowCount(0)
-
-        if not log_path.exists():
-            self._scan_table.setRowCount(1)
-            item = QTableWidgetItem("Sin escaneos ejecutados aún (scan_log.csv no existe)")
-            item.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
-            item.setForeground(QColor("#666688"))
-            self._scan_table.setSpan(0, 0, 1, 6)
-            self._scan_table.setItem(0, 0, item)
-            return
-
-        try:
-            df = pd.read_csv(log_path, encoding="utf-8")
-            if df.empty:
-                raise ValueError("vacío")
-            # Mostrar las 200 últimas alertas, más recientes arriba
-            df = df.tail(200).iloc[::-1].reset_index(drop=True)
-            self._scan_table.setRowCount(len(df))
-
-            for row, r in df.iterrows():
-                signal    = str(r.get("signal", ""))
-                sig_color = GREEN if "COMPRAR" in signal else RED if "VENDER" in signal else ORANGE
-
-                def cell(text, color=None, bold=False):
-                    item = QTableWidgetItem(str(text))
-                    item.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
-                    if color:
-                        item.setForeground(QColor(color))
-                    if bold:
-                        item.setFont(QFont("Consolas", 9, QFont.Weight.Bold))
-                    return item
-
-                ts = str(r.get("timestamp", ""))[:16]
-                self._scan_table.setItem(row, 0, cell(ts, "#888888"))
-                self._scan_table.setItem(row, 1, cell(str(r.get("symbol", "")), "#ffffff", bold=True))
-                self._scan_table.setItem(row, 2, cell(signal, sig_color, bold=True))
-                self._scan_table.setItem(row, 3, cell(str(r.get("pred_return_pct", "—"))))
-                self._scan_table.setItem(row, 4, cell(str(r.get("dir_acc_pct", "—"))))
-                self._scan_table.setItem(row, 5, cell(str(r.get("sentiment_score", "—"))))
-
-        except Exception:
-            self._scan_table.setRowCount(1)
-            item = QTableWidgetItem("Error leyendo scan_log.csv")
-            item.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
-            item.setForeground(QColor(RED))
-            self._scan_table.setSpan(0, 0, 1, 6)
-            self._scan_table.setItem(0, 0, item)

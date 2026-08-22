@@ -85,11 +85,24 @@ class ModelTrainer:
 
     # ── Entrenamiento ───────────────────────────────────────────────────
 
+    @staticmethod
+    def _recency_weights(n: int, half_life: int = 90) -> np.ndarray:
+        """Exponential decay weights — samples near index n-1 (most recent) get weight ~1,
+        samples near 0 (oldest) get weight ~0.5^(n/half_life). Sum is normalised to n."""
+        i = np.arange(n, dtype=float)
+        w = np.exp(np.log(0.5) / half_life * (n - 1 - i))
+        w = w / w.sum() * n
+        return w
+
     def train(self, X_raw: np.ndarray, y: np.ndarray, symbol: str, scaler=None) -> dict:
         """
         Entrena ensemble con TimeSeriesSplit(5 folds).
         y debe ser array de retornos float (no clasificación binaria).
+        Los datos más recientes reciben mayor peso (exponential decay, half_life=90 días).
         """
+        # Pesos globales por recencia (se indexan luego con train_idx)
+        all_weights = self._recency_weights(len(y), half_life=90)
+
         tscv = TimeSeriesSplit(n_splits=5)
         fold_maes:     list[float] = []
         fold_ics:      list[float] = []
@@ -102,11 +115,12 @@ class ModelTrainer:
             X_va = fold_scaler.transform(X_raw[val_idx])
             y_tr = y[train_idx]
             y_va = y[val_idx]
+            w_tr = all_weights[train_idx]
 
             xgb_m = XGBRegressor(**_XGB_PARAMS)
             lgb_m = LGBMRegressor(**_LGB_PARAMS)
-            xgb_m.fit(X_tr, y_tr, verbose=False)
-            lgb_m.fit(X_tr, y_tr)
+            xgb_m.fit(X_tr, y_tr, sample_weight=w_tr, verbose=False)
+            lgb_m.fit(X_tr, y_tr, sample_weight=w_tr)
 
             preds = (xgb_m.predict(X_va) + lgb_m.predict(X_va)) / 2.0
 
@@ -136,8 +150,8 @@ class ModelTrainer:
 
         self._model_xgb = XGBRegressor(**_XGB_PARAMS)
         self._model_lgb = LGBMRegressor(**_LGB_PARAMS)
-        self._model_xgb.fit(X_all, y, verbose=False)
-        self._model_lgb.fit(X_all, y)
+        self._model_xgb.fit(X_all, y, sample_weight=all_weights, verbose=False)
+        self._model_lgb.fit(X_all, y, sample_weight=all_weights)
 
         self._metrics = {
             "oos_mae":     float(np.mean(fold_maes)),

@@ -67,6 +67,17 @@ def main() -> None:
 
     window = MainWindow(config)
     window.show()
+
+    # Centrar en pantalla y forzar al frente
+    screen = app.primaryScreen().availableGeometry()
+    wg = window.frameGeometry()
+    window.move(
+        screen.x() + (screen.width()  - wg.width())  // 2,
+        screen.y() + (screen.height() - wg.height()) // 2,
+    )
+    window.raise_()
+    window.activateWindow()
+
     sys.exit(app.exec())
 
 
