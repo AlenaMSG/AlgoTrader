@@ -1,10 +1,14 @@
-"""
+r"""
 AlgoTrader Web Dashboard
 Lanzar con: .\.venv\Scripts\python.exe web_app.py
 Abrir en:   http://localhost:8050
 """
 import sys
 from pathlib import Path
+
+if sys.stdout.encoding.lower() != "utf-8":
+    sys.stdout.reconfigure(encoding="utf-8")
+    sys.stderr.reconfigure(encoding="utf-8")
 
 sys.path.insert(0, str(Path(__file__).parent))
 
