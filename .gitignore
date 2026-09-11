@@ -15,3 +15,6 @@ Readme/config.txt
 data_cache/
 models/
 pending_signals.json
+scan_log.csv
+scan_log_console.txt
+settings.json

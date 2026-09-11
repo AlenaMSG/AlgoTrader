@@ -307,3 +307,41 @@ Antes de implementar la Fase 2 y 3, hay decisiones que dependen del objetivo:
 | Universo de activos | Cualquier ticker que el usuario ingrese | Lista curada de los 100 más líquidos (S&P100) |
 | Timeframe | Diario (actual) | Diario + confirmación intraday (1h) |
 | Backtest window | Walk-forward expanding | Walk-forward rolling (ventana fija de 3 años) |
+
+---
+
+## PARTE 5 — ARQUITECTURA DEL DASHBOARD WEB
+
+### Pestaña Inicio — fuentes de datos
+
+#### KPI cards (Valor cartera, Efectivo, Capacidad de compra, Ganancia 7 días)
+
+- **Fuente:** API de Alpaca Paper Trading en tiempo real.
+- **Flujo:** `inicio.py → web/data.py:get_account_summary() → OrderExecutor.get_account() + get_portfolio_pnl()`
+- **Refresco:** cada 30 s via `dcc.Interval(id="inicio-interval")`.
+- **Almacenamiento:** no se persiste en disco — se consulta en vivo cada vez.
+
+#### Tabla "Señales del último análisis"
+
+- **Fuente única:** fichero local `C:\proyectos\AlgoTrader\pending_signals.json`.
+- **Flujo:** `inicio.py → web/data.py:get_pending_signals()` — abre y parsea el JSON sin transformaciones.
+- **Refresco:** cada 30 s via el mismo `inicio-interval`.
+
+**Columnas y campos del JSON:**
+
+| Columna | Campo en JSON | Nota |
+|---|---|---|
+| Ticker | `signal["symbol"]` | p.ej. `"AAPL"` |
+| Empresa | lookup en `COMPANY_NAMES` | dict hardcodeado en `inicio.py` |
+| Señal | `signal["signal"]` | `COMPRAR`, `VENDER`, `COMPRAR (débil)`, `VENDER (débil)`, `NEUTRAL` |
+| Precio actual | `signal["stale_quote"]["ask_price"]` | precio del momento del scan |
+| % predicción | `signal["pred_return"] * 100` | retorno predicho por el ensemble XGBoost+LightGBM |
+
+El JSON también contiene `scan_timestamp`, que se muestra en la card "Información del análisis".
+
+#### Quién escribe `pending_signals.json` y cuándo
+
+`scan_sp100.py` sobrescribe el fichero al terminar cada scan. Se ejecuta de dos formas:
+
+- **Automática:** Task Scheduler Lun-Vie a las 14:45 (09:45 ET), via `run_scan.bat`.
+- **Manual:** botón "Lanzar análisis ahora" — visible solo si `scan_mode = "manual"` en `settings.json`. Lanza `scan_sp100.py` como subprocess via `web/scan_runner.py`; muestra spinner y estado cada 5 s (`scan-poll-interval`).

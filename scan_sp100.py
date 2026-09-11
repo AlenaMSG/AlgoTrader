@@ -14,7 +14,6 @@ Opcional (para alerta Telegram):
 """
 from __future__ import annotations
 
-import csv
 import json
 import logging
 import os
@@ -86,30 +85,9 @@ def export_csv(signals: list[dict]) -> None:
     if not signals:
         log.info("Sin señales — scan_log.csv no actualizado")
         return
-    log_path  = PROJECT_ROOT / "scan_log.csv"
-    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    rows = []
-    for r in signals:
-        m = r["metrics"]
-        rows.append({
-            "timestamp":       timestamp,
-            "symbol":          r["symbol"],
-            "signal":          r["signal"],
-            "pred_return_pct": f"{r['pred_return']*100:+.2f}",
-            "dir_acc_pct":     f"{m.get('oos_dir_acc', 0)*100:.1f}",
-            "ask":             f"{r['quote']['ask_price']:.4f}",
-            "bid":             f"{r['quote']['bid_price']:.4f}",
-            "sentiment_score": f"{r.get('sentiment', {}).get('sentiment_score', 0.0):+.2f}",
-            "pc_ratio":        f"{r.get('options', {}).get('pc_ratio', 1.0):.2f}",
-        })
-    fieldnames   = list(rows[0].keys())
-    write_header = not log_path.exists()
-    with log_path.open("a", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-        if write_header:
-            writer.writeheader()
-        writer.writerows(rows)
-    log.info(f"scan_log.csv actualizado — {len(rows)} entradas ({log_path})")
+    from src.analysis.scan_logger import append_scan_log
+    n = append_scan_log(PROJECT_ROOT, signals)
+    log.info(f"scan_log.csv actualizado — {n} entradas ({PROJECT_ROOT / 'scan_log.csv'})")
 
 
 def save_pending_signals(signals: list[dict]) -> None:

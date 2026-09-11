@@ -40,6 +40,7 @@ MODEL_DIR        = PROJECT_ROOT / "models"
 CACHE_DIR        = PROJECT_ROOT / "data_cache"
 SIGNALS_FILE     = PROJECT_ROOT / "pending_signals.json"
 PREDICTIONS_LOG  = PROJECT_ROOT / "predictions_log.csv"
+ANALISIS_DIR     = Path(__file__).resolve().parents[2] / "Analisis_Predicción"
 
 PRED_LOG_FIELDS  = [
     "scan_date", "symbol", "signal", "pred_return_pct", "da_pct",
@@ -645,6 +646,22 @@ class MainWindow(QMainWindow):
         )
         self.train_btn.clicked.connect(lambda: self._run_analysis())
         sym_row.addWidget(self.train_btn)
+
+        self._update_btn = QPushButton("↻  Actualizar resultados reales")
+        self._update_btn.setFixedHeight(34)
+        self._update_btn.setFont(QFont("Segoe UI", 9))
+        self._update_btn.setToolTip(
+            "Descarga el retorno real del mercado para todas las predicciones guardadas\n"
+            "en Analisis_Predicción/ cuya fecha de predicción ya haya pasado."
+        )
+        self._update_btn.setStyleSheet(
+            "QPushButton { background: #1a2a1a; color: #88cc88; border: 1px solid #2a4a2a;"
+            " border-radius: 5px; padding: 0 12px; }"
+            "QPushButton:hover { background: #00aa44; color: white; }"
+            "QPushButton:disabled { background: #1a2a1a; color: #445544; }"
+        )
+        self._update_btn.clicked.connect(self._update_actuals_manual)
+        sym_row.addWidget(self._update_btn)
 
         layout.addLayout(sym_row)
 
@@ -1610,19 +1627,7 @@ class MainWindow(QMainWindow):
 
     def _show_export_path(self, path: str) -> None:
         p = Path(path)
-        folder_uri = p.parent.as_uri()
-        self._set_status(f"CSV exportado: {p.name}")
-        if hasattr(self, "_export_path_lbl"):
-            self.status_bar.removeWidget(self._export_path_lbl)
-            self._export_path_lbl.deleteLater()
-        lbl = QLabel(
-            f'  <a href="{folder_uri}" style="color:#88cc88; text-decoration:underline;">'
-            f"Abrir carpeta: {p.name}</a>  "
-        )
-        lbl.setTextFormat(Qt.TextFormat.RichText)
-        lbl.setOpenExternalLinks(True)
-        self._export_path_lbl = lbl
-        self.status_bar.addPermanentWidget(lbl)
+        self._set_status(f"CSV exportado: {p.name}  ·  {p.parent}")
 
     # ══════════════════════════════════════════════════════════════════════
     # LOGICA (sin cambios)
@@ -1831,6 +1836,9 @@ class MainWindow(QMainWindow):
         if result.get("backtest"):
             self._backtest_results[symbol] = result["backtest"]
             self.backtest_widget.update(result["backtest"], symbol)
+        # Guardar en Analisis_Predicción solo en análisis manual (no scan)
+        if not self._scan_mode:
+            self._save_to_tracker(result)
         if self.auto_exec_check.isChecked() and self.executor:
             self._start_order_worker(result)
 
@@ -2230,6 +2238,48 @@ class MainWindow(QMainWindow):
 
         lines.append(f"Barra {data['bar_idx'] + 1} de {data['n_bars']} mostradas")
         return "\n".join(lines)
+
+    def _save_to_tracker(self, result: dict) -> None:
+        from src.analysis import prediction_tracker
+        try:
+            ANALISIS_DIR.mkdir(parents=True, exist_ok=True)
+            train_desde = self.start_date_input.text().strip()
+            train_hasta = self._end_date_input.text().strip()
+            prediction_tracker.save_real_data(ANALISIS_DIR, result["symbol"], result["df"])
+            saved = prediction_tracker.save_prediction(
+                ANALISIS_DIR, result["symbol"], result, train_desde, train_hasta,
+            )
+            if saved:
+                self._set_status(
+                    f"[{result['symbol']}] Guardado en Analisis_Predicción/ — "
+                    f"señal {result['signal']} para {result['symbol']}"
+                )
+        except Exception as exc:
+            self._set_status(
+                f"[{result['symbol']}] Error al guardar en Analisis_Predicción: {exc}",
+                error=True,
+            )
+
+    def _update_actuals_manual(self) -> None:
+        from src.analysis import prediction_tracker
+        self._set_status("Buscando retornos reales pendientes en Analisis_Predicción/...")
+        self._update_btn.setEnabled(False)
+
+        def _bg():
+            n = prediction_tracker.update_actuals(ANALISIS_DIR)
+            from PyQt6.QtCore import QTimer
+            QTimer.singleShot(0, lambda: self._on_actuals_done(n))
+
+        threading.Thread(target=_bg, daemon=True).start()
+
+    def _on_actuals_done(self, n: int) -> None:
+        self._update_btn.setEnabled(True)
+        if n > 0:
+            self._set_status(
+                f"Actualización completada — {n} predicción{'es' if n > 1 else ''} completada{'s' if n > 1 else ''} con datos reales."
+            )
+        else:
+            self._set_status("Sin predicciones pendientes de completar en Analisis_Predicción/.")
 
     def _start_order_worker(self, result: dict) -> None:
         try:

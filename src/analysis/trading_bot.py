@@ -14,9 +14,10 @@ from src.analysis.backtester import Backtester
 
 
 class TradingBot:
-    def __init__(self, data_loader: DataLoader, model_dir: Path):
-        self.loader    = data_loader
-        self.model_dir = Path(model_dir)
+    def __init__(self, data_loader: DataLoader, model_dir: Path, model_type: str | None = None):
+        self.loader     = data_loader
+        self.model_dir  = Path(model_dir)
+        self.model_type = model_type   # None → ModelTrainer lee de settings.json
         self._market: dict | None = None  # cargado una vez y reutilizado
 
     def _get_market(self, start_date: str) -> dict:
@@ -66,7 +67,7 @@ class TradingBot:
         fe = FeatureEngineer()
         X_raw, y, idx, closes = fe.prepare_raw(df_raw, calendar=calendar, market=market)
 
-        trainer    = ModelTrainer(self.model_dir)
+        trainer    = ModelTrainer(self.model_dir, model_type=self.model_type)
         n_features = X_raw.shape[1]
 
         if trainer.try_load_cache(symbol, n_features):
@@ -82,7 +83,7 @@ class TradingBot:
                 trainer.save_scaler(symbol, fe.scaler)
                 fe._fitted = True
         else:
-            emit(f"[{symbol}] Entrenando ensemble XGBoost+LightGBM (5 folds)…")
+            emit(f"[{symbol}] Entrenando {trainer.model_type} (5 folds)…")
             metrics = trainer.train(X_raw, y, symbol, scaler=fe.scaler)
             trainer.save_scaler(symbol, fe.scaler)
             fe._fitted = True
@@ -125,4 +126,4 @@ class TradingBot:
         }
 
     def has_trained_model(self, symbol: str) -> bool:
-        return ModelTrainer(self.model_dir).has_model(symbol)
+        return ModelTrainer(self.model_dir, model_type=self.model_type).has_model(symbol)

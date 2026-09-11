@@ -1,0 +1,421 @@
+/* ── Base ──────────────────────────────────────────────────────────────── */
+body {
+  background-color: #060606;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+/* ── Navbar ────────────────────────────────────────────────────────────── */
+.navbar {
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.navbar-brand-custom {
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.3px;
+  color: #00bc8c !important;
+}
+
+.nav-link-custom {
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  padding: 0.4rem 0.8rem !important;
+  border-radius: 6px;
+  margin: 0 2px;
+  transition: background 0.15s;
+}
+
+.nav-link-custom:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.nav-link-custom.active {
+  background: rgba(0, 188, 140, 0.15) !important;
+  color: #00bc8c !important;
+}
+
+/* ── Cards ─────────────────────────────────────────────────────────────── */
+.card {
+  border: 1px solid #222;
+  border-radius: 10px;
+  background-color: #111;
+}
+
+.card-kpi {
+  border-left: 3px solid #00bc8c;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.card-kpi:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 188, 140, 0.12);
+}
+
+.kpi-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.kpi-label {
+  font-size: 0.78rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.kpi-icon {
+  font-size: 1.6rem;
+  opacity: 0.25;
+}
+
+/* ── Signal badges ─────────────────────────────────────────────────────── */
+.badge-comprar {
+  background-color: #00bc8c !important;
+  color: #000 !important;
+  font-weight: 700 !important;
+}
+
+.badge-vender {
+  background-color: #e74c3c !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+}
+
+.badge-debil {
+  background-color: #f39c12 !important;
+  color: #000 !important;
+  font-weight: 600 !important;
+}
+
+.badge-neutral {
+  background-color: #444 !important;
+  color: #aaa !important;
+}
+
+/* AG Grid: signal text color only, no background */
+.ag-cell.badge-comprar { background-color: transparent !important; color: #00bc8c !important; font-weight: 700 !important; }
+.ag-cell.badge-vender  { background-color: transparent !important; color: #e74c3c !important; font-weight: 700 !important; }
+.ag-cell.badge-debil   { background-color: transparent !important; color: #f39c12 !important; font-weight: 600 !important; }
+.ag-cell.badge-neutral { background-color: transparent !important; color: #888    !important; font-weight: 500 !important; }
+
+/* ── Signals table ─────────────────────────────────────────────────────── */
+.signal-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 16px;
+  border-bottom: 1px solid #1a1a1a;
+  transition: background 0.1s;
+}
+
+.signal-row:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.signal-symbol {
+  font-weight: 700;
+  font-size: 1rem;
+  min-width: 60px;
+}
+
+.signal-price {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.signal-return {
+  font-size: 0.82rem;
+  font-family: monospace;
+}
+
+/* ── Section headers ───────────────────────────────────────────────────── */
+.section-title {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #666;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+/* ── Charts ────────────────────────────────────────────────────────────── */
+.dash-graph .plotly .modebar {
+  background: transparent !important;
+}
+
+/* ── Timestamp badge ───────────────────────────────────────────────────── */
+.scan-timestamp {
+  font-size: 0.75rem;
+  color: #555;
+  font-family: monospace;
+}
+
+/* ── Scrollable signal list ────────────────────────────────────────────── */
+.signal-list-container {
+  max-height: 420px;
+  overflow-y: auto;
+  border-radius: 8px;
+}
+
+.signal-list-container::-webkit-scrollbar {
+  width: 4px;
+}
+
+.signal-list-container::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+/* ── Page title ────────────────────────────────────────────────────────── */
+.page-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.page-subtitle {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* ── Status dot ────────────────────────────────────────────────────────── */
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 6px;
+  animation: pulse 2s infinite;
+}
+
+.status-dot.live {
+  background: #00bc8c;
+}
+
+@keyframes pulse {
+  0%   { opacity: 1; }
+  50%  { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* ── AG Grid dark theme override (dash-ag-grid 35.x) ──────────────────── */
+.ag-root-wrapper,
+.ag-root,
+.ag-body,
+.ag-body-viewport,
+.ag-center-cols-container,
+.ag-center-cols-viewport,
+.ag-center-cols-clipper,
+.ag-body-horizontal-scroll,
+.ag-floating-bottom {
+  background-color: #0d0d0d !important;
+}
+
+/* Overlay: empieza bajo el header (38 px) para no tapar las columnas */
+.ag-overlay {
+  top: 38px !important;
+  height: calc(100% - 38px) !important;
+  background-color: transparent !important;
+}
+
+.ag-header,
+.ag-header-row,
+.ag-header-cell {
+  background-color: #1a1a28 !important;
+  border-color: #2a2a3a !important;
+  color: #8888aa !important;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.ag-header {
+  border-bottom: 2px solid #3a3a5a !important;
+}
+
+.ag-header-cell:hover {
+  background-color: #22223a !important;
+}
+
+.ag-row {
+  background-color: #0d0d0d !important;
+  border-color: #1a1a1a !important;
+  color: #c0c0e0 !important;
+}
+
+.ag-row-odd {
+  background-color: #111 !important;
+}
+
+.ag-row:hover,
+.ag-row-hover {
+  background-color: #1a1a2e !important;
+}
+
+.ag-row-selected,
+.ag-row-selected.ag-row-odd {
+  background-color: #0055aa !important;
+  color: #fff !important;
+}
+
+.ag-cell {
+  border-color: #1a1a1a !important;
+  color: inherit !important;
+}
+
+.ag-paging-panel,
+.ag-status-bar {
+  background-color: #0d0d0d !important;
+  border-color: #1a1a1a !important;
+  color: #666688 !important;
+}
+
+.ag-paging-button,
+.ag-paging-page-summary-panel {
+  color: #888 !important;
+}
+
+.ag-icon {
+  color: #666688 !important;
+}
+
+.ag-filter-toolpanel,
+.ag-menu,
+.ag-popup-child {
+  background-color: #12121c !important;
+  border-color: #2a2a3a !important;
+  color: #c0c0e0 !important;
+}
+
+.ag-input-field-input {
+  background-color: #0d0d14 !important;
+  border-color: #2a2a3a !important;
+  color: #c0c0e0 !important;
+}
+
+.ag-ltr .ag-cell-focus:not(.ag-cell-range-selected):focus-within {
+  border-color: #0077cc !important;
+}
+
+.ag-overlay-no-rows-wrapper,
+.ag-overlay-wrapper {
+  background-color: #0d0d0d !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.ag-overlay-no-rows-center {
+  color: #666 !important;
+  font-size: 0.85rem !important;
+}
+
+/* ── KPI info icon ─────────────────────────────────────────────────────── */
+.kpi-info-icon {
+  font-size: 0.7rem;
+  color: #555;
+  cursor: pointer;
+  vertical-align: middle;
+  transition: color 0.15s;
+}
+
+.kpi-info-icon:hover {
+  color: #00bc8c;
+}
+
+/* ── Signal table headers ──────────────────────────────────────────────── */
+.signal-header-row {
+  border-bottom: 2px solid #2a2a2a !important;
+  padding: 6px 16px !important;
+  cursor: default;
+}
+
+.signal-header-row:hover {
+  background: transparent !important;
+}
+
+.signal-col-header {
+  font-size: 0.68rem;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.signal-col-header-cell {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+
+/* ── AG Grid pred_ret colores ─────────────────────────────────────────── */
+.ag-cell.pred-positive { color: #00bc8c !important; font-family: monospace; font-size: 0.82rem; }
+.ag-cell.pred-negative { color: #e74c3c !important; font-family: monospace; font-size: 0.82rem; }
+
+/* ── AG Grid tooltip ──────────────────────────────────────────────────── */
+.ag-tooltip {
+  background-color: #1a1a2e !important;
+  color: #c0c0e0 !important;
+  border: 1px solid #3a3a5a !important;
+  border-radius: 4px !important;
+  padding: 5px 10px !important;
+  font-size: 0.82rem !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5) !important;
+}
+
+/* ── AG Grid floating filters ─────────────────────────────────────────── */
+.ag-floating-filter-body input,
+.ag-floating-filter-full-body input {
+  background-color: #0d0d14 !important;
+  border-color: #2a2a3a !important;
+  color: #c0c0e0 !important;
+  font-size: 0.78rem !important;
+}
+
+.ag-floating-filter-body input::placeholder {
+  color: #444 !important;
+}
+
+/* ── Configuración: dropdown oscuro ────────────────────────────────────── */
+.cfg-dropdown .Select-control,
+.cfg-dropdown .Select-menu-outer {
+  background-color: #0d0d14 !important;
+  border-color: #2a2a3a !important;
+  color: #c0c0e0 !important;
+}
+
+.cfg-dropdown .Select-option {
+  background-color: #0d0d14 !important;
+  color: #c0c0e0 !important;
+}
+
+.cfg-dropdown .Select-option:hover,
+.cfg-dropdown .Select-option.is-focused {
+  background-color: #1a1a2e !important;
+}
+
+.cfg-dropdown .Select-value-label {
+  color: #c0c0e0 !important;
+}
+
+.cfg-dropdown .Select-arrow {
+  border-top-color: #666 !important;
+}
+
+/* ── Mobile tweaks ─────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .kpi-value { font-size: 1.4rem; }
+  .page-title { font-size: 1.2rem; }
+  .signal-row { padding: 8px 12px; }
+}
