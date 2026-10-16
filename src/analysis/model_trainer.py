@@ -54,6 +54,12 @@ _GB_PARAMS = dict(
     subsample=0.8, random_state=42,
 )
 
+# Versión de los datos de entrada. Si cambia la forma de obtener/ajustar los
+# precios, se sube y los modelos cacheados con la versión anterior se descartan.
+#   1 → Alpaca con adjustment="raw" (precios sin ajustar por splits, bug)
+#   2 → todas las fuentes ajustadas por splits y dividendos
+DATA_VERSION = 2
+
 # ── Configuración por tipo ───────────────────────────────────────────────────
 
 # Mapea model_type → (kind_a, kind_b); kind_b = None si es modelo simple
@@ -225,6 +231,7 @@ class ModelTrainer:
             "trained_date":    date.today(),
             "n_features":      int(X_raw.shape[1]),
             "model_type":      self.model_type,
+            "data_version":    DATA_VERSION,
             "oos_val_indices": self._oos_val_indices,
             "oos_val_preds":   self._oos_val_preds,
             "metrics":         self._metrics,
@@ -253,7 +260,9 @@ class ModelTrainer:
                 return False
             if meta.get("model_type") != self.model_type:
                 return False
-            self._model_a         = joblib.load(self._path_a(symbol))
+            if meta.get("data_version") != DATA_VERSION:
+                return False
+            self._model_a        = joblib.load(self._path_a(symbol))
             self._model_b         = joblib.load(self._path_b(symbol)) if self._kind_b else None
             self._metrics         = meta["metrics"]
             self._oos_val_indices = meta.get("oos_val_indices")

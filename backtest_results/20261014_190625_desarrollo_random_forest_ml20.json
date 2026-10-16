@@ -1,0 +1,92 @@
+{
+  "periodo": "2016-02-02 → 2025-09-16",
+  "n_dias": 2420,
+  "n_simbolos": 98,
+  "n_rebalanceos": 121,
+  "estrategia": {
+    "total_return": 7.5265260750546865,
+    "cagr": 0.25003846886608283,
+    "sharpe": 1.0834615921053719,
+    "max_drawdown": -0.3257414997952782
+  },
+  "benchmark_equiponderado": {
+    "total_return": 4.255448391890095,
+    "cagr": 0.18860815035925627,
+    "sharpe": 1.1055431605382497,
+    "max_drawdown": -0.32843285776723696
+  },
+  "n_operaciones": 1210,
+  "acierto_compras": 0.5743801652892562,
+  "acierto_compras_ic95": [
+    0.546328343191646,
+    0.6019611865130534
+  ],
+  "ret_neto_medio_operacion": 0.019281480755717242,
+  "ic_medio": 0.0005650009544896293,
+  "ic_t_stat": 0.04232373053450203,
+  "criterios": {
+    "1_sharpe_gt_benchmark": false,
+    "2_ic_positive_t_gt_2": false,
+    "3_hit_rate_ci_low_gt_50": true
+  },
+  "ACEPTADO": false,
+  "por_anio": {
+    "2016": {
+      "estrategia": 0.40380650216979563,
+      "benchmark": 0.2655723451035781
+    },
+    "2017": {
+      "estrategia": 0.4457502003667688,
+      "benchmark": 0.29514870896779577
+    },
+    "2018": {
+      "estrategia": -0.10029366403349038,
+      "benchmark": -0.03334066949958836
+    },
+    "2019": {
+      "estrategia": 0.5182583439131945,
+      "benchmark": 0.37882343324413603
+    },
+    "2020": {
+      "estrategia": 0.4360885596061781,
+      "benchmark": 0.2349533512505304
+    },
+    "2021": {
+      "estrategia": 0.3259369141317776,
+      "benchmark": 0.3161334865160619
+    },
+    "2022": {
+      "estrategia": -0.12653015121272804,
+      "benchmark": -0.08057296645914513
+    },
+    "2023": {
+      "estrategia": 0.20875506321266624,
+      "benchmark": 0.21938767660245562
+    },
+    "2024": {
+      "estrategia": 0.288023261479178,
+      "benchmark": 0.19135818858625142
+    },
+    "2025": {
+      "estrategia": 0.18771199723828969,
+      "benchmark": 0.1080749646432726
+    }
+  },
+  "config": {
+    "model_type": "random_forest",
+    "variant": "base",
+    "snapshot": "99fa23d063b1",
+    "data_version": 2,
+    "features": 29,
+    "dev_start": "2016-01-01",
+    "holdout_start": "2025-10-01",
+    "buy_threshold": 0.005,
+    "cost_pct": 0.0005,
+    "max_weight": 0.1,
+    "strategy": "ml20",
+    "hold": 20,
+    "top_n": 10
+  },
+  "config_hash": "ac0f9a03daee",
+  "tipo": "desarrollo"
+}

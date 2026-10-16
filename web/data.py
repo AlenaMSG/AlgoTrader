@@ -84,6 +84,22 @@ def get_positions() -> list[dict]:
         return []
 
 
+def sell_position(symbol: str, qty: float | None = None) -> dict:
+    """Vende `qty` acciones de symbol (o toda la posición si qty es None)."""
+    try:
+        from src.config.config_manager import ConfigManager
+        from src.data.data_fetcher import DataFetcher
+        from src.trading.order_executor import OrderExecutor
+
+        cfg = ConfigManager()
+        api_key, secret_key = cfg.get_credentials()
+        executor = OrderExecutor(api_key, secret_key, cfg.get_base_url())
+        quote = DataFetcher(api_key, secret_key).get_quote(symbol)
+        return executor.close_position(symbol, quote, qty)
+    except Exception as exc:
+        return {"action": "error", "reason": str(exc), "order": None}
+
+
 def get_portfolio_history(period: str = "1M") -> dict:
     """Retorna timestamps + equity para equity curve."""
     try:

@@ -107,7 +107,7 @@ class TradingBot:
             oos_index  = idx[oos_idx]
             try:
                 backtest = Backtester(buy_threshold=return_threshold).run(
-                    oos_preds, oos_closes, oos_index
+                    oos_preds, oos_closes, oos_index, prices=df_raw
                 )
             except Exception:
                 backtest = None

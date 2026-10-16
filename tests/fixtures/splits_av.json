@@ -1,0 +1,61 @@
+{
+  "source": "Alpha Vantage SPLITS, descargado 2026-10-14",
+  "splits": {
+    "NVDA": [
+      {
+        "date": "2024-06-10",
+        "factor": 10.0
+      },
+      {
+        "date": "2021-07-20",
+        "factor": 4.0
+      }
+    ],
+    "AAPL": [
+      {
+        "date": "2020-08-31",
+        "factor": 4.0
+      }
+    ],
+    "TSLA": [
+      {
+        "date": "2022-08-25",
+        "factor": 3.0
+      },
+      {
+        "date": "2020-08-31",
+        "factor": 5.0
+      }
+    ],
+    "AMZN": [
+      {
+        "date": "2022-06-06",
+        "factor": 20.0
+      }
+    ],
+    "GOOGL": [
+      {
+        "date": "2022-07-18",
+        "factor": 20.0
+      }
+    ],
+    "WMT": [
+      {
+        "date": "2024-02-26",
+        "factor": 3.0
+      }
+    ],
+    "AVGO": [
+      {
+        "date": "2024-07-15",
+        "factor": 10.0
+      }
+    ],
+    "GOOG": [
+      {
+        "date": "2022-07-18",
+        "factor": 20.0
+      }
+    ]
+  }
+}

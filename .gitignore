@@ -18,3 +18,18 @@ pending_signals.json
 scan_log.csv
 scan_log_console.txt
 settings.json
+
+# Datos congelados del backtest: pesan cientos de MB. Solo se versionan los manifest (hashes)
+backtest_data/**/*
+!backtest_data/**/
+!backtest_data/**/manifest.json
+backtest_results/*.parquet
+models_backtest/
+
+# Salidas generadas, estado de ejecución y capturas
+Analisis_Predicción/
+strategy_portfolio.json
+telegram_handler_state.json
+/*.png
+*.lnk
+Readme/~$*

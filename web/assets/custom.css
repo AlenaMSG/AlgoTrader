@@ -71,6 +71,20 @@ body {
   opacity: 0.25;
 }
 
+.kpi-breakdown {
+  display: flex;
+  gap: 14px;
+  margin-top: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.kpi-breakdown-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
 /* ── Signal badges ─────────────────────────────────────────────────────── */
 .badge-comprar {
   background-color: #00bc8c !important;
@@ -412,6 +426,15 @@ body {
 .cfg-dropdown .Select-arrow {
   border-top-color: #666 !important;
 }
+
+/* ── Estrategias / configuración ──────────────────────────────────────── */
+.strategy-metrics { width: 100%; font-size: 0.78rem; }
+.strategy-metrics td { padding: 1px 6px 1px 0; vertical-align: top; }
+.strategy-metrics td:nth-child(2) { font-weight: 600; white-space: nowrap; }
+.cfg-table { background: transparent !important; font-size: 0.82rem; }
+.cfg-table th { color: #888 !important; font-weight: 500; font-size: 0.75rem; background: transparent !important; }
+.cfg-table td { background: transparent !important; vertical-align: middle; color: #ddd !important; }
+.cfg-table td strong { color: #e8e8f0; }
 
 /* ── Mobile tweaks ─────────────────────────────────────────────────────── */
 @media (max-width: 768px) {

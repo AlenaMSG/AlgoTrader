@@ -208,6 +208,34 @@ def _scan_panel_visible() -> tuple[bool, str, str]:
     return visible, src, mdl
 
 
+def _strategy_banner():
+    """Aviso con la estrategia principal y su estado en el backtest fijo."""
+    try:
+        from src.analysis.strategies import BY_ID, ESTADO_COLOR, can_trade, status
+        from src.config.settings_manager import settings
+        sid = settings.get("strategy")
+        s = BY_ID.get(sid) or BY_ID["h1_quality_value"]
+        est = status(s.id)
+    except Exception:
+        return html.Div()
+    nota = ("Puede enviar órdenes." if can_trade(s.id)
+            else "No envía órdenes hasta estar Aprobada en el backtest fijo; de momento, cartera teórica.")
+    return dbc.Alert(
+        dbc.Row([
+            dbc.Col([
+                html.I(className="fa-solid fa-chess-knight me-2"),
+                html.Span("Estrategia principal: ", className="text-muted"),
+                html.Strong(s.nombre),
+                dbc.Badge(est, color=ESTADO_COLOR[est], className="ms-2"),
+                html.Div(nota, className="text-muted", style={"fontSize": "0.78rem"}),
+            ]),
+            dbc.Col(dcc.Link("Ver estrategias →", href="/estrategias"), width="auto"),
+        ], align="center"),
+        className="py-2 mb-3",
+        style={"background": "#0f1420", "color": "#ddd", "border": "1px solid #2a3a5a", "fontSize": "0.88rem"},
+    )
+
+
 def layout():
     visible, src_label, mdl_label = _scan_panel_visible()
     panel_style = {"border": "1px solid #1a3a1a", "background": "#0a180a"} if visible else {"display": "none"}
@@ -216,6 +244,8 @@ def layout():
         [
             dcc.Interval(id="inicio-interval", interval=30_000, n_intervals=0),
             dcc.Interval(id="scan-poll-interval", interval=5_000, n_intervals=0, disabled=True),
+
+            _strategy_banner(),
 
             # Panel de scan manual — siempre en DOM, oculto en modo auto
             dbc.Card(

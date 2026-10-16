@@ -6,6 +6,7 @@ from dash import html, dcc, callback, Output, Input
 NAV_ITEMS = [
     ("Inicio",         "/",               "fa-house"),
     ("Análisis",       "/analisis",       "fa-magnifying-glass-chart"),
+    ("Estrategias",    "/estrategias",    "fa-chess-knight"),
     ("Precio",         "/precio",         "fa-chart-candlestick"),
     ("Cartera",        "/cartera",        "fa-briefcase"),
     ("Historial",      "/historial",      "fa-clock-rotate-left"),

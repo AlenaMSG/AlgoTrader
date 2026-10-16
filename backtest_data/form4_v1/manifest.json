@@ -1,0 +1,8 @@
+{
+  "created": "2026-10-16T15:46:52",
+  "source": "SEC Insider Transactions Data Sets 2006q1 \u2192 2026q3",
+  "rows": 581079,
+  "files": {
+    "trades.parquet": "b9e722980ef9104b"
+  }
+}

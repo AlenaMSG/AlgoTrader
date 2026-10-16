@@ -1,14 +1,18 @@
 import dash
-from dash import html, dcc, callback, Output, Input, State, ALL, MATCH
+from dash import html, dcc, callback, clientside_callback, Output, Input, State, ALL, MATCH
 import dash_bootstrap_components as dbc
 import dash_ag_grid as dag
 
 dash.register_page(__name__, path="/analisis", name="Análisis", title="AlgoTrader · Análisis")
 
 from src.data.sp100 import SP100_SYMBOLS
+from src.data.sp500 import SP500
 
-_SYMBOL_OPTIONS = [{"label": "Todos (S&P100)", "value": "__ALL__"}] + [
-    {"label": s, "value": s} for s in sorted(SP100_SYMBOLS)
+# "Todos" sigue siendo el S&P 100: entrenar un modelo por valor para los 503 tardaría horas.
+# Cada valor del S&P 500 se puede analizar individualmente (se busca por símbolo o nombre).
+_SYMBOL_OPTIONS = [{"label": "Todos (S&P 100)", "value": "__ALL__"}] + [
+    {"label": f"{s} · {SP500[s][2]}" if s in SP500 else s, "value": s}
+    for s in sorted(set(SP500) | set(SP100_SYMBOLS))
 ]
 
 FEATURE_TOOLTIPS = {
@@ -411,6 +415,25 @@ def layout():
                                     xs=12, md="auto",
                                     class_name="d-flex align-items-center",
                                 ),
+                                # Compra por decisión propia: ignora señal, Dir.Acc y Kelly
+                                dbc.Col(
+                                    dcc.ConfirmDialogProvider(
+                                        dbc.Button(
+                                            [html.I(className="fa-solid fa-hand-pointer me-2"), "Comprar manual"],
+                                            id="exec-manual-btn",
+                                            size="sm",
+                                            outline=True,
+                                            color="info",
+                                        ),
+                                        id="exec-manual-confirm",
+                                        message=(
+                                            "Compra manual: se ignorarán la señal y la fiabilidad del modelo "
+                                            "y se comprará el importe indicado al precio actual. ¿Continuar?"
+                                        ),
+                                    ),
+                                    xs=12, md="auto",
+                                    class_name="d-flex align-items-center",
+                                ),
                             ],
                             align="center",
                             class_name="g-2",
@@ -523,11 +546,39 @@ def render_chips(symbols, combo_value):
 
 # ── Análisis ──────────────────────────────────────────────────────────────────
 
+# Feedback inmediato al pulsar "Predecir Señal": analizar "Todos (S&P100)" (el
+# valor por defecto si no se elige ningún símbolo) entrena un modelo por cada
+# uno de los 100 símbolos la primera vez que se usa una fuente de datos o un
+# modelo nuevos, lo que puede tardar varios minutos. Sin este aviso, la tabla
+# se queda vacía todo ese tiempo y parece que la web no ha hecho nada.
+clientside_callback(
+    """
+    function(n) {
+        if (!n) { return window.dash_clientside.no_update; }
+        return [
+            true,
+            [
+                {namespace: 'dash_html_components', type: 'I',
+                 props: {className: 'fa-solid fa-spinner fa-spin me-2'}},
+                'Analizando... esto puede tardar varios minutos si son muchos ' +
+                'símbolos o la primera vez que usas esta fuente de datos / modelo.'
+            ]
+        ];
+    }
+    """,
+    Output("analisis-run-btn", "disabled", allow_duplicate=True),
+    Output("analisis-status",  "children", allow_duplicate=True),
+    Input("analisis-run-btn",  "n_clicks"),
+    prevent_initial_call=True,
+)
+
+
 @callback(
     Output("analisis-grid",         "rowData"),
     Output("analisis-results-store","data"),
-    Output("analisis-status",       "children"),
+    Output("analisis-status",       "children",  allow_duplicate=True),
     Output("analisis-alert",        "children"),
+    Output("analisis-run-btn",      "disabled",  allow_duplicate=True),
     Input("analisis-run-btn",       "n_clicks"),
     State("analisis-symbols-store", "data"),
     State("analisis-combo",         "value"),
@@ -538,7 +589,7 @@ def render_chips(symbols, combo_value):
 )
 def run_analysis(n_clicks, stored_symbols, combo_value, desde, hasta, threshold):
     if not n_clicks:
-        return [], [], "", ""
+        return [], [], "", "", False
 
     # Determinar símbolos
     if stored_symbols:
@@ -548,7 +599,7 @@ def run_analysis(n_clicks, stored_symbols, combo_value, desde, hasta, threshold)
     elif combo_value:
         symbols = [combo_value]
     else:
-        return [], [], "", dbc.Alert("Selecciona al menos un símbolo.", color="warning")
+        return [], [], "", dbc.Alert("Selecciona al menos un símbolo.", color="warning"), False
 
     # Parsear fechas (DD-MM-AAAA → YYYY-MM-DD)
     def parse_date(raw):
@@ -579,7 +630,7 @@ def run_analysis(n_clicks, stored_symbols, combo_value, desde, hasta, threshold)
         loader = DataLoader(api_key, secret_key, cache_dir=root / "data_cache")
         bot    = TradingBot(loader, model_dir=root / "models")
     except Exception as exc:
-        return [], [], "", dbc.Alert(str(exc), color="danger")
+        return [], [], "", dbc.Alert(str(exc), color="danger"), False
 
     rows        = []
     full_data   = []
@@ -649,7 +700,7 @@ def run_analysis(n_clicks, stored_symbols, combo_value, desde, hasta, threshold)
     except Exception:
         pass  # el registro histórico no debe romper el análisis en curso
 
-    return rows, full_data, status_msg, ""
+    return rows, full_data, status_msg, "", False
 
 
 # ── Detalle al seleccionar fila ────────────────────────────────────────────────
@@ -778,6 +829,9 @@ def populate_exec_panel(selected_rows, full_data):
     quote  = result.get("quote", {})
     price  = quote.get("ask_price", 0) or quote.get("bid_price", 0)
 
+    # El panel se muestra siempre para permitir la compra manual; el botón del
+    # modelo solo se activa si hay señal.
+    btn_disabled = False
     if "COMPRAR" in signal:
         btn_label = [html.I(className="fa-solid fa-arrow-trend-up me-2"), f"Comprar {sym}"]
         btn_color = "success"
@@ -785,12 +839,14 @@ def populate_exec_panel(selected_rows, full_data):
         btn_label = [html.I(className="fa-solid fa-arrow-trend-down me-2"), f"Vender {sym}"]
         btn_color = "danger"
     else:
-        return empty  # NEUTRAL: no mostramos panel
+        btn_label, btn_color, btn_disabled = "Sin señal del modelo", "secondary", True
 
     sign = "+" if pred >= 0 else ""
     sig_color = "#00bc8c" if "COMPRAR" in signal else "#e74c3c"
     if "débil" in signal:
         sig_color = "#f39c12"
+    elif "COMPRAR" not in signal and "VENDER" not in signal:
+        sig_color = "#888888"
 
     info = [
         html.Span(sym, style={"fontWeight": "700", "fontSize": "1.1rem"}),
@@ -799,13 +855,26 @@ def populate_exec_panel(selected_rows, full_data):
         html.Span(f"Precio: ${price:,.2f}" if price else "", className="text-muted", style={"fontSize": "0.85rem"}),
     ]
 
-    return visible, info, btn_label, btn_color, False, ""
+    return visible, info, btn_label, btn_color, btn_disabled, ""
 
 
 # ── Ejecutar orden manual ─────────────────────────────────────────────────────
 
+# Deshabilita el botón EN EL NAVEGADOR en cuanto se pulsa (sin esperar la
+# respuesta del servidor), para que un doble clic no dispare dos órdenes a la
+# vez sobre las mismas acciones (causaba "insufficient qty available" en Alpaca
+# cuando la segunda petición llegaba antes de que la primera quedara reservada).
+clientside_callback(
+    "function(n) { return n ? true : window.dash_clientside.no_update; }",
+    Output("exec-order-btn", "disabled", allow_duplicate=True),
+    Input("exec-order-btn",  "n_clicks"),
+    prevent_initial_call=True,
+)
+
+
 @callback(
-    Output("exec-order-result", "children", allow_duplicate=True),
+    Output("exec-order-result", "children",  allow_duplicate=True),
+    Output("exec-order-btn",    "disabled",  allow_duplicate=True),
     Input("exec-order-btn",     "n_clicks"),
     State("analisis-grid",      "selectedRows"),
     State("analisis-results-store", "data"),
@@ -814,12 +883,12 @@ def populate_exec_panel(selected_rows, full_data):
 )
 def execute_manual_order(n_clicks, selected_rows, full_data, amount):
     if not n_clicks or not selected_rows or not full_data:
-        return ""
+        return "", False
 
     sym    = selected_rows[0].get("symbol", "")
     result = next((r for r in full_data if r.get("symbol") == sym), None)
     if not result:
-        return dbc.Alert("No hay datos para este símbolo.", color="warning")
+        return dbc.Alert("No hay datos para este símbolo.", color="warning"), False
 
     try:
         trade_amount = float(amount or 1000)
@@ -859,17 +928,115 @@ def execute_manual_order(n_clicks, selected_rows, full_data, amount):
                     f"· Estado: {order.get('status', '?')}",
                 ],
                 color=color, dismissable=True,
-            )
+            ), False
         elif action == "skip":
             return dbc.Alert(
                 [html.I(className="fa-solid fa-info-circle me-2"), f"Orden omitida: {reason}"],
                 color="warning", dismissable=True,
-            )
+            ), False
         else:
-            return dbc.Alert(f"Error: {reason}", color="danger", dismissable=True)
+            return dbc.Alert(
+                [html.I(className="fa-solid fa-triangle-exclamation me-2"), reason],
+                color="danger", dismissable=True,
+            ), False
 
     except Exception as exc:
-        return dbc.Alert(str(exc), color="danger", dismissable=True)
+        return dbc.Alert(
+            [
+                html.I(className="fa-solid fa-triangle-exclamation me-2"),
+                f"No se pudo procesar la orden de {sym}: {exc}",
+            ],
+            color="danger", dismissable=True,
+        ), False
+
+
+# ── Compra manual (decisión propia, sin filtros del modelo) ───────────────────
+
+def _log_manual_order(sym: str, order: dict, result: dict) -> None:
+    """Añade la compra manual a orders_log.csv con signal=MANUAL, para que no se
+    mezcle con las órdenes del modelo al medir resultados."""
+    import csv
+    from datetime import datetime
+    from pathlib import Path
+
+    log_path = Path(__file__).resolve().parents[2] / "orders_log.csv"
+    qty, price = order.get("qty", ""), order.get("limit_price", "")
+    metrics = result.get("metrics", {})
+    row = {
+        "timestamp":   datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "symbol":      sym,
+        "action":      "buy",
+        "qty":         qty,
+        "limit_price": price,
+        "amount":      round(qty * price, 2) if qty and price else "",
+        "order_id":    order.get("id", ""),
+        "signal":      "MANUAL",
+        "pred_return": f"{result.get('pred_return', 0.0)*100:+.3f}%",
+        "dir_acc":     f"{metrics.get('oos_dir_acc', 0.0)*100:.1f}%" if metrics.get("oos_dir_acc") is not None else "",
+        "kelly_used":  False,
+    }
+    try:
+        write_header = not log_path.exists()
+        with log_path.open("a", newline="", encoding="utf-8") as f:
+            writer = csv.DictWriter(f, fieldnames=list(row.keys()))
+            if write_header:
+                writer.writeheader()
+            writer.writerow(row)
+    except Exception:
+        pass
+
+
+@callback(
+    Output("exec-order-result",  "children", allow_duplicate=True),
+    Input("exec-manual-confirm", "submit_n_clicks"),
+    State("analisis-grid",       "selectedRows"),
+    State("analisis-results-store", "data"),
+    State("exec-amount",         "value"),
+    prevent_initial_call=True,
+)
+def execute_manual_buy(submit_n_clicks, selected_rows, full_data, amount):
+    if not submit_n_clicks or not selected_rows or not full_data:
+        return dash.no_update
+
+    sym    = selected_rows[0].get("symbol", "")
+    result = next((r for r in full_data if r.get("symbol") == sym), None) or {}
+    try:
+        trade_amount = float(amount or 0)
+    except (ValueError, TypeError):
+        trade_amount = 0.0
+
+    try:
+        from src.config.config_manager import ConfigManager
+        from src.trading.order_executor import OrderExecutor
+
+        api_key, sec_key = ConfigManager().get_credentials()
+        exec_result = OrderExecutor(api_key, sec_key).manual_buy(
+            sym, result.get("quote", {}), trade_amount
+        )
+    except Exception as exc:
+        return dbc.Alert(
+            [html.I(className="fa-solid fa-triangle-exclamation me-2"),
+             f"No se pudo procesar la compra manual de {sym}: {exc}"],
+            color="danger", dismissable=True,
+        )
+
+    action, reason, order = exec_result.get("action"), exec_result.get("reason", ""), exec_result.get("order")
+    if action == "buy" and order:
+        _log_manual_order(sym, order, result)
+        return dbc.Alert(
+            [
+                html.I(className="fa-solid fa-check-circle me-2"),
+                html.Strong(f"Compra manual enviada — {sym}: "),
+                f"{order.get('qty', '?')} acciones @ ${order.get('limit_price', 0):.2f} "
+                f"· Estado: {order.get('status', '?')}",
+            ],
+            color="info", dismissable=True,
+        )
+    color = "warning" if action == "skip" else "danger"
+    return dbc.Alert(
+        [html.I(className="fa-solid fa-info-circle me-2"), f"Compra manual no enviada: {reason}"],
+        color=color, dismissable=True,
+    )
 
 
 # ── Actualizar resultados reales ──────────────────────────────────────────────

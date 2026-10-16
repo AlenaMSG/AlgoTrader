@@ -25,6 +25,25 @@ logger = logging.getLogger(__name__)
 
 PAPER_URL = "https://paper-api.alpaca.markets"
 
+ALPACA_REQUEST_TIMEOUT = 20  # segundos
+
+
+def _apply_request_timeout(api: "tradeapi.REST", timeout: int = ALPACA_REQUEST_TIMEOUT) -> None:
+    """
+    alpaca_trade_api.REST no aplica ningún timeout a sus peticiones HTTP
+    (llama a requests.Session.request sin 'timeout'), así que una sola
+    petición colgada puede bloquear indefinidamente todo el análisis
+    (p. ej. escanear el S&P100 completo se queda con las tablas vacías
+    para siempre). Forzamos un timeout razonable para que ese símbolo
+    falle rápido en vez de congelar todo el proceso.
+    """
+    import functools
+    session = api._session
+    if getattr(session, "_algotrader_timeout_patched", False):
+        return
+    session.request = functools.partial(session.request, timeout=timeout)
+    session._algotrader_timeout_patched = True
+
 
 class DataLoader:
     """
@@ -38,6 +57,7 @@ class DataLoader:
             secret_key=secret_key,
             base_url=PAPER_URL,
         )
+        _apply_request_timeout(self.api)
         self.cache_dir = Path(cache_dir)
         self.cache_dir.mkdir(parents=True, exist_ok=True)
 
@@ -63,7 +83,7 @@ class DataLoader:
                 logger.info(f"[{symbol}] Caché local: {len(df)} filas")
                 return df
 
-        ticker = yf.Ticker(symbol)
+        ticker = yf.Ticker(symbol.replace(".", "-"))  # BRK.B → BRK-B en Yahoo
         df = ticker.history(start=start, end=end, interval="1d", auto_adjust=True)
 
         if df.empty:
@@ -109,7 +129,7 @@ class DataLoader:
         Ambos son DatetimeIndex sin timezone. Si no hay datos, devuelve None.
         """
         result = {"earnings": None, "dividends": None}
-        ticker = yf.Ticker(symbol)
+        ticker = yf.Ticker(symbol.replace(".", "-"))  # BRK.B → BRK-B en Yahoo
 
         try:
             ed = ticker.get_earnings_dates(limit=40)
@@ -200,7 +220,7 @@ class DataLoader:
             return av_result
 
         # Fallback: VADER sobre titulares de yfinance
-        ticker  = yf.Ticker(symbol)
+        ticker  = yf.Ticker(symbol.replace(".", "-"))  # BRK.B → BRK-B en Yahoo
         cutoff  = datetime.now().timestamp() - 3 * 86400
         default = {"sentiment_score": 0.0, "sentiment_volume": 0}
         try:
@@ -242,7 +262,7 @@ class DataLoader:
         Calcula el put/call ratio de open interest en la cadena de opciones
         más cercana. Clamp [0.1, 10.0]. Default 1.0 si sin datos.
         """
-        ticker  = yf.Ticker(symbol)
+        ticker  = yf.Ticker(symbol.replace(".", "-"))  # BRK.B → BRK-B en Yahoo
         default = {"pc_ratio": 1.0}
         try:
             expirations = ticker.options
@@ -300,8 +320,13 @@ class DataLoader:
         start: str = "2010-01-01",
         end: str | None = None,
     ) -> pd.DataFrame:
-        """Barras diarias desde Alpaca Markets (requiere plan activo para >5 años)."""
-        cache_file = self.cache_dir / f"{symbol.upper()}_alpaca_daily.parquet"
+        """
+        Barras diarias desde Alpaca Markets, ajustadas por splits y dividendos.
+        Con el feed IEX gratuito el histórico empieza el 2020-07-27.
+        """
+        # Nombre de caché distinto al de la versión sin ajustar (`_alpaca_daily`)
+        # para que nunca se reutilice una caché antigua con precios raw.
+        cache_file = self.cache_dir / f"{symbol.upper()}_alpaca_adj_daily.parquet"
 
         if cache_file.exists():
             age = datetime.now() - datetime.fromtimestamp(cache_file.stat().st_mtime)
@@ -317,7 +342,9 @@ class DataLoader:
             start=start,
             end=end_str,
             feed="iex",
-            adjustment="raw",
+            # "raw" metía saltos falsos en cada split (NVDA 10:1 el 2024-06-10
+            # aparecía como una caída del 90%) y corrompía todas las features.
+            adjustment="all",
         ).df
 
         if bars is None or bars.empty:

@@ -1094,6 +1094,93 @@ def build():
     # ── 7. Pestaña pendiente de documentar ────────────────────────────────────
     heading(doc, "7. Pestaña Comparación", 1, AZUL)
 
+    doc.add_page_break()
+
+    # ── 8. Anexo: cómo se rellenan los ficheros de datos ────────────────────
+    heading(doc, "8. Anexo: cómo se rellenan los ficheros de datos", 1, AZUL)
+    body(doc,
+         "AlgoTrader tiene dos interfaces que comparten la misma capa de datos "
+         "(carpeta 'src/'): el dashboard web (este manual) y una app de "
+         "escritorio PyQt6 más antigua. Ambas leen y escriben sobre los mismos "
+         "ficheros, pero no todas las acciones están disponibles en las dos. "
+         "Esta tabla aclara, ficha por ficha, desde qué botón concreto se "
+         "rellena cada uno y si ese origen está en la web o solo en la app de "
+         "escritorio.")
+
+    body(doc, "8.1  Ficheros que sí rellena la web", bold=True, color=AZUL_CLARO)
+    col_table(doc,
+        ["Fichero", "Botón / origen en la web"],
+        [
+            ["scan_log.csv",
+             "Inicio → 'Lanzar análisis ahora' (lanza scan_sp100.py) y "
+             "Análisis → 'Predecir Señal'. Ambos llaman a append_scan_log(); "
+             "solo guarda señales que no sean NEUTRAL."],
+            ["pending_signals.json",
+             "Solo el scan scan_sp100.py (automático por Task Scheduler o "
+             "manual vía 'Lanzar análisis ahora'). Lo lee la tabla de señales "
+             "de Inicio."],
+            ["scan_status.json",
+             "Inicio → 'Lanzar análisis ahora'. Estado idle/running/done/"
+             "error, escrito por web/scan_runner.py mientras dura el "
+             "subproceso del scan."],
+            ["settings.json",
+             "Configuración → 'Guardar'."],
+            ["data_cache/*.parquet",
+             "Cualquier análisis (scan automático o 'Predecir Señal'): "
+             "caché de precios históricos por fuente de datos."],
+            ["models/*.joblib",
+             "Cualquier análisis: caché de los modelos de IA ya entrenados "
+             "por símbolo."],
+        ],
+        col_widths=[1.9, 4.6],
+    )
+
+    body(doc, "8.2  Ficheros que la web solo lee (los rellena la app de escritorio)",
+         bold=True, color=AZUL_CLARO)
+    col_table(doc,
+        ["Fichero", "Quién lo rellena de verdad"],
+        [
+            ["predictions_log.csv",
+             "Solo la app de escritorio PyQt6 (main_window.py). La pestaña "
+             "Comparación de la web únicamente lo lee con get_predictions_log(); "
+             "el botón 'Predecir Señal' de la web no escribe en este fichero."],
+            ["orders_log.csv",
+             "Solo la app de escritorio PyQt6. El panel 'Ejecutar Orden "
+             "Manual' de la web envía la orden real a Alpaca, pero no la "
+             "registra en este CSV — la web solo lo lee con get_orders_log()."],
+            ["Analisis_Predicción/*.xlsx",
+             "Solo la app de escritorio PyQt6, vía save_real_data() y "
+             "save_prediction(). El botón web 'Actualizar resultados reales' "
+             "solo actualiza filas ya existentes (update_actuals()); si solo "
+             "usas la web, nunca se crean filas nuevas aquí."],
+        ],
+        col_widths=[1.9, 4.6],
+    )
+
+    body(doc, "8.3  Ficheros ajenos al dashboard web", bold=True, color=AZUL_CLARO)
+    col_table(doc,
+        ["Fichero", "Origen real"],
+        [
+            ["scan_log_console.txt",
+             "run_scan.bat (Task Scheduler), que redirige la salida de "
+             "consola con '>>'. El scan lanzado desde la web usa "
+             "subprocess.DEVNULL, así que no escribe aquí."],
+            ["telegram_handler_state.json",
+             "telegram_handler.py, un proceso de Telegram independiente "
+             "(run_handler.bat) sin relación con la web."],
+        ],
+        col_widths=[1.9, 4.6],
+    )
+
+    info_box(doc, "En resumen:", [
+        "Si se usa solo la web (sin abrir nunca la app de escritorio), "
+        "predictions_log.csv, orders_log.csv y la carpeta "
+        "Analisis_Predicción se quedan vacíos o congelados.",
+        "Eso significa que la pestaña Comparación y el histórico de "
+        "aciertos por símbolo dependen hoy de datos que solo genera la app "
+        "de escritorio, no el dashboard web.",
+    ])
+
     doc.save(str(OUTPUT))
     print(f"Manual guardado en: {OUTPUT}")
 

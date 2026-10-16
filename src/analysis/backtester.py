@@ -2,8 +2,11 @@
 Backtester: simula P&L usando predicciones out-of-sample del CV.
 No necesita reentrenar — reutiliza las predicciones ya generadas en los folds.
 
-Estrategia: long-only, hold 1 día.
-  - Cuando pred_return >= buy_threshold: comprar al cierre[t], vender al cierre[t+1]
+Estrategia: long-only, hold 1 día, solo con precios ejecutables.
+  - La señal del día t usa el cierre[t] (log_ret_1d, rsi…), así que solo se
+    conoce después del cierre: se compra a la apertura[t+1] y se vende a la
+    apertura[t+2]. Antes se compraba al propio cierre[t] (no ejecutable,
+    inflaba win rate, Sharpe y el sizing Kelly — bug nº2 de la auditoría).
   - buy_threshold es el retorno mínimo esperado (ej. 0.005 = 0.5%)
   - Aplica cost_pct en entrada y en salida (0.05% c/u → 0.1% round-trip)
 """
@@ -24,15 +27,18 @@ class Backtester:
         oos_preds: np.ndarray,
         oos_close: np.ndarray,
         oos_index: pd.DatetimeIndex,
+        prices:    pd.DataFrame,
     ) -> dict:
         """
         Simula la estrategia sobre predicciones OOS ya ordenadas cronológicamente.
 
         oos_preds : retornos predichos por el ensemble para cada barra OOS
-        oos_close : precio de cierre de cada barra OOS
+        oos_close : precio de cierre de cada barra OOS (solo para buy & hold)
         oos_index : índice temporal correspondiente
+        prices    : OHLCV completo del símbolo (necesita columna "open"); de aquí
+                    salen las aperturas de t+1 y t+2 aunque no estén en el OOS
         """
-        daily_rets, trades = self._simulate(oos_preds, oos_close)
+        daily_rets, trades = self._simulate(oos_preds, oos_index, prices)
 
         equity    = pd.Series((1 + daily_rets).cumprod(), index=oos_index)
         bh_rets   = np.concatenate([[0.0], np.diff(oos_close) / oos_close[:-1]])
@@ -54,21 +60,30 @@ class Backtester:
     def _simulate(
         self,
         preds:  np.ndarray,
-        closes: np.ndarray,
+        index:  pd.DatetimeIndex,
+        prices: pd.DataFrame,
     ) -> tuple[np.ndarray, list[dict]]:
         n          = len(preds)
         daily_rets = np.zeros(n)
         trades: list[dict] = []
 
-        for i in range(n - 1):
+        opens = prices["open"].to_numpy(dtype=np.float64)
+        pos   = prices.index.get_indexer(index)   # posición de cada barra OOS en la serie completa
+
+        for i in range(n):
+            p = pos[i]
+            if p < 0 or p + 2 >= len(opens):
+                continue                          # sin apertura t+1/t+2 conocida todavía
             if preds[i] >= self.buy_threshold:
-                entry = closes[i]     * (1 + self.cost_pct)
-                exit_ = closes[i + 1] * (1 - self.cost_pct)
+                entry = opens[p + 1] * (1 + self.cost_pct)
+                exit_ = opens[p + 2] * (1 - self.cost_pct)
                 ret   = (exit_ - entry) / entry
-                daily_rets[i + 1] = ret
+                if i + 1 < n:
+                    daily_rets[i + 1] = ret
                 trades.append({
-                    "entry_price": closes[i],
-                    "exit_price":  closes[i + 1],
+                    "signal_date": index[i],
+                    "entry_price": opens[p + 1],
+                    "exit_price":  opens[p + 2],
                     "return_net":  ret,
                 })
 
@@ -107,11 +122,12 @@ class Backtester:
         gross_losses  = abs(sum(losses)) + 1e-9
         profit_factor = gross_wins / gross_losses
 
-        active_rets = daily_rets[daily_rets != 0]
+        # Sharpe sobre TODOS los días (los días sin posición rinden 0). Antes solo
+        # se usaban los días con operación, lo que lo inflaba.
         sharpe = 0.0
-        if len(active_rets) > 1:
+        if len(daily_rets) > 1:
             sharpe = float(
-                np.mean(active_rets) / (np.std(active_rets) + 1e-9) * np.sqrt(252)
+                np.mean(daily_rets) / (np.std(daily_rets) + 1e-9) * np.sqrt(252)
             )
 
         roll_max     = equity.cummax()
