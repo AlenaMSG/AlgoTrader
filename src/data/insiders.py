@@ -159,8 +159,12 @@ def fetch_recent(ciks: set[int], since: pd.Timestamp, until: pd.Timestamp | None
         try:
             idx = _get(url, timeout=60).text
         except requests.HTTPError as exc:
-            if exc.response is not None and exc.response.status_code == 404:
-                continue                                # festivo o aún no publicado
+            # Festivo (p. ej. Columbus Day) o aún no publicado: la SEC responde 404 o 403.
+            # Un 403 por límite de peticiones dice "Request Rate Threshold Exceeded" → error real.
+            resp = exc.response
+            if resp is not None and (resp.status_code == 404 or
+                                     (resp.status_code == 403 and "Rate Threshold" not in resp.text)):
+                continue
             raise
         n = 0
         for line in idx.splitlines():
